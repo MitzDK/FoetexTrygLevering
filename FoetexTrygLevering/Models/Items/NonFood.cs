@@ -14,7 +14,7 @@ namespace FoetexTrygLevering.Models.Items
             
         }
 
-        public NonFood(bool ageRestriction)
+        public NonFood(int id, string name, double price, string description, bool ageRestriction) : base(id, name, price, description)
         {
             AgeRestriction = ageRestriction;
         }

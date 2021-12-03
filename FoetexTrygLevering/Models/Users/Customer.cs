@@ -15,7 +15,7 @@ namespace FoetexTrygLevering.Models.Users
             
         }
 
-        public Customer(string address, int age)
+        public Customer(int userId, string name, string phone, string email, string address, int age) : base(userId, name, phone, email)
         {
             Address = address;
             Age = age;
