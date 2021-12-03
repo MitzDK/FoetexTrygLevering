@@ -5,7 +5,12 @@ using System.Threading.Tasks;
 
 namespace FoetexTrygLevering.Models.Users
 {
-    public class DeliveryDriver : User
+    public string Address { get; set; }
+    public string Age { get; set; }
+
+    public DeliveryDriver(string address, string age)
     {
+            Address = address;
+            Age = age;
     }
 }

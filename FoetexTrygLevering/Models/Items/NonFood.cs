@@ -7,5 +7,16 @@ namespace FoetexTrygLevering.Models.Items
 {
     public class NonFood : Item
     {
+        public bool AgeRestriction { get; set; }
+
+        public NonFood()
+        {
+            
+        }
+
+        public NonFood(bool ageRestriction)
+        {
+            AgeRestriction = ageRestriction;
+        }
     }
 }

@@ -16,5 +16,6 @@ namespace FoetexTrygLevering.Services
         void Update(int number, Item theItem);
         List<Item> GetAll();
         void AssignID();
+
     }
 }

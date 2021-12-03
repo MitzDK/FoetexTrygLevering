@@ -13,7 +13,8 @@ namespace FoetexTrygLevering.Services
 
         public ItemService(JsonFileService jsonFileService)
         {
-
+            JsonFileService = jsonFileService;
+            _items = 
         }
         public void Add(Item newItem)
         {
