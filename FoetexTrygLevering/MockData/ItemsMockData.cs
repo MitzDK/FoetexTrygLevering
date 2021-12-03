@@ -10,7 +10,7 @@ namespace FoetexTrygLevering.MockData
     {
         private static List<Item> _items = new List<Item>()
         {
-
+            
         };
 
         public static List<Item> GetItems()
