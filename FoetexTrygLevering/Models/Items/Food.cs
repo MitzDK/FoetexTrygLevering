@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace FoetexTrygLevering.Models.Items.Consumables
+namespace FoetexTrygLevering.Models.Items
 {
-    public class Food : Consumable
+    public class Food : Item
     {
     }
 }

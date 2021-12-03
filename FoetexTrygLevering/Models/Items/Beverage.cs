@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace FoetexTrygLevering.Models.Items
 {
-    public class Beverage
+    public class Beverage : Item
     {
         public bool AgeRestriction{get;set;}
     }
