@@ -7,15 +7,15 @@ namespace FoetexTrygLevering.Models.Users
 {
     public class DeliveryDriver : User
     {
-        public int AccNumber { get; set; }
+        public string AccNumber { get; set; }
         public int PostalCode { get; set; }
 
-        public DeliveryDriver(string name, string phone, string email, int accNumber, int postalCode) : base(name, phone, email)
+        public DeliveryDriver(string name, string phone, string email, string accNumber, int postalCode) : base(name, phone, email)
         {
             AccNumber = accNumber;
             PostalCode = postalCode;
         }
-        public DeliveryDriver(int userID, string name, string phone, string email, int accNumber, int postalCode) : base(userID, name, phone, email)
+        public DeliveryDriver(int userID, string name, string phone, string email, string accNumber, int postalCode) : base(userID, name, phone, email)
         {
             AccNumber = accNumber;
             PostalCode = postalCode;
