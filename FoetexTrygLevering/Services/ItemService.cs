@@ -45,38 +45,53 @@ namespace FoetexTrygLevering.Services
             if (string.IsNullOrEmpty(str)) return _items;
             foreach (Item item in _items)
             {
-                if (item.Description.ToLower().Contains(str.ToLower()))
+                if (item.Name.ToLower().Contains(str.ToLower()))
                 {
                     searchList.Add(item);
                 }
             }
-
             return searchList;
         }
 
         public List<Item> SearchByDescription(string str)
         {
-            throw new NotImplementedException();
+            List<Item> searchList = new List<Item>();
+            if (string.IsNullOrEmpty(str)) return _items;
+            foreach (Item item in _items)
+            {
+                if (item.Description.ToLower().Contains(str.ToLower()))
+                {
+                    searchList.Add(item);
+                }
+            }
+            return searchList;
         }
 
         public void Delete(int number)
         {
-            throw new NotImplementedException();
+            _items.RemoveAt(number-1);
+            AssignID();
+            JsonFileService.SaveJsonItems(_items);
         }
 
         public void Update(int number, Item theItem)
         {
-            throw new NotImplementedException();
+            Item searchItem = Search(number);
+            searchItem = theItem;
+            JsonFileService.SaveJsonItems(_items);
         }
 
         public List<Item> GetAll()
         {
-            throw new NotImplementedException();
+            return _items;
         }
 
         public void AssignID()
         {
-            throw new NotImplementedException();
+            foreach (Item item in _items)
+            {
+                item.ID = _items.IndexOf(item) + 1;
+            }
         }
 
         public IEnumerable<Item> PriceFilter(int maxPrice, int minPrice)

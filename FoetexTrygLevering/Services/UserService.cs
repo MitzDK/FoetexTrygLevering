@@ -20,44 +20,91 @@ namespace FoetexTrygLevering.Services
             //Udkommenter og brug den ovenover, hvis du vil bruge Mock Data istedet
             //_items = JsonFileService.GetJsonItems().ToList();
         }
+
         public void Add(User newItem)
         {
-            throw new NotImplementedException();
+            _userList.Add(newItem);
         }
 
         public User Search(int number)
         {
-            throw new NotImplementedException();
+            foreach (User user in _userList)
+            {
+                if (number == user.UserID)
+                {
+                    return user;
+                }
+            }
+            return null;
         }
 
         public List<User> SearchByName(string str)
         {
-            throw new NotImplementedException();
+            List<User> searchList = new List<User>();
+            if (string.IsNullOrEmpty(str)) return _userList;
+            foreach (User user in _userList)
+            {
+                if (user.Name.ToLower().Contains(str.ToLower()))
+                {
+                    searchList.Add(user);
+                }
+            }
+            return searchList;
         }
 
-        public List<User> SearchByDescription(string str)
+        public List<User> SearchByPhone(string str)
         {
-            throw new NotImplementedException();
+            List<User> searchList = new List<User>();
+            if (string.IsNullOrEmpty(str)) return _userList;
+            foreach (User user in _userList)
+            {
+                if (user.Phone.ToLower().Contains(str.ToLower()))
+                {
+                    searchList.Add(user);
+                }
+            }
+            return searchList;
+        }
+
+        public List<User> SearchByEmail(string str)
+        {
+            List<User> searchList = new List<User>();
+            if (string.IsNullOrEmpty(str)) return _userList;
+            foreach (User user in _userList)
+            {
+                if (user.Email.ToLower().Contains(str.ToLower()))
+                {
+                    searchList.Add(user);
+                }
+            }
+            return searchList;
         }
 
         public void Delete(int number)
         {
-            throw new NotImplementedException();
+            _userList.RemoveAt(number - 1);
+            AssignID();
+            JsonFileService.SaveJsonUsers(_userList);
         }
 
         public void Update(int number, User theUser)
         {
-            throw new NotImplementedException();
+            User searchUser = Search(number);
+            searchUser = theUser;
+            JsonFileService.SaveJsonUsers(_userList);
         }
 
         public List<User> GetAll()
         {
-            throw new NotImplementedException();
+            return _userList;
         }
 
         public void AssignID()
         {
-            throw new NotImplementedException();
+            foreach (User user in _userList)
+            {
+                user.UserID = _userList.IndexOf(user) + 1;
+            }
         }
     }
 }

@@ -11,7 +11,8 @@ namespace FoetexTrygLevering.Services
         void Add(User newItem);
         User Search(int number);
         List<User> SearchByName(string str);
-        List<User> SearchByDescription(string str);
+        List<User> SearchByPhone(string str);
+        List<User> SearchByEmail(string str);
         void Delete(int number);
         void Update(int number, User theUser);
         List<User> GetAll();
