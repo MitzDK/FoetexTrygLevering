@@ -17,7 +17,7 @@ namespace FoetexTrygLevering.Models.Items
             
         }
 
-        public Item(string name, double price, int id, string description)
+        public Item(int id, string name, double price, string description)
         {
             Name = name;
             Price = price;

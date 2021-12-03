@@ -1,4 +1,96 @@
 ﻿@page
+@using FoetexTrygLevering.Models.Items
 @model FoetexTrygLevering.Pages.Items.GetAllItemsModel
 @{
 }
+<h1>All items</h1>
+
+<div class="row">
+    <div class="col-4"><h5>Search Name</h5></div>
+    <div class="col-4"><h5>Search by description</h5></div>
+    <div class="col-4"><h5>Filter Price</h5></div>
+    <div class="col-4"></div>
+</div>
+
+<div class="row">
+    <div class="col-4">
+        <form method="post" class="form-inline input-padding">
+            <input asp-for="SearchString" class="form-control mr-1 " placeholder="Enter search term" />
+            <input type="submit" asp-page-handler="NameSearch" value="Search" class="btn btn-primary" />
+        </form>
+    </div>
+    
+    <div class="col-5">
+        <form method="post" class="form-inline input-padding">
+            <input asp-for="SearchDescription" class="form-control mr-1" placeholder="Enter search term"/>
+            <input type="submit" asp-page-handler="DescriptionSearch" value="Search" class="btn btn-primary"/>
+        </form>
+    </div>
+
+    <div class="col-5">
+        <form method="post" class="form-inline input-padding">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Min</span>
+                </div>
+                <input asp-for="MinPrice" class="form-control mr-1" />
+
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Max</span>
+                </div>
+                <input asp-for="MaxPrice" class="form-control mr-1" />
+                <input type="submit" asp-page-handler="PriceFilter" value="Filter" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+    <div class="col-2"></div>
+</div>
+
+
+<table class="table table-bordered table-hover table-striped table-opacity" width="60%">
+    <col style="width: 5%">
+    <col style="width: 77%">
+    <col style="width: 9%">
+    <col style="width: 9%">
+    <thead>
+        <tr class="btn-secondary active">
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Description
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Items != null)
+        {
+            foreach (Item anItem in Model.Items)
+            {
+                <tr class="btn-secondary">
+                    <td>
+                        @anItem.ID
+                    </td>
+                    <td>
+                        @anItem.Name
+                    </td>
+                    <td>
+                        @anItem.Description
+                    </td>
+                    <td>
+                        @anItem.Price
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

@@ -17,12 +17,12 @@ namespace FoetexTrygLevering.Pages.Items
         [BindProperty] public int MinPrice { get; set; }
         [BindProperty] public int MaxPrice { get; set; }
         [BindProperty] public string SearchString { get; set; }
+        [BindProperty] public string SearchDescription { get; set; }
 
         public GetAllItemsModel(ItemService itemService)
         {
             _itemService = itemService;
         }
-
 
         public void OnGet()
         {
@@ -31,13 +31,19 @@ namespace FoetexTrygLevering.Pages.Items
 
         public IActionResult OnPostNameSearch()
         {
-            Items = _itemService.SearchByName(SearchString).ToList();
+            Items = _itemService.SearchByName(SearchString);
             return Page();
         }
 
-        public IActionResult OnPostDescription()
+        public IActionResult OnPostDescriptionSearch()
         {
-            Items = _itemService.SearchByName(SearchString).ToList();
+            Items = _itemService.SearchByDescription(SearchDescription);
+            return Page();
+        }
+
+        public IActionResult OnPostPriceFilter()
+        {
+            Items = _itemService.PriceFilter(MaxPrice, MinPrice).ToList();
             return Page();
         }
     }

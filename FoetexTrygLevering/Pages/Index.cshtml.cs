@@ -5,21 +5,58 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FoetexTrygLevering.Models.Users;
+using FoetexTrygLevering.Services;
 
 namespace FoetexTrygLevering.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        [BindProperty] public string UserName { get; set; }
+        [BindProperty] public string Password { get; set; }
+        private User currentUser;
+        private UserService _userService;
 
-        public IndexModel(ILogger<IndexModel> logger)
+        public IndexModel(UserService userService)
         {
-            _logger = logger;
+            _userService = userService;
         }
 
-        public void OnGet()
+        public IActionResult OnGet()
         {
+            return Page();
+        }
 
+        public IActionResult OnPost()
+        {
+            foreach (User user in _userService.GetAll())
+            {
+                if (user is Models.Users.Admin)
+                {
+                    if (UserName == user.Name)
+                    {
+                        currentUser = user;
+                        return RedirectToPage("Items/GetAllItems");
+                    }
+                }
+                if (user is Models.Users.DeliveryDriver)
+                {
+                    if (UserName == user.Name)
+                    {
+                        currentUser = user;
+                        return RedirectToPage("Items/GetAllItems");
+                    }
+                }
+                if (user is Models.Users.Customer)
+                {
+                    if (UserName == user.Name)
+                    {
+                        currentUser = user;
+                        return RedirectToPage("Items/GetAllItems");
+                    }
+                }
+            }
+            return Page();
         }
     }
 }

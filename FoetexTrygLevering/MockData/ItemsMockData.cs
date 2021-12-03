@@ -11,16 +11,17 @@ namespace FoetexTrygLevering.MockData
         private static List<Item> _items = new List<Item>()
         {
             //ID, Navn, Pris, Description
-            new Food(1, "Hakket Oksekød 450g", 42, ""),
-            new Food(2, "", 34, ""),
-            new Food(3, "Hakket oksekød 4-7% fedt9", 34,"Hakket oksekød 4-7% fedt 400 g"),
-            new Food(4, "Hakket oksekød 14-18% fedt", 30,"Hakket oksekød 14-18% fedt 500 g"),
-            new Food(5, "Hakket oksekød 4-7% fedt øko", 50,"Økologisk hakket oksekød 4-7% fedt 400 g"),
-            new Food(6, "Hakket oksekød 14-18% fedt", 42,""),
-            new Food(7, "Banan", 42,""),
-            new Food(8, "Banan", 42,""),
-            new Food(9, "Banan",  42,""),
-            new Food(10, "Banan", 999, "")
+            new Food(1, "Hakket oksekød 8-12% fedt øko", 42, "Økologisk hakket oksekød 8-12% fedt 450 g"),
+            new Food(2, "Hakket oksekød 4-7% fedt", 34,"Hakket oksekød 4-7% fedt 400 g"),
+            new Food(3, "Hakket oksekød 14-18% fedt", 30,"Hakket oksekød 14-18% fedt 500 g"),
+            new Food(4, "Hakket oksekød 4-7% fedt øko", 50,"Økologisk hakket oksekød 4-7% fedt 400 g"),
+            new Food(5, "Hakket oksekød 14-18% fedt", 65,"Hakket oksekød 14-18% fedt 1000 g"),
+            new Food(6, "Hakket oksekød 4-7% fedt", 78,"Hakket oksekød 4-7% fedt 1000 g"),
+            new Food(7, "Hakket oksekød 8-12% fedt",  150,"Hakket oksekød 8-12% fedt 2100 g"),
+            new Food(8, "Hakkebøffer", 65,"Hakkebøffer af oksekød 500 g"),
+            new Food(9, "Hakket oksekød 8-12% fedt", 49,"Slagtermesteren 1000 g"),
+            new Food(10, "Entrecotes", 65,"Entrecotebøffer 360 g"),
+            new Food(11, "Flanksteak", 65, "Okseflanksteak 500 g")
         };
 
         public static List<Item> GetItems()
