@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FoetexTrygLevering.Models.Users;
 using FoetexTrygLevering.Services;
 
 namespace FoetexTrygLevering
@@ -26,6 +27,7 @@ namespace FoetexTrygLevering
         {
             services.AddRazorPages();
             services.AddSingleton<ItemService, ItemService>();
+            services.AddSingleton<UserService, UserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
