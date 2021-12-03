@@ -5,7 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Data\" />
+    <Folder Include="Data\Items\" />
+    <Folder Include="Data\Users\" />
+    <Folder Include="Pages\Admin\" />
   </ItemGroup>
 
 </Project>

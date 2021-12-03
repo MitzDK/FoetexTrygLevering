@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Threading.Tasks;
+using FoetexTrygLevering.MockData;
 using FoetexTrygLevering.Models.Items;
 
 namespace FoetexTrygLevering.Services
@@ -14,21 +16,42 @@ namespace FoetexTrygLevering.Services
         public ItemService(JsonFileService jsonFileService)
         {
             JsonFileService = jsonFileService;
-            _items = 
+            //Udkommenter og brug den nedenunder, hvis du vil bruge Json data istedet for Mock Data
+            _items = ItemsMockData.GetItems();
+            //Udkommenter og brug den ovenover, hvis du vil bruge Mock Data istedet
+            //_items = JsonFileService.GetJsonItems().ToList();
         }
         public void Add(Item newItem)
         {
-            throw new NotImplementedException();
+            _items.Add(newItem);
         }
 
         public Item Search(int number)
         {
-            throw new NotImplementedException();
+            foreach (Item item in _items)
+            {
+                if (number == item.ID)
+                {
+                    return item;
+                }
+            }
+
+            return null;
         }
 
         public List<Item> SearchByName(string str)
         {
-            throw new NotImplementedException();
+            List<Item> searchList = new List<Item>();
+            if (string.IsNullOrEmpty(str)) return _items;
+            foreach (Item item in _items)
+            {
+                if (item.Description.ToLower().Contains(str.ToLower()))
+                {
+                    searchList.Add(item);
+                }
+            }
+
+            return searchList;
         }
 
         public List<Item> SearchByDescription(string str)
@@ -54,6 +77,20 @@ namespace FoetexTrygLevering.Services
         public void AssignID()
         {
             throw new NotImplementedException();
+        }
+
+        public IEnumerable<Item> PriceFilter(int maxPrice, int minPrice)
+        {
+            List<Item> filterList = new List<Item>();
+            foreach (Item item in _items)
+            {
+                if ((minPrice == 0 && item.Price <= maxPrice) || (maxPrice == 0 && item.Price >= minPrice) || (item.Price >= minPrice && item.Price <= maxPrice))
+                {
+                    filterList.Add(item);
+                }
+            }
+
+            return filterList;
         }
     }
 }

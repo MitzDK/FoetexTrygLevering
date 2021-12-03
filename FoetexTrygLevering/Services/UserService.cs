@@ -2,12 +2,24 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FoetexTrygLevering.MockData;
 using FoetexTrygLevering.Models.Users;
 
 namespace FoetexTrygLevering.Services
 {
     public class UserService : IUserService
     {
+        private List<User> _userList;
+        private JsonFileService JsonFileService { get; set; }
+
+        public UserService(JsonFileService jsonFileService)
+        {
+            JsonFileService = jsonFileService;
+            //Udkommenter og brug den nedenunder, hvis du vil bruge Json data istedet for Mock Data
+            _userList = UserMockData.GetItems();
+            //Udkommenter og brug den ovenover, hvis du vil bruge Mock Data istedet
+            //_items = JsonFileService.GetJsonItems().ToList();
+        }
         public void Add(User newItem)
         {
             throw new NotImplementedException();

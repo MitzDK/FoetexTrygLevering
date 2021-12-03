@@ -7,5 +7,9 @@ namespace FoetexTrygLevering.Models.Users
 {
     public class Admin : User
     {
+        public Admin()
+        {
+            
+        }
     }
 }

@@ -28,6 +28,7 @@ namespace FoetexTrygLevering
             services.AddRazorPages();
             services.AddSingleton<ItemService, ItemService>();
             services.AddSingleton<UserService, UserService>();
+            services.AddTransient<JsonFileService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -16,6 +16,6 @@ namespace FoetexTrygLevering.Services
         void Update(int number, Item theItem);
         List<Item> GetAll();
         void AssignID();
-
+        public IEnumerable<Item> PriceFilter(int maxPrice, int minPrice);
     }
 }

@@ -7,13 +7,13 @@ namespace FoetexTrygLevering.Models.Users
 {
     public class DeliveryDriver : User
     {
-        public string Address { get; set; }
-        public string Age { get; set; }
+        public int AccNumber { get; set; }
+        public int PostalCode { get; set; }
 
-        public DeliveryDriver(string address, string age)
+        public DeliveryDriver(int accNumber, int postalCode)
         {
-            Address = address;
-            Age = age;
+            AccNumber = accNumber;
+            postalCode = PostalCode;
         }
     }
 }
