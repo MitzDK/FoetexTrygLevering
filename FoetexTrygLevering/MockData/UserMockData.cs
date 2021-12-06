@@ -33,7 +33,8 @@ namespace FoetexTrygLevering.MockData
             new DeliveryDriver(12,"Mike F. Hansen","22743868","MikeFHansen@armyspy.com","5678453212",7870),
             new DeliveryDriver(13,"Julius C. Bak","25725490","JuliusCBak@teleworm.us","1245795632",1606),
             new DeliveryDriver(14,"Mathias S. Kristoffersen","20763813","MathiasSKristoffersen@teleworm.us","3257485698",1728),
-            new DeliveryDriver(15,"Kasper T. Bach","21563739","KasperTBach@dayrep.com","7465231545",5000)
+            new DeliveryDriver(15,"Kasper T. Bach","21563739","KasperTBach@dayrep.com","7465231545",5000),
+            new DeliveryDriver(16,"TestDriver", "00000000", "Test@test.com", "0000000000", 0000)
         };
 
         public static List<User> GetItems()

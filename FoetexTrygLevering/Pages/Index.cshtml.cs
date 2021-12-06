@@ -36,7 +36,7 @@ namespace FoetexTrygLevering.Pages
                     if (UserName == user.Name)
                     {
                         currentUser = user;
-                        return RedirectToPage("Items/GetAllItems");
+                        return RedirectToPage("Users/Admin/Homepage");
                     }
                 }
                 if (user is Models.Users.DeliveryDriver)
@@ -44,7 +44,7 @@ namespace FoetexTrygLevering.Pages
                     if (UserName == user.Name)
                     {
                         currentUser = user;
-                        return RedirectToPage("Items/GetAllItems");
+                        return RedirectToPage("Users/DeliveryDriver/Homepage");
                     }
                 }
                 if (user is Models.Users.Customer)
@@ -52,7 +52,7 @@ namespace FoetexTrygLevering.Pages
                     if (UserName == user.Name)
                     {
                         currentUser = user;
-                        return RedirectToPage("Items/GetAllItems");
+                        return RedirectToPage("Users/Customer/Homepage");
                     }
                 }
             }
