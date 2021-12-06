@@ -14,7 +14,7 @@ namespace FoetexTrygLevering.MockData
              //Admin
             //int userId, string name, string phone, string email
             new Admin(2,"Victor Jejlskov","81611117", "Vict1452@edu.zealand.dk"),
-            new Admin(3,"Andreas BroBerg","51951164", "andr52j4@edu.zealand.dk"),
+            new Admin(3,"Andreas Broberg","51951164", "andr52j4@edu.zealand.dk"),
             new Admin(4,"Frederik Bressendorff", "20987041", "fred03q7@edu.zealand.dk"),
             new Admin(5, "Martin Lylloff","50523160","mart0c95@edu.zealand.dk"),
             new Admin(6,"Zacharias Hirsborg","29847447","zach0118@edu.zealand.dk"),

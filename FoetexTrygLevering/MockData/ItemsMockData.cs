@@ -21,7 +21,12 @@ namespace FoetexTrygLevering.MockData
             new Food(8, "Hakkebøffer", 65,"Hakkebøffer af oksekød 500 g"),
             new Food(9, "Hakket oksekød 8-12% fedt", 49,"Slagtermesteren 1000 g"),
             new Food(10, "Entrecotes", 65,"Entrecotebøffer 360 g"),
-            new Food(11, "Flanksteak", 65, "Okseflanksteak 500 g")
+            new Food(11, "Flanksteak", 65, "Okseflanksteak 500 g"),
+
+            new Beverage(12,"Drikkeyoghurt m. jordbær",14,"Drikkeyoghurt m. jordbær", false),
+            new Beverage(12,"Drikkeyoghurt m. blåbær",14,"Syrnet skummetmælk med blåbær 0,5% fedt 500 ml", false),
+            new Beverage(12,"Drikkeyoghurt m. blåbær",14,"Syrnet skummetmælk med blåbær 0,5% fedt 500 ml", false)
+
         };
 
         public static List<Item> GetItems()
