@@ -1,0 +1,31 @@
+@page
+@using FoetexTrygLevering.Models.Users
+@model FoetexTrygLevering.Pages.Users.DeliveryDriver.CreateDeliveryDriverModel
+@{
+}
+<form method="post">
+    <div class="form-group">
+        <label asp-for="DeliveryDriver.Name"></label>
+        <input asp-for="DeliveryDriver.Name"></>
+    </div>
+    <div class="form-group">
+        <label asp-for="DeliveryDriver.Email"></label>
+        <input asp-for="DeliveryDriver.Email"></>
+    </div>
+    <div class="form-group">
+        <label asp-for="DeliveryDriver.Phone"></label>
+        <input asp-for="DeliveryDriver.Phone"></>
+    </div>
+    <div class="form-group">
+        <label asp-for="DeliveryDriver.AccNumber"></label>
+        <input asp-for="DeliveryDriver.AccNumber"></>
+    </div>
+    <div class="form-group">
+        <label asp-for="DeliveryDriver.PostalCode"></label>
+        <input asp-for="DeliveryDriver.PostalCode"></>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>
