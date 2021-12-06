@@ -7,9 +7,6 @@
   <ItemGroup>
     <Folder Include="Data\Items\" />
     <Folder Include="Data\Users\" />
-    <Folder Include="Pages\Users\Admin\" />
-    <Folder Include="Pages\Users\Customer\" />
-    <Folder Include="Pages\Users\DeliveryDriver\" />
   </ItemGroup>
 
 </Project>
