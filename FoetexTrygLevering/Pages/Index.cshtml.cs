@@ -4,9 +4,11 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using FoetexTrygLevering.Models.Users;
 using FoetexTrygLevering.Services;
+using Microsoft.AspNetCore.Authentication;
 
 namespace FoetexTrygLevering.Pages
 {
@@ -27,15 +29,22 @@ namespace FoetexTrygLevering.Pages
             return Page();
         }
 
-        public IActionResult OnPost()
+        public async Task<IActionResult> OnPostAsync()
         {
+            if (!ModelState.IsValid) return Page();
             foreach (User user in _userService.GetAll())
             {
                 if (user is Models.Users.Admin)
                 {
                     if (UserName == user.Name)
                     {
-                        currentUser = user;
+                        var claims = new List<Claim>
+                        {
+                            new Claim(ClaimTypes.Name, user.Name)
+                        };
+                        var identity = new ClaimsIdentity(claims, "MyCookieAuth");
+                        ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);
+                        await HttpContext.SignInAsync("MyCookieAuth", claimsPrincipal);
                         return RedirectToPage("Users/Admin/Homepage");
                     }
                 }
@@ -43,7 +52,13 @@ namespace FoetexTrygLevering.Pages
                 {
                     if (UserName == user.Name)
                     {
-                        currentUser = user;
+                        var claims = new List<Claim>
+                        {
+                            new Claim(ClaimTypes.Name, user.Name)
+                        };
+                        var identity = new ClaimsIdentity(claims, "MyCookieAuth");
+                        ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);
+                        await HttpContext.SignInAsync("MyCookieAuth", claimsPrincipal);
                         return RedirectToPage("Users/DeliveryDriver/Homepage");
                     }
                 }
@@ -51,7 +66,14 @@ namespace FoetexTrygLevering.Pages
                 {
                     if (UserName == user.Name)
                     {
-                        currentUser = user;
+                        var claims = new List<Claim>
+                        {
+                            new Claim(ClaimTypes.Name, user.Name)
+                        };
+                        var identity = new ClaimsIdentity(claims, "MyCookieAuth");
+                        ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);
+                        await HttpContext.SignInAsync("MyCookieAuth", claimsPrincipal);
+
                         return RedirectToPage("Users/Customer/Homepage");
                     }
                 }

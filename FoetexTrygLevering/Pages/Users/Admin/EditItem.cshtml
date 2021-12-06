@@ -1,0 +1,33 @@
+﻿@page "{id:int}"
+@model FoetexTrygLevering.Pages.Users.Admin.EditItemModel
+@{
+}
+<h1>Edit item</h1>
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Id" class="control-lable"></label>
+        <input asp-for="Id" class="form-control" readonly="@(true)" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Name" class="control-lable"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Description" class="control-lable"></label>
+        <input asp-for="Description" class="form-control" />
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Price" class="control-lable"></label>
+        <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Update" class="btn btn-primary" />
+    </div>
+</form>
+<div>
+    <a asp-page="Homepage">Back to admin frontpage</a>
+</div>

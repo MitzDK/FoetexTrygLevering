@@ -85,6 +85,46 @@ namespace FoetexTrygLevering.Services
         {
             return _items;
         }
+        
+        public List<Item> GetAllFood()
+        {
+            List<Item> foodList = new List<Item>();
+            foreach (Item item in GetAll())
+            {
+                if (item is Food)
+                {
+                    foodList.Add(item);
+                }
+            }
+            return foodList;
+        }
+
+        public List<Item> GetAllBeverages()
+        {
+            List<Item> beverageList = new List<Item>();
+            foreach (Item item in GetAll())
+            {
+                if (item is Beverage)
+                {
+                    beverageList.Add(item);
+                }
+            }
+            return beverageList;
+        }
+
+        public List<Item> GetAllNonFoods()
+        {
+            List<Item> nonFoodList = new List<Item>();
+            foreach (Item item in GetAll())
+            {
+                if (item is NonFood)
+                {
+                    nonFoodList.Add(item);
+                }
+            }
+
+            return nonFoodList;
+        }
 
         public void AssignID()
         {

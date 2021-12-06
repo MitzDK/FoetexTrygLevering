@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/w3.css" />
     <link rel="stylesheet" href="~/css/FoetexCustomStyles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
@@ -22,12 +23,35 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Kategorier</a>
+                            <form method="post" asp-page="HomepageModel">
+                                @*<a class="nav-link text-dark" asp-area="" asp-page="/Index">Kategorier</a>*@
+                                <select id="MenuChoice" name="MenuChoice">
+                                    <option value="1">Alle varer</option>
+                                    <option value="2">Mad</option>
+                                    <option value="3">Drikke</option>
+                                    <option value="4">Andet</option>
+                                </select>
+                                <br/>
+                                <input type="submit" value="Vis varer"/>
+                            </form>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">@Model.Customer.Name</a>
+                        <li class="nav-item nav-link text-dark text-center">
+                            @if (User.Identity.Name == "Guest")
+                            {
+                                <div>Velkommen Gæst</div>
+                            }
+                            else
+                            {
+                                <div class="text-center">
+                                    Velkommen tilbage: <br/><b>@User.Identity.Name</b>
+                                </div>
+                            }
+
                         </li>
                     </ul>
+                </div>
+                <div class="mr-2">
+                    <partial name="_LoginStatusPartial"/>
                 </div>
             </div>
         </nav>

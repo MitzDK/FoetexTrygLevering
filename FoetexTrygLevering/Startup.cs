@@ -25,6 +25,11 @@ namespace FoetexTrygLevering
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthentication("MyCookieAuth").AddCookie("MyCookieAuth", options =>
+            {
+                options.Cookie.Name = "MyCookieAuth";
+                options.LoginPath = "/Index";
+            });
             services.AddRazorPages();
             services.AddSingleton<ItemService, ItemService>();
             services.AddSingleton<UserService, UserService>();
@@ -49,7 +54,7 @@ namespace FoetexTrygLevering
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

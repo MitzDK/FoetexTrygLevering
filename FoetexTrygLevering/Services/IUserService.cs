@@ -10,6 +10,7 @@ namespace FoetexTrygLevering.Services
     {
         void Add(User newItem);
         User Search(int number);
+        Customer SpecificCustomer(string name);
         List<User> SearchByName(string str);
         List<User> SearchByPhone(string str);
         List<User> SearchByEmail(string str);

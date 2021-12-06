@@ -38,6 +38,21 @@ namespace FoetexTrygLevering.Services
             return null;
         }
 
+        public Customer SpecificCustomer(string name)
+        {
+            foreach (User user in _userList)
+            {
+                if (user is Customer)
+                {
+                    if (name == user.Name)
+                    {
+                        return (Customer)user;
+                    }
+                }
+            }
+            return null;
+        }
+
         public List<User> SearchByName(string str)
         {
             List<User> searchList = new List<User>();
