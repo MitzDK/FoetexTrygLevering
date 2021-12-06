@@ -8,23 +8,23 @@
 <form method="post">
     <div class="form-group">
         <label asp-for="Customer.Name"></label>
-        <input asp-for="Customer.Name"></>
+        <input asp-for="Customer.Name" class="form-control" name="Navn"></>
     </div>
     <div class="form-group">
         <label asp-for="Customer.Email"></label>
-        <input asp-for="Customer.Email"></>
+        <input id="Email"type="email" asp-for="Customer.Email" class="form-control" name="Email"></>
     </div>
     <div class="form-group">
         <label asp-for="Customer.Phone"></label>
-        <input asp-for="Customer.Phone"></>
+        <input asp-for="Customer.Phone" class="form-control" name="Phone"></>
     </div>
     <div class="form-group">
         <label asp-for="Customer.Age"></label>
-        <input asp-for="Customer.Age"></>
+        <input asp-for="Customer.Age" class="form-control" name="Age"></>
     </div>
     <div class="form-group">
         <label asp-for="Customer.Address"></label>
-        <input asp-for="Customer.Address"></>
+        <input asp-for="Customer.Address" class="form-control" name="Address"></>
     </div>
     
     <div class="form-group">

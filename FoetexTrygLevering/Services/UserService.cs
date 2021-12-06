@@ -94,6 +94,46 @@ namespace FoetexTrygLevering.Services
             JsonFileService.SaveJsonUsers(_userList);
         }
 
+        public List<Admin> GetAllAdmins()
+        {
+            List<Admin> adminList = new List<Admin>();
+            foreach (User user in GetAll())
+            {
+                if (user is Admin)
+                {
+                    adminList.Add((Admin)user);
+                }
+            }
+            return adminList;
+        }
+
+        public List<Customer> GetAllCustomers()
+        {
+            List<Customer> customerList = new List<Customer>();
+            foreach (User user in GetAll())
+            {
+                if (user is Customer)
+                {
+                    customerList.Add((Customer)user);
+                }
+            }
+            return customerList;
+        } 
+
+        public List<DeliveryDriver> GetAllDrivers()
+        {
+            List<DeliveryDriver> deliveryList = new List<DeliveryDriver>();
+            foreach (User user in GetAll())
+            {
+                if (user is DeliveryDriver)
+                {
+                    deliveryList.Add((DeliveryDriver)user);
+                }
+            }
+
+            return deliveryList;
+        }
+
         public List<User> GetAll()
         {
             return _userList;

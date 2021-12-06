@@ -12,7 +12,7 @@ namespace FoetexTrygLevering.Pages.Users.Customer
     public class HomepageModel : PageModel
     {
         public Models.Users.Customer Customer { get; set; }
-        public List<User> Users { get; set; }
+        public List<Models.Users.Customer> Customers { get; set; }
         private UserService _userService;
 
         public HomepageModel(UserService userService)
@@ -21,8 +21,8 @@ namespace FoetexTrygLevering.Pages.Users.Customer
         }
         public IActionResult OnGet()
         {
-
-            //foreach(User user in )
+            Customers = _userService.GetAllCustomers();
+            Customer = Customers[0];
             return Page();
         }
     }

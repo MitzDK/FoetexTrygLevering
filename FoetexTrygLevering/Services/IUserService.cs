@@ -15,6 +15,9 @@ namespace FoetexTrygLevering.Services
         List<User> SearchByEmail(string str);
         void Delete(int number);
         void Update(int number, User theUser);
+        List<Admin> GetAllAdmins();
+        List<Customer> GetAllCustomers();
+        List<DeliveryDriver> GetAllDrivers();
         List<User> GetAll();
         void AssignID();
     }
