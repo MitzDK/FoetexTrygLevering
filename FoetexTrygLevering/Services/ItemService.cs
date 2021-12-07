@@ -71,14 +71,14 @@ namespace FoetexTrygLevering.Services
         {
             _items.RemoveAt(number-1);
             AssignID();
-            JsonFileService.SaveJsonItems(_items);
+            //JsonFileService.SaveJsonItems(_items);
         }
 
         public void Update(int number, Item theItem)
         {
             Item searchItem = Search(number);
             searchItem = theItem;
-            JsonFileService.SaveJsonItems(_items);
+            //JsonFileService.SaveJsonItems(_items);
         }
 
         public List<Item> GetAll()

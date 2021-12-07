@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using FoetexTrygLevering.Models.Items;
 
 namespace FoetexTrygLevering.Models.Users
 {
@@ -10,6 +12,7 @@ namespace FoetexTrygLevering.Models.Users
         public string Address { get; set; }
         public int Age { get; set; }
 
+        public List<Item> ShoppingCart { get; set; }
         public Customer()
         {
             
