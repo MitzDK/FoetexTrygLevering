@@ -18,7 +18,7 @@ namespace FoetexTrygLevering.Services
             //Udkommenter og brug den nedenunder, hvis du vil bruge Json data istedet for Mock Data
             _userList = UserMockData.GetItems();
             //Udkommenter og brug den ovenover, hvis du vil bruge Mock Data istedet
-            //_items = JsonFileService.GetJsonItems().ToList();
+            //_userList = JsonFileService.GetJsonUsers();
         }
 
         public void Add(User newItem)

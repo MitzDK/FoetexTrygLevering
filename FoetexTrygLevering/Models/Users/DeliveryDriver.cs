@@ -8,8 +8,13 @@ namespace FoetexTrygLevering.Models.Users
 {
     public class DeliveryDriver : User
     {
+        [Required]
         public string AccNumber { get; set; }
-        [Required, MinLength(4), MaxLength(4)]
+
+
+        [Display(Name = "Post nummer:")]
+        [Required(ErrorMessage = "Der skal angives et postnummer.")]
+        [Range(1000, 9999)]
         public int PostalCode { get; set; }
 
         public DeliveryDriver(string name, string phone, string email, string accNumber, int postalCode) : base(name, phone, email)

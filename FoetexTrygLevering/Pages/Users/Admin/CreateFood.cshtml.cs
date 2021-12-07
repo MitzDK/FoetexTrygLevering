@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace FoetexTrygLevering.Pages.Users.Admin
 {
-    public class CreateItemModel : PageModel
+    public class CreateFoodModel : PageModel
     {
         public void OnGet()
         {

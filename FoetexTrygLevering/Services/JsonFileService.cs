@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
 using FoetexTrygLevering.Models.Items;
+using FoetexTrygLevering.Models.Order;
 using FoetexTrygLevering.Models.Users;
 using Microsoft.AspNetCore.Hosting;
 
@@ -19,6 +20,8 @@ namespace FoetexTrygLevering.Services
         private List<Admin> _admins = new List<Admin>();
         private List<Customer> _customers = new List<Customer>();
         private List<DeliveryDriver> _deliveryDrivers = new List<DeliveryDriver>();
+
+        private List<Order> _orders = new List<Order>();
 
         public List<User> CombineUsers(List<Admin> admins, List<Customer> customers, List<DeliveryDriver> deliveryDrivers)
         {
@@ -124,7 +127,23 @@ namespace FoetexTrygLevering.Services
         {
             get { return Path.Combine(WebHostEnvironment.WebRootPath, "Data", "Users", "UserDeliveryDrivers.json"); }
         }
+        private string JsonFileOrderName
+        {
+            get { return Path.Combine(WebHostEnvironment.WebRootPath, "Data", "Order", "Orders.json"); }
+        }
 
+        public void SaveOrders(List<Order> orders)
+        {
+            using (FileStream jsonFileWriter = File.Create(JsonFileOrderName))
+            {
+                Utf8JsonWriter jsonWriter = new Utf8JsonWriter(jsonFileWriter, new JsonWriterOptions()
+                {
+                    SkipValidation = false,
+                    Indented = true
+                });
+                JsonSerializer.Serialize<Order[]>(jsonWriter, _orders.ToArray());
+            }
+        }
         public void SaveItemBeverages(List<Beverage> beverageItems)
         {
             using (FileStream jsonFileWriter = File.Create(JsonFileItemBeverageName))
@@ -219,6 +238,18 @@ namespace FoetexTrygLevering.Services
             _deliveryDrivers.Clear();
         }
 
+        public void SaveJsonOrders()
+        {
+            SaveOrders(_orders);
+        }
+
+        public IEnumerable<Order> GetOrders()
+        {
+            using (StreamReader jsonFileReader = File.OpenText(JsonFileOrderName))
+            {
+                return JsonSerializer.Deserialize<Order[]>(jsonFileReader.ReadToEnd());
+            }
+        }
         public IEnumerable<Beverage> GetBeverageItems()
         {
             using (StreamReader jsonFileReader = File.OpenText(JsonFileItemBeverageName))
@@ -263,6 +294,10 @@ namespace FoetexTrygLevering.Services
             }
         }
 
+        public List<Order> GetJsonOrders()
+        {
+            return GetOrders().ToList();
+        }
         public List<Item> GetJsonItems()
         {
             return CombineItems(GetBeverageItems().ToList(), GetFoodItems().ToList(), GetNonFoodItems().ToList());

@@ -22,7 +22,6 @@ public class EditItemModel : PageModel
         [BindProperty] public bool SpecialCondition{ get; set; }
 
         [Display(Name = "Item ID")]
-        [Required(ErrorMessage = "Der skal tastet et nummer")]
         [BindProperty] 
         public int Id { get; set; }
 

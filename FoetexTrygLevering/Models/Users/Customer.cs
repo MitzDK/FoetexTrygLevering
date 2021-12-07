@@ -13,6 +13,7 @@ namespace FoetexTrygLevering.Models.Users
         public int Age { get; set; }
 
         public List<Item> ShoppingCart { get; set; }
+        
         public Customer()
         {
             
