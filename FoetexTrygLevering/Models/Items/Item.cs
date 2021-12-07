@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Threading.Tasks;
 
 namespace FoetexTrygLevering.Models.Items
 {
-    public abstract class Item
+    public class Item
     {
         [Display(Name = "Item name")]
         [Required(ErrorMessage = "A name is required"), MaxLength(100)]
@@ -23,6 +24,7 @@ namespace FoetexTrygLevering.Models.Items
         [Display(Name = "Item description")]
         [Required(ErrorMessage = "A description is required"), MaxLength(10000000)]
         public string Description { get; set; }
+        
 
         public Item()
         {

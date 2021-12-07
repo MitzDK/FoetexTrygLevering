@@ -23,7 +23,7 @@ namespace FoetexTrygLevering.Pages.Users.Customer
 
         public IActionResult OnGet(int id)
         {
-            //Customer = _userService.GetUser(); //GetUser ikke implementeret
+            Customer = _userService.GetCustomer(id);
             if (Customer == null) return RedirectToPage("../../Error");
 
             return Page();
@@ -34,8 +34,8 @@ namespace FoetexTrygLevering.Pages.Users.Customer
             if (!ModelState.IsValid)
             {
                 return Page();
-            }
-           // _userService.UpdateCustomer(Customer); UpdateCustomer ikke implementeret
+            } 
+            _userService.UpdateCustomer(Customer); 
 
             return RedirectToPage("Homepage");
 

@@ -19,9 +19,7 @@
             <th>Quantity <input type="submit" value="Update" /></th>
             <th>Sub Total</th>
         </tr>
-        @if (Model.ShoppingCart != null)
-        {
-            @foreach (var item in Model.ShoppingCart)
+        @foreach (var item in Model.ShoppingCart)
             {
                 <tr align="center">
                     <td align="center">
@@ -41,10 +39,16 @@
                 <td colspan="6" align="right">Total</td>
                 <td align="center">$@Model.TotalPrice</td>
             </tr>
-        }
-
+            }
     </table>
 </form>
 <a asp-page="Homepage">Continue Shopping</a>
+    
 
+@if (Model.ShoppingCart == null)
+{
+    <p>
+        Den er null kaptajn klo ;) =)
+    </p>
+}
 </body>

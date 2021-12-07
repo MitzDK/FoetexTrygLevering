@@ -161,5 +161,35 @@ namespace FoetexTrygLevering.Services
                 user.UserID = _userList.IndexOf(user) + 1;
             }
         }
+        public void UpdateCustomer(Customer customer)
+        {
+            if (customer != null)
+            {
+                foreach (Customer c in _userList)
+                {
+                    if (c.UserID==customer.UserID)
+                    {
+                        c.Name = customer.Name;
+                        c.Email = customer.Email;
+                        c.Age = customer.Age;
+                        c.Address = customer.Address;
+                        c.PostalCode = customer.PostalCode;
+                    }
+                }
+            }
+        }
+
+        public Customer GetCustomer(int id)
+        {
+            foreach (Customer c in _userList)
+            {
+                if (c.UserID==id)
+                {
+                    return c;
+                }
+            }
+
+            return null;
+        }
     }
 }
