@@ -16,16 +16,16 @@ namespace FoetexTrygLevering.MockData
             new Admin(2,"Victor Jejlskov","81611117", "Vict1452@edu.zealand.dk"),
             new Admin(3,"Andreas Broberg","51951164", "andr52j4@edu.zealand.dk"),
             new Admin(4,"Frederik Bressendorff", "20987041", "fred03q7@edu.zealand.dk"),
-            new Admin(5, "Martin Lylloff","50523160","mart0c95@edu.zealand.dk"),
+            new Admin(5,"Martin Lylloff","50523160","mart0c95@edu.zealand.dk"),
             new Admin(6,"Zacharias Hirsborg","29847447","zach0118@edu.zealand.dk"),
             
             //Customer
             //int userId, string name, string phone, string email, string address, int age
-            new Customer(1, "Guest", "00000000", "123@email.com", "EksempelVej 123", 18),
-            new Customer(7, "Kent Jørgen", "23568790", "KentJørgen", "kastanejeVej 12", 65),
-            new Customer(8, "Birgitte Thomsen", "12436986", "BThomsen@email.com", "æselVej 432", 45),
-            new Customer(9, "Lars Karlsen", "43512389", "LArskoarlsen@email.com", "fyrrelunden 1", 32),
-            new Customer(10, "Sebastian Jensen", "23567512", "Sebastian@email.com", "birkelunden 234", 25),
+            new Customer(1, "Guest", "00000000", "123@email.com", "Haarby, Algade 91", 5683, 18),
+            new Customer(7, "Kent Jørgen", "23568790", "KentJørgen", "København K, Frørupvej 83", 1146, 65),
+            new Customer(8, "Birgitte Thomsen", "12436986", "BThomsen@email.com", "København K, Slipager 9", 1434, 45),
+            new Customer(9, "Lars Karlsen", "43512389", "LArskoarlsen@email.com", "Skodsborg, Hans Schacksvej 8", 2942, 32),
+            new Customer(10, "Sebastian Jensen", "23567512", "Sebastian@email.com", "Terndrup, Hovbanken 8",9575, 25),
 
             //Delivery Driver
             //int userID, string name, string phone, string email, int accNumber, int postalCode

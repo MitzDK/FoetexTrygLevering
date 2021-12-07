@@ -238,9 +238,9 @@ namespace FoetexTrygLevering.Services
             _deliveryDrivers.Clear();
         }
 
-        public void SaveJsonOrders()
+        public void SaveJsonOrders(List<Order> orderList)
         {
-            SaveOrders(_orders);
+            SaveOrders(orderList);
         }
 
         public IEnumerable<Order> GetOrders()

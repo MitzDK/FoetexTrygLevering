@@ -10,7 +10,6 @@ namespace FoetexTrygLevering.Services
     {
         void Add(Item newItem);
         Item Search(int number);
-
         List<Item> SearchByName(string str);
         List<Item> SearchByDescription(string str);
         void Delete(int number);

@@ -13,7 +13,9 @@ namespace FoetexTrygLevering.Models.Users
 
         public string Name {get; set;}
         [Display(Name ="Telefon:" )]
-        [Required(ErrorMessage = "Der skal indtastes et telefonnummer."), MinLength(8), MaxLength(8)]
+        [Required(ErrorMessage = "Der skal indtastes et telefonnummer.")]
+        [RegularExpression(@"([0-9]+)", ErrorMessage = "Må kun indeholde tal:"), MinLength(8), MaxLength(8)]
+
         public string Phone {get; set;}
         [Display(Name = "E-mail:")]
         [Required(ErrorMessage = "Der skal indtastes en E-mail adresse.")]

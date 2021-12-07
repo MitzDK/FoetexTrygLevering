@@ -9,6 +9,7 @@ namespace FoetexTrygLevering.Models.Users
     public class DeliveryDriver : User
     {
         [Required]
+        [RegularExpression(@"([0-9]+)", ErrorMessage = "Må kun indeholde tal:"), MinLength(16), MaxLength(16)]
         public string AccNumber { get; set; }
 
 

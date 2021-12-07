@@ -8,14 +8,14 @@ namespace FoetexTrygLevering.Services
 {
     interface IOrderService
     {
-        public void CreateOrder();
-        public Order UpdateOrder();
-        public void DeleteOrder();
+        public void CreateOrder(Order ord);
+        public void UpdateOrder(int number, Order ord);
+        public void DeleteOrder(int number);
         public List<Order> FilterOrderByCustomer(string cusName);
-        public List<Order> FilterOrderByPrice(int inputPrice);
+        public IEnumerable<Order> PriceFilter(int maxPrice, int minPrice);
         public List<Order> FilterOrderByPostalCode(int inputPostalCode);
-
+        public void AssignID();
         public Order Search(int id);
-
+        public List<Order> GetAll();
     }
 }

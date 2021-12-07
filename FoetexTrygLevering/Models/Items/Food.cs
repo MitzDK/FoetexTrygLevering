@@ -16,5 +16,9 @@ namespace FoetexTrygLevering.Models.Items
         {
             
         }
+        public Food(string name, double price, string description) : base(name, price, description)
+        {
+
+        }
     }
 }

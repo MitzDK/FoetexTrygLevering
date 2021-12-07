@@ -21,9 +21,12 @@ namespace FoetexTrygLevering.Services
             //Udkommenter og brug den ovenover, hvis du vil bruge Mock Data istedet
             //_items = JsonFileService.GetJsonItems();
         }
+
         public void Add(Item newItem)
         {
             _items.Add(newItem);
+            AssignID();
+            //JsonFileService.SaveJsonItems(_items);
         }
 
         public Item Search(int number)

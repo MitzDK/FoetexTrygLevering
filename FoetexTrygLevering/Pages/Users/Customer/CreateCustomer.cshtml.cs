@@ -30,7 +30,7 @@ namespace FoetexTrygLevering.Pages.Users.Customer
                 return Page();
             }
             _userService.Add(Customer);
-            return RedirectToPage("GetAllUsers");
+            return RedirectToPage("Homepage");
         }
     }
 }

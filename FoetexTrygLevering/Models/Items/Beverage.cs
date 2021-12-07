@@ -18,5 +18,9 @@ namespace FoetexTrygLevering.Models.Items
         {
             AgeRestriction = ageRestriction;
         }
+        public Beverage(string name, double price, string description, bool ageRestriction) : base(name, price, description)
+        {
+            AgeRestriction = ageRestriction;
+        }
     }
 }

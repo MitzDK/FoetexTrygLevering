@@ -12,7 +12,6 @@ namespace FoetexTrygLevering.Pages.Users.Customer
 {
     public class HomepageModel : PageModel
     {
-        public Models.Users.Customer Customer { get; set; } = new Models.Users.Customer();
         public List<Models.Items.Item> ItemList { get; set; }
         [BindProperty] public int MenuChoice { get; set; }
 

@@ -14,30 +14,56 @@ namespace FoetexTrygLevering.Services
         public OrderService(JsonFileService jsonFileService)
         {
             JsonFileService = jsonFileService;
+            _orders = JsonFileService.GetJsonOrders();
         }
-        public void CreateOrder()
+        public void CreateOrder(Order ord)
         {
-            throw new NotImplementedException();
+            _orders.Add(ord);
         }
 
-        public Order UpdateOrder()
+        public void UpdateOrder(int number, Order ord)
         {
-            throw new NotImplementedException();
+            Order searchOrder = Search(number);
+            searchOrder = ord;
+            JsonFileService.SaveJsonOrders(_orders);
         }
 
-        public void DeleteOrder()
+        public void DeleteOrder(int number)
         {
-            throw new NotImplementedException();
+            _orders.RemoveAt(number-1);
+            AssignID();
+            JsonFileService.SaveJsonOrders(_orders);
         }
+
 
         public List<Order> FilterOrderByCustomer(string cusName)
         {
-            throw new NotImplementedException();
+            List<Order> searchList = new List<Order>();
+            if (string.IsNullOrEmpty(cusName)) return _orders;
+            foreach (Order ord in _orders)
+            {
+                if (ord.Customer.Name.ToLower().Contains(cusName.ToLower()))
+                {
+                    searchList.Add(ord);
+                }
+            }
+
+            return searchList;
         }
 
-        public List<Order> FilterOrderByPrice(int inputPrice)
+        public IEnumerable<Order> PriceFilter(int maxPrice, int minPrice)
         {
-            throw new NotImplementedException();
+            List<Order> filterList = new List<Order>();
+            foreach (Order ord in _orders)
+            {
+                if ((minPrice == 0 && ord.TotalPrice <= maxPrice) || (maxPrice == 0 && ord.TotalPrice >= minPrice) ||
+                    (ord.TotalPrice >= minPrice && ord.TotalPrice <= maxPrice))
+                {
+                    filterList.Add(ord);
+                }
+            }
+
+            return filterList;
         }
 
         public List<Order> FilterOrderByPostalCode(int inputPostalCode)
@@ -47,7 +73,27 @@ namespace FoetexTrygLevering.Services
 
         public Order Search(int id)
         {
-            throw new NotImplementedException();
+            foreach (Order ord in _orders)
+            {
+                if (id == ord.OrderID)
+                {
+                    return ord;
+                }
+            }
+            return null;
+        }
+
+        public List<Order> GetAll()
+        {
+            return _orders;
+        }
+
+        public void AssignID()
+        {
+            foreach (Order ord in _orders)
+            {
+                ord.OrderID = _orders.IndexOf(ord) + 1;
+            }
         }
     }
 }

@@ -24,5 +24,11 @@ namespace FoetexTrygLevering.Models.Items
             ID = id;
             Description = description;
         }
+        public Item(string name, double price, string description)
+        {
+            Name = name;
+            Price = price;
+            Description = description;
+        }
     }
 }
