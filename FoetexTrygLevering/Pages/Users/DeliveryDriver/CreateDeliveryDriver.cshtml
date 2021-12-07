@@ -6,23 +6,33 @@
 <form method="post">
     <div class="form-group">
         <label asp-for="DeliveryDriver.Name"></label>
-        <input asp-for="DeliveryDriver.Name" class="form-control" name="Fornavn og efternavn"></>
+        <input asp-for="DeliveryDriver.Name" class="form-control"></>
+        <span asp-validation-for="DeliveryDriver.Name" class="text-danger"></span>
+
     </div>
     <div class="form-group">
         <label asp-for="DeliveryDriver.Email"></label>
-        <input id="Email"type="email" asp-for="DeliveryDriver.Email" class="form-control" name="E-mail"></>
+        <input id="Email" type="email" asp-for="DeliveryDriver.Email" class="form-control"></>
+        <span asp-validation-for="DeliveryDriver.Email" class="text-danger"></span>
+
     </div>
     <div class="form-group">
         <label asp-for="DeliveryDriver.Phone"></label>
-        <input asp-for="DeliveryDriver.Phone" class="form-control" name="Telefon nummer"></>
+        <input asp-for="DeliveryDriver.Phone" class="form-control"></>
+        <span asp-validation-for="DeliveryDriver.Phone" class="text-danger"></span>
+
     </div>
     <div class="form-group">
         <label asp-for="DeliveryDriver.AccNumber"></label>
-        <input asp-for="DeliveryDriver.AccNumber" class="form-control" name="Kontonummer"></>
+        <input asp-for="DeliveryDriver.AccNumber" class="form-control"></>
+        <span asp-validation-for="DeliveryDriver.AccNumber" class="text-danger"></span>
+
     </div>
     <div class="form-group">
         <label asp-for="DeliveryDriver.PostalCode"></label>
-        <input asp-for="DeliveryDriver.PostalCode" class="form-control" name="Postnummer"></>
+        <input asp-for="DeliveryDriver.PostalCode" class="form-control"></>
+        <span asp-validation-for="DeliveryDriver.PostalCode" class="text-danger"></span>
+
     </div>
 
     <div class="form-group">

@@ -41,8 +41,7 @@ namespace FoetexTrygLevering.Pages
                     {
                         var claims = new List<Claim>
                         {
-                            new Claim(ClaimTypes.Name, user.Name),
-                            new Claim("UserID", user.UserID.ToString())
+                            new Claim(ClaimTypes.Name, user.Name)
                         };
                         var identity = new ClaimsIdentity(claims, "MyCookieAuth");
                         ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);
@@ -56,8 +55,7 @@ namespace FoetexTrygLevering.Pages
                     {
                         var claims = new List<Claim>
                         {
-                            new Claim(ClaimTypes.Name, user.Name),
-                            new Claim("UserID", user.UserID.ToString())
+                            new Claim(ClaimTypes.Name, user.Name)
                         };
                         var identity = new ClaimsIdentity(claims, "MyCookieAuth");
                         ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);
@@ -71,8 +69,7 @@ namespace FoetexTrygLevering.Pages
                     {
                         var claims = new List<Claim>
                         {
-                            new Claim(ClaimTypes.Name, user.Name),
-                            new Claim("UserID", user.UserID.ToString())
+                            new Claim(ClaimTypes.Name, user.Name)
                         };
                         var identity = new ClaimsIdentity(claims, "MyCookieAuth");
                         ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);

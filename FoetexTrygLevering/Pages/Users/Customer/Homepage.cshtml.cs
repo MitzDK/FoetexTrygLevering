@@ -14,6 +14,8 @@ namespace FoetexTrygLevering.Pages.Users.Customer
     {
         public List<Models.Items.Item> ItemList { get; set; }
         [BindProperty] public int MenuChoice { get; set; }
+        public Models.Users.Customer Customer { get; set; }
+        public List<Item> ShoppingCart { get; set; }
 
         private UserService _userService;
         private ItemService _itemService;
@@ -28,6 +30,7 @@ namespace FoetexTrygLevering.Pages.Users.Customer
         public void OnGet()
         {
             ItemList = _itemService.GetAll();
+            Customer = _userService.SpecificCustomer(User.Identity.Name);
         }
 
         public void OnPost()
@@ -54,5 +57,6 @@ namespace FoetexTrygLevering.Pages.Users.Customer
             
             return Page();
         }
+
     }
 }

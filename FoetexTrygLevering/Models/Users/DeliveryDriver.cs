@@ -18,6 +18,11 @@ namespace FoetexTrygLevering.Models.Users
         [Range(1000, 9999)]
         public int PostalCode { get; set; }
 
+        public DeliveryDriver()
+        {
+            
+        }
+
         public DeliveryDriver(string name, string phone, string email, string accNumber, int postalCode) : base(name, phone, email)
         {
             AccNumber = accNumber;

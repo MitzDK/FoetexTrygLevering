@@ -1,4 +1,50 @@
 ﻿@page
+@using FoetexTrygLevering.Models.Items
 @model FoetexTrygLevering.Pages.Users.Customer.ShoppingCartModel
 @{
 }
+
+
+<body>
+
+<h3>Cart</h3>
+<form method="post" asp-page="ShoppingCart" asp-page-handler="update">
+    <table border="1">
+        <tr>
+            <th>Action</th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Photo</th>
+            <th>Price</th>
+            <th>Quantity <input type="submit" value="Update" /></th>
+            <th>Sub Total</th>
+        </tr>
+        @if (Model.ShoppingCart != null)
+        {
+            @foreach (var item in Model.ShoppingCart)
+            {
+                <tr align="center">
+                    <td align="center">
+                        <a asp-page="ShoppingCart" asp-page-handler="delete" asp-route-id="@item.Item.ID">X</a>
+                    </td>
+                    <td>@item.Item.ID</td>
+                    <td>@item.Item.Name</td>
+                    <td><img src="" width="120" height="100" /></td>
+                    <td>$@item.Item.Price</td>
+                    <td><input type="number" name="quantities" value="@item.Quantity" min="1" style="width: 50px;" /></td>
+                    <td>
+                        $@(item.Item.Price * item.Quantity)
+                    </td>
+                </tr>
+            }
+            <tr>
+                <td colspan="6" align="right">Total</td>
+                <td align="center">$@Model.TotalPrice</td>
+            </tr>
+        }
+
+    </table>
+</form>
+<a asp-page="Homepage">Continue Shopping</a>
+
+</body>
