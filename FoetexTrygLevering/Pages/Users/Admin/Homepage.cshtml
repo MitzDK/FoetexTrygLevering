@@ -5,6 +5,16 @@
 @{
     Layout = "Shared/_AdminLayout";
 }
+<p>
+    <a class="btn btn-primary" asp-page="CreateBeverage"> Create a new beverage item </a>
+</p>
+<p>
+    <a class="btn btn-primary" asp-page="CreateFood"> Create a new food item </a>
+</p>
+<p>
+    <a class="btn btn-primary" asp-page="CreateNonFood"> Create a new non-food item </a>
+</p>
+
 <div class="w3-row-padding w3-padding-16 w3-center" id="food">
     @foreach (Item anItem in Model.Items)
     {

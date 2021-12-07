@@ -3,3 +3,25 @@
 @{
     Layout = "Shared/_AdminLayout";
 }
+<form method="post">
+    <div class="form-group">
+        <label asp-for="NonFood.Name"></label>
+        <input asp-for="NonFood.Name" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="NonFood.Description"></label>
+        <input asp-for="NonFood.Description" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="NonFood.Price"></label>
+        <input asp-for="NonFood.Price" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="NonFood.AgeRestriction"></label>
+        <input asp-for="NonFood.AgeRestriction" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>

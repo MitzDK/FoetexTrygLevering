@@ -19,6 +19,7 @@ namespace FoetexTrygLevering.Pages.Users.Customer
 
         public ShoppingCartModel(UserService userService, ItemService itemService)
         {
+            ViewData["UserID"] = HttpContext.User.Claims.First(c => c.Type == "UserID").Value;
             _userService = userService;
             _itemService = itemService;
 
