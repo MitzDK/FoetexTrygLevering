@@ -24,11 +24,11 @@ namespace FoetexTrygLevering.Models.Items
         [Display(Name = "Item description")]
         [Required(ErrorMessage = "A description is required"), MaxLength(10000000)]
         public string Description { get; set; }
-        
+
+        public string ImageName { get; set; }
 
         public Item()
         {
-            
         }
 
         public Item(int id, string name, double price, string description)
@@ -37,6 +37,14 @@ namespace FoetexTrygLevering.Models.Items
             Price = price;
             ID = id;
             Description = description;
+        }
+        public Item(int id, string name, double price, string description, string imageName)
+        {
+            Name = name;
+            Price = price;
+            ID = id;
+            Description = description;
+            ImageName = "/Assets/"+imageName;
         }
         public Item(string name, double price, string description)
         {

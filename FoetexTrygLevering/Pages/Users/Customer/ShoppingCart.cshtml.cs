@@ -30,9 +30,8 @@ namespace FoetexTrygLevering.Pages.Users.Customer
         {
             Customer = _userService.SpecificCustomer(User.Identity.Name);
             ShoppingCart = HttpContext.Session.GetObjectFromJson<List<ShoppingItem>>("ShoppingCart");
-
-            TotalPrice = 1;
-            ShoppingCart.Sum(i => i.Item.Price * i.Quantity);
+            
+            TotalPrice = ShoppingCart.Sum(i => i.Item.Price * i.Quantity);
         }
         public IActionResult OnGetAddToCart(int id)
         {

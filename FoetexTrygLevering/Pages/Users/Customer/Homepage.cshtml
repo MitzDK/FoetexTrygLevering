@@ -11,12 +11,12 @@
     @foreach (Item anItem in Model.ItemList)
     {
         <div class="w3-quarter table-border">
-            <img src="/Koed.jpg" alt="BILLEDENAVN" style="width: 100%">
-            <h3>@anItem.Name</h3>
-            <p>Beskrivelse: @anItem.Description</p>
-            <p>Pris: @anItem.Price DKK</p>
+            <img src="@anItem.ImageName" alt="" style="width: 100%">
+            <h4>@anItem.Name</h4>
+            Beskrivelse: @anItem.Description<br/>
+            Pris: @anItem.Price DKK<br/>
             <li class="list-inline-item">
-                <a class="btn btn-primary btn-sm " type="button" data-toggle="tooltip" data-placement="top" title="Add to cart" asp-page="ShoppingCart" asp-page-handler="AddToCart" asp-route-id="@anItem.ID"><i class="fa fa-shopping-basket"></i></a>
+                <a class="btn btn-primary" type="button" data-toggle="tooltip" data-placement="top" title="Add to cart" asp-page="ShoppingCart" asp-page-handler="AddToCart" asp-route-id="@anItem.ID"><i class="fa fa-shopping-basket"></i></a>
             </li>
         </div>
     }

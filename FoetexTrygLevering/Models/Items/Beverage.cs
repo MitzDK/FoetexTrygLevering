@@ -18,6 +18,10 @@ namespace FoetexTrygLevering.Models.Items
         {
             AgeRestriction = ageRestriction;
         }
+        public Beverage(int id, string name, double price, string description, bool ageRestriction, string imageName) : base(id, name, price, description, imageName)
+        {
+            AgeRestriction = ageRestriction;
+        }
         public Beverage(string name, double price, string description, bool ageRestriction) : base(name, price, description)
         {
             AgeRestriction = ageRestriction;
