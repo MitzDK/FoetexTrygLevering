@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FoetexTrygLevering.MockData;
 using FoetexTrygLevering.Models.Order;
 
 namespace FoetexTrygLevering.Services
@@ -9,30 +10,46 @@ namespace FoetexTrygLevering.Services
     public class OrderService : IOrderService
     {
         private List<Order> _orders;
+        private List<Order> _pendingOrders;
         private JsonFileService JsonFileService { get; set; }
 
         public OrderService(JsonFileService jsonFileService)
         {
             JsonFileService = jsonFileService;
-            _orders = JsonFileService.GetJsonOrders();
+            //_orders = JsonFileService.GetJsonOrders();
+            _orders = OrderMockData.GetAllOrders();
+            _pendingOrders = OrderMockData.GetAllPendingOrders();
+            //_pendingOrders = JsonFileService.GetJsonPendingOrders();
         }
         public void CreateOrder(Order ord)
         {
             _orders.Add(ord);
+            AssignID();
+            JsonFileService.SaveJsonOrders(_orders);
+        }
+
+        public void CreatePendingOrder(Order ord)
+        {
+            _pendingOrders.Add(ord);
+            AssignID();
+            JsonFileService.SavePendingOrders(_pendingOrders);
         }
 
         public void UpdateOrder(int number, Order ord)
         {
             Order searchOrder = Search(number);
             searchOrder = ord;
-            JsonFileService.SaveJsonOrders(_orders);
+            //JsonFileService.SaveJsonOrders(_orders);
+            //JsonFileService.SavePendingOrders(_pendingOrders);
+
         }
 
         public void DeleteOrder(int number)
         {
             _orders.RemoveAt(number-1);
             AssignID();
-            JsonFileService.SaveJsonOrders(_orders);
+            //JsonFileService.SaveJsonOrders(_orders);
+            //JsonFileService.SavePendingOrders(_pendingOrders);
         }
 
 
@@ -90,10 +107,22 @@ namespace FoetexTrygLevering.Services
 
         public void AssignID()
         {
-            foreach (Order ord in _orders)
+            if (_orders.Count != 0)
             {
-                ord.OrderID = _orders.IndexOf(ord) + 1;
+                foreach (Order ord in _orders)
+                {
+                    ord.OrderID = _orders.IndexOf(ord) + 1;
+                }
             }
+
+            if (_pendingOrders.Count != 0)
+            {
+                foreach (Order ord in _pendingOrders)
+                {
+                    ord.OrderID = _pendingOrders.IndexOf(ord) + 1;
+                }
+            }
+
         }
     }
 }

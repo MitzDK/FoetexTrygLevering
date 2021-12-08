@@ -21,7 +21,8 @@ namespace FoetexTrygLevering.Services
         private List<Customer> _customers = new List<Customer>();
         private List<DeliveryDriver> _deliveryDrivers = new List<DeliveryDriver>();
 
-        private List<Order> _orders = new List<Order>();
+        private List<Order> _doneOrders = new List<Order>();
+        private List<Order> _pendingOrders = new List<Order>();
 
         public List<User> CombineUsers(List<Admin> admins, List<Customer> customers, List<DeliveryDriver> deliveryDrivers)
         {
@@ -129,7 +130,12 @@ namespace FoetexTrygLevering.Services
         }
         private string JsonFileOrderName
         {
-            get { return Path.Combine(WebHostEnvironment.WebRootPath, "Data", "Order", "Orders.json"); }
+            get { return Path.Combine(WebHostEnvironment.WebRootPath, "Data", "Orders", "Orders.json"); }
+        }
+
+        private string JsonFilePendingOrderName
+        {
+            get { return Path.Combine(WebHostEnvironment.WebRootPath, "Data", "Orders", "PendingOrders.json"); }
         }
 
         public void SaveOrders(List<Order> orders)
@@ -141,9 +147,23 @@ namespace FoetexTrygLevering.Services
                     SkipValidation = false,
                     Indented = true
                 });
-                JsonSerializer.Serialize<Order[]>(jsonWriter, _orders.ToArray());
+                JsonSerializer.Serialize<Order[]>(jsonWriter, _doneOrders.ToArray());
             }
         }
+
+        public void SavePendingOrders(List<Order> orders)
+        {
+            using (FileStream jsonFileWriter = File.Create(JsonFilePendingOrderName))
+            {
+                Utf8JsonWriter jsonWriter = new Utf8JsonWriter(jsonFileWriter, new JsonWriterOptions()
+                {
+                    SkipValidation = false,
+                    Indented = true
+                });
+                JsonSerializer.Serialize<Order[]>(jsonWriter, _pendingOrders.ToArray());
+            }
+        }
+
         public void SaveItemBeverages(List<Beverage> beverageItems)
         {
             using (FileStream jsonFileWriter = File.Create(JsonFileItemBeverageName))
@@ -250,6 +270,14 @@ namespace FoetexTrygLevering.Services
                 return JsonSerializer.Deserialize<Order[]>(jsonFileReader.ReadToEnd());
             }
         }
+
+        public IEnumerable<Order> GetPendingOrders()
+        {
+            using (StreamReader jsonFileReader = File.OpenText(JsonFilePendingOrderName))
+            {
+                return JsonSerializer.Deserialize<Order[]>(jsonFileReader.ReadToEnd());
+            }
+        }
         public IEnumerable<Beverage> GetBeverageItems()
         {
             using (StreamReader jsonFileReader = File.OpenText(JsonFileItemBeverageName))
@@ -297,6 +325,11 @@ namespace FoetexTrygLevering.Services
         public List<Order> GetJsonOrders()
         {
             return GetOrders().ToList();
+        }
+
+        public List<Order> GetJsonPendingOrders()
+        {
+            return GetPendingOrders().ToList();
         }
         public List<Item> GetJsonItems()
         {

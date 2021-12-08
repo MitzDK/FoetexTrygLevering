@@ -36,6 +36,7 @@ namespace FoetexTrygLevering
             services.AddRazorPages();
             services.AddSingleton<ItemService, ItemService>();
             services.AddSingleton<UserService, UserService>();
+            services.AddSingleton<OrderService, OrderService>();
             services.AddTransient<JsonFileService>();
 
         }

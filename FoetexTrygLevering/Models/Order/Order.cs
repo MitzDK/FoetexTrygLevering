@@ -22,9 +22,9 @@ namespace FoetexTrygLevering.Models.Order
             
         }
 
-        public Order(bool isDelivered, Customer customer, List<ShoppingItem> shoppedItems)
+        public Order(Customer customer, List<ShoppingItem> shoppedItems)
         {
-            IsDelivered = isDelivered;
+            IsDelivered = false;
             Customer = customer;
             ShoppedItems = shoppedItems;
             DeliveryAddress = customer.Address;

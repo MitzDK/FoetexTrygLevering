@@ -17,5 +17,6 @@ namespace FoetexTrygLevering.Services
         public void AssignID();
         public Order Search(int id);
         public List<Order> GetAll();
+        public void CreatePendingOrder(Order ord);
     }
 }

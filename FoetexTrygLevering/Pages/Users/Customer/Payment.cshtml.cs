@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using FoetexTrygLevering.Helpers;
 using FoetexTrygLevering.Models.Items;
+using FoetexTrygLevering.Models.Order;
 using FoetexTrygLevering.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -15,14 +16,18 @@ namespace FoetexTrygLevering.Pages.Users.Customer
         public Models.Users.Customer Customer { get; set; }
         private UserService _userService;
         private ItemService _itemService;
+        private OrderService _orderService;
+
+        public Models.Order.Order Order { get; set; }
+
         public List<ShoppingItem> ShoppingCart { get; set; }
         public double TotalPrice { get; set; }
+        
 
         public int Quantity
         {
             get { return GetQuantities(); }
         }
-
         public int GetQuantities()
         {
             int amount = 0;
@@ -33,15 +38,14 @@ namespace FoetexTrygLevering.Pages.Users.Customer
                     amount += item.Quantity;
                 }
             }
-
             return amount;
         }
 
-        public PaymentModel(UserService userService, ItemService itemService)
+        public PaymentModel(UserService userService, ItemService itemService, OrderService orderService)
         {
             _userService = userService;
             _itemService = itemService;
-
+            _orderService = orderService;
         }
         public void OnGet()
         {
@@ -56,6 +60,10 @@ namespace FoetexTrygLevering.Pages.Users.Customer
 
         public IActionResult OnPost()
         {
+            Customer = _userService.SpecificCustomer(User.Identity.Name);
+            ShoppingCart = HttpContext.Session.GetObjectFromJson<List<ShoppingItem>>("ShoppingCart");
+            Order o1 = new Order(Customer, ShoppingCart);
+            _orderService.CreatePendingOrder(o1);
             return RedirectToPage("ConfirmationPurchase");
         }
     }
