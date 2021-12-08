@@ -52,6 +52,20 @@ namespace FoetexTrygLevering.Services
             }
             return null;
         }
+        public DeliveryDriver SpecificDeliveryDriver(string name)
+        {
+            foreach (User user in _userList)
+            {
+                if (user is DeliveryDriver)
+                {
+                    if (name == user.Name)
+                    {
+                        return (DeliveryDriver)user;
+                    }
+                }
+            }
+            return null;
+        }
 
         public List<User> SearchByName(string str)
         {
@@ -167,6 +181,27 @@ namespace FoetexTrygLevering.Services
             Customer oldCus = (Customer)Search(number);
             _userList[_userList.IndexOf(oldCus)] = customer;
             JsonFileService.SaveJsonUsers(_userList);
+        }
+        public void UpdateDeliveryDriver(int number, DeliveryDriver deliveryDriver)
+        {
+            DeliveryDriver oldDriver = (DeliveryDriver)Search(number);
+            _userList[_userList.IndexOf(oldDriver)] = deliveryDriver;
+            JsonFileService.SaveJsonUsers(_userList);
+        }
+        public User GetDeliveryDriver(int id)
+        {
+            foreach (User user in _userList)
+            {
+                if (user is DeliveryDriver)
+                {
+                    if (user.UserID==id)
+                    {
+                        return ((DeliveryDriver) user);
+                    }
+                }
+            }
+
+            return null;
         }
 
         public User GetCustomer(int id)

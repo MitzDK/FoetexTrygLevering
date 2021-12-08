@@ -15,5 +15,11 @@ namespace FoetexTrygLevering.Pages
             await HttpContext.SignOutAsync("MyCookieAuth");
             return RedirectToPage("Index");
         }
+
+        public async Task<IActionResult> OnGet()
+        {
+            await HttpContext.SignOutAsync("MyCookieAuth");
+            return RedirectToPage("Index");
+        }
     }
 }

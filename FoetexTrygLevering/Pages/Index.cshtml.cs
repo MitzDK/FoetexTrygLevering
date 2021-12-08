@@ -27,6 +27,11 @@ namespace FoetexTrygLevering.Pages
 
         public IActionResult OnGet()
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                return RedirectToPage("LogOut");
+            }
+
             return Page();
         }
 
