@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FoetexTrygLevering.Helpers;
 using FoetexTrygLevering.Models.Items;
 using FoetexTrygLevering.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -23,9 +24,10 @@ namespace FoetexTrygLevering.Pages.Users.Customer
             _itemService = itemService;
 
         }
-        public void OnGet(List<ShoppingItem> shoppingCart)
+
+        public void OnGet()
         {
-            Customer = _userService.SpecificCustomer(User.Identity.Name);
+            ShoppingCart = HttpContext.Session.GetObjectFromJson<List<ShoppingItem>>("ShoppingCart");
         }
     }
 }

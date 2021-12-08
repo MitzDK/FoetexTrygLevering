@@ -27,10 +27,11 @@ namespace FoetexTrygLevering.Pages.Users.Customer
             
         }
 
-        public void OnGet()
+        public IActionResult OnGet()
         {
             ItemList = _itemService.GetAll();
             Customer = _userService.SpecificCustomer(User.Identity.Name);
+            return Page();
         }
 
         public void OnPost()

@@ -21,7 +21,7 @@ namespace FoetexTrygLevering.Services
         List<DeliveryDriver> GetAllDrivers();
         List<User> GetAll();
         void AssignID();
-        void UpdateCustomer(Customer customer);
+        public void UpdateCustomer(int number, Customer customer);
         User GetCustomer(int id);
     }
 }

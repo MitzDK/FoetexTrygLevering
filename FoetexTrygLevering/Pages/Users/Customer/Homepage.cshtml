@@ -7,8 +7,11 @@
 <p>
     <a class="btn btn-primary" asp-page="ShoppingCart">View Shoppingcart</a>
 </p>
-<p>
-    <a class="btn btn-primary" type="button" title="Edit customer" asp-page="EditCustomer" asp-route-id="@Model.Customer.UserID">Rediger profiloplysninger</a>
+<p>@if (Model.Customer != null)
+   {
+       <a class="btn btn-primary" type="button" title="Edit customer" asp-page="EditCustomer" asp-route-id="@Model.Customer.UserID">Rediger profiloplysninger</a>
+   }
+
 </p>
 <div class="w3-row-padding w3-padding-16 w3-center" id="food">
     @foreach (Item anItem in Model.ItemList)

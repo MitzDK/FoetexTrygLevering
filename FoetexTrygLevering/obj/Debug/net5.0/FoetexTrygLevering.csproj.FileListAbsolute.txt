@@ -71,7 +71,6 @@ C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Ra
 C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Privacy.cshtml.g.cs
 C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
 C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
-C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\GetAllUsers.cshtml.g.cs
 C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs
 C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\_ViewStart.cshtml.g.cs
 C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\FoetexTrygLevering.RazorTargetAssemblyInfo.cache
@@ -125,3 +124,5 @@ C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Ra
 C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Customer\ConfirmationPurchase.cshtml.g.cs
 C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Customer\FinishPurchase.cshtml.g.cs
 C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Customer\Payment.cshtml.g.cs
+C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Admin\GetAllUsers.cshtml.g.cs
+C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\GetAllUsers.cshtml.g.cs

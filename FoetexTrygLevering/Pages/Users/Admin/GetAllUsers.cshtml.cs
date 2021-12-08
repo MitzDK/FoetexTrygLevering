@@ -7,7 +7,7 @@ using FoetexTrygLevering.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace FoetexTrygLevering.Pages
+namespace FoetexTrygLevering.Pages.Users.Admin
 {
     public class GetAllUsersModel : PageModel
     {

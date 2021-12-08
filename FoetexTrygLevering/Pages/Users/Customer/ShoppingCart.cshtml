@@ -44,7 +44,9 @@
         }
     </table>
 </form>
-<a asp-page="FinishPurchase">Finish purchanse</a>
-<a asp-page="Homepage">Continue Shopping</a>
+<form method="post" asp-page="ShoppingCart" asp-page-handler="FinishPurchase">
+    <button class="btn btn-success"></button>
+</form>
+    <a asp-page="Homepage">Continue Shopping</a>
 
 </body>
