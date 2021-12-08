@@ -53,5 +53,10 @@ namespace FoetexTrygLevering.Pages.Users.Customer
                 TotalPrice = ShoppingCart.Sum(i => i.Item.Price * i.Quantity);
             }
         }
+
+        public IActionResult OnPost()
+        {
+            return RedirectToPage("ConfirmationPurchase");
+        }
     }
 }

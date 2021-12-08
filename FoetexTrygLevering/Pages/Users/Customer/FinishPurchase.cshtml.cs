@@ -17,6 +17,7 @@ namespace FoetexTrygLevering.Pages.Users.Customer
         private UserService _userService;
         private ItemService _itemService;
 
+        public double TotalPrice { get; set; }
 
         public FinishPurchaseModel(UserService userService, ItemService itemService)
         {
@@ -28,6 +29,10 @@ namespace FoetexTrygLevering.Pages.Users.Customer
         public void OnGet()
         {
             ShoppingCart = HttpContext.Session.GetObjectFromJson<List<ShoppingItem>>("ShoppingCart");
+            if (ShoppingCart != null && ShoppingCart.Count != 0)
+            {
+                TotalPrice = ShoppingCart.Sum(i => i.Item.Price * i.Quantity);
+            }
         }
     }
 }

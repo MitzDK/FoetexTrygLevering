@@ -13,9 +13,6 @@ namespace FoetexTrygLevering.Pages.Users.Customer
         public Models.Users.Customer Customer { get; set; }
         public List<ShoppingItem> ShoppingCart { get; set; }
         public double TotalPrice { get; set; }
-        
-
-
         private UserService _userService;
         private ItemService _itemService;
 
@@ -104,7 +101,7 @@ namespace FoetexTrygLevering.Pages.Users.Customer
 
         public IActionResult OnPostFinishPurchase()
         {
-            return RedirectToPage("FinishPurchase", "Purchase", ShoppingCart);
+            return RedirectToPage("FinishPurchase", ShoppingCart);
         }
     }
 }

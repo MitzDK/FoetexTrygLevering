@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "iqfQ72kK3O54z3PioFZZhrNNg6V0oUal1JBhvuEN6V5j5/szSgg4ewPBZA7wTP4njbJ0zh1fiDDS5tuMZ7C9cA==",
+  "dgSpecHash": "kGmVfB//HucEXWHnRrDoPicaXM6QpvOVU4cX4pdDQc+PO27s6ednjjiCpgu6BpNxqVXbBj4Zhzmp0SRVneqvlQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\victo\\Desktop\\FoetexTrygLevering\\FoetexTrygLevering\\FoetexTrygLevering.csproj",
+  "projectFilePath": "C:\\Users\\Victur\\Desktop\\FoetexTrygLevering\\FoetexTrygLevering\\FoetexTrygLevering.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\victo\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\Victur\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }

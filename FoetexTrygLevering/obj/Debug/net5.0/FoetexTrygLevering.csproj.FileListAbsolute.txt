@@ -126,3 +126,7 @@ C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Ra
 C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Customer\Payment.cshtml.g.cs
 C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Admin\GetAllUsers.cshtml.g.cs
 C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\GetAllUsers.cshtml.g.cs
+C:\Users\Victur\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Admin\GetAllUsers.cshtml.g.cs
+C:\Users\Victur\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Customer\ConfirmationPurchase.cshtml.g.cs
+C:\Users\Victur\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Customer\FinishPurchase.cshtml.g.cs
+C:\Users\Victur\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Customer\Payment.cshtml.g.cs
