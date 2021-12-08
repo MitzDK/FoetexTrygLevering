@@ -7,7 +7,6 @@
   <ItemGroup>
     <Folder Include="Data\Items\" />
     <Folder Include="Data\Orders\" />
-    <Folder Include="Data\Users\" />
   </ItemGroup>
 
   <ItemGroup>
