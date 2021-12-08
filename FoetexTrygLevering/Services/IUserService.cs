@@ -22,6 +22,6 @@ namespace FoetexTrygLevering.Services
         List<User> GetAll();
         void AssignID();
         void UpdateCustomer(Customer customer);
-        Customer GetCustomer(int id);
+        User GetCustomer(int id);
     }
 }

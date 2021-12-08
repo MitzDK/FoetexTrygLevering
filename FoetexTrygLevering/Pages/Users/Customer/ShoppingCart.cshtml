@@ -41,16 +41,10 @@
                 <td colspan="6" align="right">Total</td>
                 <td align="center">@Model.TotalPrice,-</td>
             </tr>
-            }
+        }
     </table>
 </form>
+<a asp-page="FinishPurchase">Finish purchanse</a>
 <a asp-page="Homepage">Continue Shopping</a>
-    
 
-@if (Model.ShoppingCart == null)
-{
-    <p>
-        Den er null kaptajn klo ;) =)
-    </p>
-}
 </body>

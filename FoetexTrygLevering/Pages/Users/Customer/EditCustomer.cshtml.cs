@@ -23,7 +23,8 @@ namespace FoetexTrygLevering.Pages.Users.Customer
 
         public IActionResult OnGet(int id)
         {
-            Customer = _userService.GetCustomer(id);
+            Customer = (Models.Users.Customer)_userService.GetCustomer(id);
+
             if (Customer == null) return RedirectToPage("../../Error");
 
             return Page();
