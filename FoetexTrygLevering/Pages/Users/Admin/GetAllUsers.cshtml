@@ -2,3 +2,115 @@
 @model FoetexTrygLevering.Pages.Users.Admin.GetAllUsersModel
 @{
 }
+@page
+@model FoetexTrygLevering.Pages.Users.Admin.GetAllUsersModel
+@{
+    Layout = "Shared/_AdminLayout";
+}
+
+<h1>Items</h1>
+<br />
+<div class="row">
+    <div class="col-4"><h5>Search ID</h5></div>
+    <div class="col-4"><h5>Search Name</h5></div>
+    <div class="col-4"><h5>Search Email</h5></div>
+    <div class="col-4"><h5>Search Phone</h5></div>
+    <div class="col-4"></div>
+</div>
+
+<div class="row">
+    <div class="col-4">
+        <form method="post" class="form-inline">
+            <input asp-for="@Model.ID" class="form-control mr-1" placeholder="Enter search term" />
+            <input type="submit" asp-page-handler="NameSearch" value="Search" class="btn btn-primary" />
+        </form>
+    </div>
+    <div class="col-4">
+        <form method="post" class="form-inline">
+            <input asp-for="@Model.Name" class="form-control mr-1" placeholder="Enter search term" />
+            <input type="submit" asp-page-handler="NameSearch" value="Search" class="btn btn-primary" />
+        </form>
+    </div><div class="col-4">
+        <div class="col-4">
+            <form method="post" class="form-inline">
+                <input asp-for="@Model.Email" class="form-control mr-1" placeholder="Enter search term" />
+                <input type="submit" asp-page-handler="NameSearch" value="Search" class="btn btn-primary" />
+            </form>
+        </div>
+    </div><div class="col-4">
+        <form method="post" class="form-inline">
+            <input asp-for="@Model.Phone" class="form-control mr-1" placeholder="Enter search term" />
+            <input type="submit" asp-page-handler="NameSearch" value="Search" class="btn btn-primary" />
+        </form>
+    </div>
+
+
+
+
+    <div class="col-2"></div>
+</div>
+<br />
+<table class="table table-bordered table-hover table-striped table-opacity" width="60%">
+    <col style="width: 5%">
+    <col style="width: 77%">
+    <col style="width: 9%">
+    <col style="width: 9%">
+    <thead>
+        <tr class="btn-secondary active">
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Phone
+            </th>
+            <th>
+                Actions
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (@Model.ListUsers != null)
+        {
+            foreach (var user in Model.ListUsers)
+            {
+                if (!(user is Models.Users.Admin))
+                {
+                    <tr class="btn-secondary">
+                        <td>
+                            @user.UserID
+                        </td>
+                        <td>
+                            @user.Name
+                        </td>
+                        <td>
+                            @user.Email
+                        </td>
+                        <td>
+                            @user.Phone
+                        </td>
+                        <td>
+                            <ul class="list-inline m-0">
+                                <li class="list-inline-item">
+                                    <a class="btn btn-primary btn-sm" type="button" data-toggle="tooltip" title="Edit" asp-page="EditUser" asp-route-id="@user.UserID"><i class="fa fa-edit"></i></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="btn btn-danger btn-sm " type="button" data-toggle="tooltip" data-placement="top" title="Delete" asp-page="DeleteItem" asp-route-id="@user.UserID"><i class="fa fa-trash"></i></a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                }
+            }
+        }
+    </tbody>
+</table>
+
+<p>
+    <a class="btn btn-primary" asp-page="EditUser"> Create a new User </a>
+</p>

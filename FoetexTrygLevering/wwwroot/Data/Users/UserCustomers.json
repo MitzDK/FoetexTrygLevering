@@ -1,0 +1,47 @@
+[
+  {
+    "Address": "Haarby, Algade 91",
+    "Age": 18,
+    "PostalCode": 5683,
+    "Name": "Guest123",
+    "Phone": "00000000",
+    "Email": "123@email.com",
+    "UserID": 1
+  },
+  {
+    "Address": "K\u00F8benhavn K, Fr\u00F8rupvej 83",
+    "Age": 65,
+    "PostalCode": 1146,
+    "Name": "Kent J\u00F8rgen",
+    "Phone": "23568790",
+    "Email": "KentJ\u00F8rgen",
+    "UserID": 7
+  },
+  {
+    "Address": "K\u00F8benhavn K, Slipager 9",
+    "Age": 45,
+    "PostalCode": 1434,
+    "Name": "Birgitte Thomsen",
+    "Phone": "12436986",
+    "Email": "BThomsen@email.com",
+    "UserID": 8
+  },
+  {
+    "Address": "Skodsborg, Hans Schacksvej 8",
+    "Age": 32,
+    "PostalCode": 2942,
+    "Name": "Lars Karlsen",
+    "Phone": "43512389",
+    "Email": "LArskoarlsen@email.com",
+    "UserID": 9
+  },
+  {
+    "Address": "Terndrup, Hovbanken 8",
+    "Age": 25,
+    "PostalCode": 9575,
+    "Name": "Sebastian Jensen",
+    "Phone": "23567512",
+    "Email": "Sebastian@email.com",
+    "UserID": 10
+  }
+]

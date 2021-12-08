@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Data\Items\" />
-    <Folder Include="Data\Orders\" />
+    <Folder Include="wwwroot\Data\Items\" />
+    <Folder Include="wwwroot\Data\Orders\" />
   </ItemGroup>
 
   <ItemGroup>
