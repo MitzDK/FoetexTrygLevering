@@ -1,32 +1,29 @@
-﻿@page
-@model FoetexTrygLevering.Pages.Users.Admin.CreateBeverageModel
+﻿using FoetexTrygLevering.Models.Items
+@using FoetexTrygLevering.Models.Items
+@model FoetexTrygLevering.Pages.Users.Admin.HomepageModel
 @{
     Layout = "Shared/_AdminLayout";
 }
-<form method="post">
-    <div class="form-group">
-        <label asp-for="Beverage.Name"></label>
-        <input asp-for="Beverage.Name" class="form-control"/>
-        <span asp-validation-for="Beverage.Name" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Beverage.Price"></label>
-        <input asp-for="Beverage.Price" class="form-control"/>
-        <span asp-validation-for="Beverage.Price" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Beverage.Description"></label>
-        <input asp-for="Beverage.Description" class="form-control"/>
-        <span asp-validation-for="Beverage.Description" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Beverage.AgeRestriction"></label>
-        <input asp-for="Beverage.AgeRestriction" class="form-control" />
-        <span asp-validation-for="Beverage.AgeRestriction" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <input type="submit" value="Create" class="btn btn-primary" />
-    </div>
-</form>
+<p>
+    <a class="btn btn-primary" asp-page="ShoppingCart">View Shoppingcart</a>
+</p>
+<p>
+    <a class="btn btn-primary" type="button" title="Edit customer" asp-page="EditCustomer" asp-route-id="1">Edit</a>
+</p>
+<div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    @foreach (Item anItem in Model.Items)
+    {
+        <div class="w3-quarter table-border">
+            <img src="@anItem.ImageName" alt="" style="width: 100%">
+            <h4>@anItem.Name</h4>
+            Beskrivelse: @anItem.Description<br />
+            Pris: @anItem.Price DKK<br />
+            <li class="list-inline-item">
+                <a class="btn btn-primary" type="button" data-toggle="tooltip" data-placement="top" title="Edit item" asp-page="EditItem" asp-page-handler="EditItem" asp-route-id="@anItem.ID"><i class="fa fa-edit"></i></a>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn btn-danger" type="button" data-toggle="tooltip" data-placement="top" title="Trash item" asp-page="DeleteItem" asp-page-handler="DeleteItem" asp-route-id="@anItem.ID"><i class="fa fa-trash"></i></a>
+            </li>
+        </div>
+    }
+</div>

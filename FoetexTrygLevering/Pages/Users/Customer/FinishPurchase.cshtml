@@ -1,4 +1,9 @@
 ﻿@page
 @model FoetexTrygLevering.Pages.Users.Customer.FinishPurchaseModel
 @{
+    Layout = "Shared/_CustomerLayout";
+}
+@if (Model.ShoppingCart != null)
+{
+    @Model.ShoppingCart.Count
 }

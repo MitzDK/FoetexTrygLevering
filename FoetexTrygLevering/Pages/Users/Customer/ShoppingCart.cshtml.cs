@@ -101,5 +101,10 @@ namespace FoetexTrygLevering.Pages.Users.Customer
 
             return -1;
         }
+
+        public IActionResult OnPostFinishPurchase()
+        {
+            return RedirectToPage("FinishPurchase", ShoppingCart);
+        }
     }
 }
