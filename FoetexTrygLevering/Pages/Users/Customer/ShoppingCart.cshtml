@@ -2,6 +2,7 @@
 @using FoetexTrygLevering.Models.Items
 @model FoetexTrygLevering.Pages.Users.Customer.ShoppingCartModel
 @{
+    Layout = "_CustomerLayout";
 }
 
 
@@ -19,7 +20,8 @@
             <th>Quantity <input type="submit" value="Update" /></th>
             <th>Sub Total</th>
         </tr>
-        @foreach (var item in Model.ShoppingCart)
+        @if(Model.ShoppingCart != null){
+            @foreach (var item in Model.ShoppingCart)
             {
                 <tr align="center">
                     <td align="center">

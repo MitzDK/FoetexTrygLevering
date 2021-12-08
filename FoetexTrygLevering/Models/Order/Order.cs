@@ -12,7 +12,7 @@ namespace FoetexTrygLevering.Models.Order
         public int OrderID { get; set; }
         public bool IsDelivered { get; set; }
         public Customer Customer { get; set; }
-        public List<Item> ShoppedItems { get; set; }
+        public List<ShoppingItem> ShoppedItems { get; set; }
         public double TotalPrice { get; set; }
         public string DeliveryAddress { get; set; }
         public int PostalCode { get; set; }
@@ -22,7 +22,7 @@ namespace FoetexTrygLevering.Models.Order
             
         }
 
-        public Order(int orderId, bool isDelivered, Customer customer, List<Item> shoppedItems)
+        public Order(int orderId, bool isDelivered, Customer customer, List<ShoppingItem> shoppedItems)
         {
             OrderID = orderId;
             IsDelivered = isDelivered;
@@ -30,10 +30,7 @@ namespace FoetexTrygLevering.Models.Order
             ShoppedItems = shoppedItems;
             DeliveryAddress = customer.Address;
             PostalCode = customer.PostalCode;
-            foreach (Item item in shoppedItems)
-            {
-                TotalPrice += item.Price;
-            }
+            TotalPrice = shoppedItems.Sum(i => i.Item.Price * i.Quantity);
         }
     }
 }

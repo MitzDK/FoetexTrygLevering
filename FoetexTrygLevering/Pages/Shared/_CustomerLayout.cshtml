@@ -1,6 +1,4 @@
-﻿@using FoetexTrygLevering.Models.Users
-@model FoetexTrygLevering.Pages.Users.Customer.HomepageModel
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -15,7 +13,8 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">FoetexTrygLevering</a>
+                
+                <a class="navbar-brand" asp-area="" asp-page="Homepage">FoetexTrygLevering</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -23,7 +22,7 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <form method="post" asp-page="HomepageModel">
+                            <form method="post" asp-page="Homepage">
                                 @*<a class="nav-link text-dark" asp-area="" asp-page="/Index">Kategorier</a>*@
                                 <select id="MenuChoice" name="MenuChoice">
                                     <option value="1">Alle varer</option>
@@ -32,7 +31,9 @@
                                     <option value="4">Andet</option>
                                 </select>
                                 <br/>
-                                <input type="submit" value="Vis varer"/>
+                                <a asp-page="Homepage">
+                                    <input type="submit" value="Vis varer"/>
+                                </a>
                             </form>
                         </li>
                         <li class="nav-item nav-link text-dark text-center">

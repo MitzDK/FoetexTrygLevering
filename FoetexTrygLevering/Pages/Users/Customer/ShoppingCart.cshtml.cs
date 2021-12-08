@@ -11,7 +11,6 @@ namespace FoetexTrygLevering.Pages.Users.Customer
     public class ShoppingCartModel : PageModel
     {
         public Models.Users.Customer Customer { get; set; }
-        public List<Item> ItemList { get; set; }
         public List<ShoppingItem> ShoppingCart { get; set; }
         public double TotalPrice { get; set; }
         
@@ -30,8 +29,11 @@ namespace FoetexTrygLevering.Pages.Users.Customer
         {
             Customer = _userService.SpecificCustomer(User.Identity.Name);
             ShoppingCart = HttpContext.Session.GetObjectFromJson<List<ShoppingItem>>("ShoppingCart");
-            
-            TotalPrice = ShoppingCart.Sum(i => i.Item.Price * i.Quantity);
+
+            if (ShoppingCart != null && ShoppingCart.Count != 0) 
+            {
+                TotalPrice = ShoppingCart.Sum(i => i.Item.Price * i.Quantity);
+            }
         }
         public IActionResult OnGetAddToCart(int id)
         {

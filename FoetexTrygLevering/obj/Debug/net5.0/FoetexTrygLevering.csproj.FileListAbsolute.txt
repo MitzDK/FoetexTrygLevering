@@ -110,3 +110,15 @@ C:\Users\Victur\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\R
 C:\Users\Victur\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Customer\ShoppingCart.cshtml.g.cs
 C:\Users\Victur\Desktop\FoetexTrygLevering\FoetexTrygLevering\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\Victur\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Customer\EditCustomer.cshtml.g.cs
+C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\LogOut.cshtml.g.cs
+C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Shared\_LoginStatusPartial.cshtml.g.cs
+C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Admin\CreateBeverage.cshtml.g.cs
+C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Admin\CreateFood.cshtml.g.cs
+C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Admin\CreateNonFood.cshtml.g.cs
+C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Admin\CreateUser.cshtml.g.cs
+C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Admin\DeleteItem.cshtml.g.cs
+C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Admin\EditItem.cshtml.g.cs
+C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Admin\EditUser.cshtml.g.cs
+C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Customer\EditCustomer.cshtml.g.cs
+C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Customer\ShoppingCart.cshtml.g.cs
