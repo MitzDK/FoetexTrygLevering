@@ -133,3 +133,8 @@ span.price {
         margin-bottom: 20px;
     }
 }
+.nav-item {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+

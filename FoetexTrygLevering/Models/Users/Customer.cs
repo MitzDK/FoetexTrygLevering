@@ -2,15 +2,21 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Reflection.Metadata;
+using System.Security.AccessControl;
 using System.Threading.Tasks;
 
 namespace FoetexTrygLevering.Models.Users
 {
     public class Customer : User
     {
-        [Display(Name = "Adresse")]
+        [Display(Name = "Bynavn")]
         [Required(ErrorMessage = "Der skal indtastes en adresse")]
-        public string Address { get; set; }
+
+        public string CityName { get; set; }
+        [Display(Name = "Vejnavn")]
+        [Required(ErrorMessage = "Der skal indtastes en adresse")]
+        public string Street { get; set; }
         [Display(Name = "Alder")]
         [Required(ErrorMessage = "Der skal indtastes en alder")]
         [Range(15, 120)]
@@ -25,16 +31,18 @@ namespace FoetexTrygLevering.Models.Users
 
         }
 
-        public Customer(string name, string phone, string email, string address, int postalCode, int age) : base(name, phone, email)
+        public Customer(string name, string phone, string email, string cityName, string street, int postalCode, int age) : base(name, phone, email)
         {
             PostalCode = postalCode;
-            Address = address;
+            CityName = cityName;
+            Street = street;
             Age = age;
         }
-        public Customer(int userId, string name, string phone, string email, string address, int postalCode, int age) : base(userId, name, phone, email)
+        public Customer(int userId, string name, string phone, string email, string cityName, string street, int postalCode, int age) : base(userId, name, phone, email)
         {
             PostalCode = postalCode;
-            Address = address;
+            CityName = cityName;
+            Street = street;
             Age = age;
         }
 

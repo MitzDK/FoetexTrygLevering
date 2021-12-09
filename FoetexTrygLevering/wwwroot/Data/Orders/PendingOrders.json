@@ -3,7 +3,8 @@
     "OrderID": 1,
     "IsDelivered": false,
     "Customer": {
-      "Address": "Haarby, Algade 91",
+      "CityName": "Haarby",
+      "Street": "Algade 91",
       "Age": 18,
       "PostalCode": 5683,
       "Name": "Guest",
@@ -24,7 +25,8 @@
       }
     ],
     "TotalPrice": 42,
-    "DeliveryAddress": "Haarby, Algade 91",
+    "DeliveryCity": "Haarby",
+    "DeliveryStreet": "Algade 91",
     "PostalCode": 5683
   }
 ]

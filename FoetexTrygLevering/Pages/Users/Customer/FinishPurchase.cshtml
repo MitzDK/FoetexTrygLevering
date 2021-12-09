@@ -1,5 +1,6 @@
 ﻿@page
 @using FoetexTrygLevering.Models.Items
+@using FoetexTrygLevering.Models.Order
 @model FoetexTrygLevering.Pages.Users.Customer.FinishPurchaseModel
 @{
     Layout = "Shared/_CustomerLayout";
@@ -43,4 +44,4 @@
     </table>
 </form>
 </body>
-<a asp-page="Payment" class="btn btn-success">Pay for Delivery </a> <a style="float: right" class="btn btn-success" asp-page="Homepage">Pick-up at store</a>
+<a asp-page="Payment" class="btn btn-success">Pay for Delivery </a> <a style="float: right" class="btn btn-success" asp-page="ConfirmationPurchase" asp-route-id="">Pick-up at store</a>

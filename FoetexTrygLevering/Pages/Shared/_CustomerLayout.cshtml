@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -22,20 +22,26 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <form method="post" asp-page="Homepage">
+                            <form method="post" asp-page="Homepage" class="border">
                                 @*<a class="nav-link text-dark" asp-area="" asp-page="/Index">Kategorier</a>*@
-                                <select id="MenuChoice" name="MenuChoice">
-                                    <option value="1">Alle varer</option>
-                                    <option value="2">Mad</option>
-                                    <option value="3">Drikke</option>
-                                    <option value="4">Andet</option>
+                                <select id="MenuChoice" name="MenuChoice" class="dropdown" style="width: 125px">
+                                    <option value="1" class="text-center">Alle varer</option>
+                                    <option value="2" class="text-center">Mad</option>
+                                    <option value="3" class="text-center">Drikke</option>
+                                    <option value="4" class="text-center">Andet</option>
                                 </select>
                                 <br/>
                                 <a asp-page="Homepage">
-                                    <input type="submit" value="Vis varer"/>
+                                    <input type="submit" value="Vis varer" style="width: 125px"/>
                                 </a>
-                                <a class="btn btn-primary" type="button" title="Edit customer" asp-page="EditCustomer" asp-route-id="@Model.Customer.UserID">Rediger profiloplysninger</a>
                             </form>
+                        </li>
+                        <li class="nav-item">
+                            <a style="width:auto" class="btn btn-primary" type="button" title="Edit customer" asp-page="EditCustomer" asp-route-id="@Model.Customer.UserID">Rediger profiloplysninger</a>
+                        </li>
+                        <li></li>
+                        <li class="nav-item">
+                            <a style="width:auto" class="btn btn-primary" asp-page="ShoppingCart">View Shoppingcart</a>
                         </li>
                     </ul>
                 </div>

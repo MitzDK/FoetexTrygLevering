@@ -9,6 +9,7 @@ namespace FoetexTrygLevering.Services
     interface IOrderService
     {
         public void CreateOrder(Order ord);
+
         public void UpdateOrder(int number, Order ord);
         public void DeleteOrder(int number);
         public List<Order> FilterOrderByCustomer(string cusName);
@@ -18,5 +19,6 @@ namespace FoetexTrygLevering.Services
         public Order Search(int id);
         public List<Order> GetAll();
         public void CreatePendingOrder(Order ord);
+        public Order NewOrder(Order ord);
     }
 }

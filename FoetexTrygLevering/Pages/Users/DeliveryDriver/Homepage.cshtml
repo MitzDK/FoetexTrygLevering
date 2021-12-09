@@ -8,5 +8,10 @@
     @if (Model.Driver != null)
     {
         <a class="btn btn-primary" type="button" title="Edit customer" asp-page="EditDeliveryDriver" asp-route-id="@Model.Driver.UserID">Rediger profiloplysninger</a>
+        @if (Model.Driver.UserID != 16)
+        {
+            <a class="btn btn-primary" type="button" title="Edit customer" asp-page="DeleteDeliveryDriver" asp-route-id="@Model.Driver.UserID">Slet konto</a>
+        }
     }
 </p>
+

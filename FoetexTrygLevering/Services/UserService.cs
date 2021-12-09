@@ -111,7 +111,8 @@ namespace FoetexTrygLevering.Services
 
         public void Delete(int number)
         {
-            _userList.RemoveAt(number - 1);
+            User delUser = Search(number);
+            _userList.RemoveAt(_userList.IndexOf(delUser));
             AssignID();
             JsonFileService.SaveJsonUsers(_userList);
         }

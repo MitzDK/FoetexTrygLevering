@@ -19,7 +19,6 @@ namespace FoetexTrygLevering.Pages.Users.Admin
         private Models.Users.Customer _customer;
         private Models.Users.DeliveryDriver _deliveryDriver;
         public User SearchedUser { get; set; }
-
         [Display(Name = "Navn:")]
         [Required(ErrorMessage = "Der skal indtastes et navn"), MinLength(2), MaxLength(50)]
         [BindProperty]
@@ -41,11 +40,14 @@ namespace FoetexTrygLevering.Pages.Users.Admin
         [Range(1000, 9999)]
         [BindProperty]
         public int PostalCode { get; set; }
-
-        [Display(Name = "Adresse")]
-        [Required(ErrorMessage = "Der skal indtastes en adresse")]
+        [Display(Name = "By navn")]
+        [Required(ErrorMessage = "Der skal indtastes en værdi")]
         [BindProperty]
-        public string Address { get; set; }
+        public string CityName { get; set; }
+        [Display(Name = "Vejnavn & Nr")]
+        [Required(ErrorMessage = "Der skal indtastes en værdi")]
+        [BindProperty]
+        public string Street { get; set; }
         [Display(Name = "Alder")]
         [Required(ErrorMessage = "Der skal indtastes en alder")]
         [Range(15, 120)]
@@ -85,7 +87,8 @@ namespace FoetexTrygLevering.Pages.Users.Admin
                     Email = _customer.Email;
                     PostalCode = _customer.PostalCode;
                     Age = _customer.Age;
-                    Address = _customer.Address;
+                    CityName = _customer.CityName;
+                    Street = _customer.Street;
                 }
                 else if (_searchedUser is Models.Users.DeliveryDriver)
                 {
@@ -114,7 +117,8 @@ namespace FoetexTrygLevering.Pages.Users.Admin
                 _customer.Email = Email;
                 _customer.PostalCode = PostalCode;
                 _customer.Age = Age;
-                _customer.Address = Address;
+                _customer.CityName = CityName;
+                _customer.Street = Street;
                 _userService.Update(UserID, _customer);
             }
             else if (_searchedUser is Models.Users.DeliveryDriver)

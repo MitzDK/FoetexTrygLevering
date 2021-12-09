@@ -2,8 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FoetexTrygLevering.Helpers;
 using FoetexTrygLevering.MockData;
 using FoetexTrygLevering.Models.Order;
+using FoetexTrygLevering.Services;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+
 
 namespace FoetexTrygLevering.Services
 {
@@ -33,6 +38,12 @@ namespace FoetexTrygLevering.Services
             _pendingOrders.Add(ord);
             AssignID();
             JsonFileService.SavePendingOrders(_pendingOrders);
+        }
+
+        public Order NewOrder(Order ord)
+        {
+            CreatePendingOrder(ord);
+            return _pendingOrders[_pendingOrders.IndexOf(ord)];
         }
 
         public void UpdateOrder(int number, Order ord)

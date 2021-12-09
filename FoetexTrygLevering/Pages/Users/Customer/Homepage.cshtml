@@ -4,12 +4,13 @@
 @{
     Layout = "Shared/_CustomerLayout";
 }
-<p>
-    <a class="btn btn-primary" asp-page="ShoppingCart">View Shoppingcart</a>
-</p>
 <p>@if (Model.Customer != null)
    {
        <a class="btn btn-primary" type="button" title="Edit customer" asp-page="EditCustomer" asp-route-id="@Model.Customer.UserID">Rediger profiloplysninger</a>
+       @if(Model.Customer.UserID != 1)
+       {
+           <a class="btn btn-primary" type="button" title="Delete customer" asp-page="DeleteCustomer" asp-route-id="@Model.Customer.UserID">Slet konto</a>
+       }
    }
 
 </p>
@@ -27,3 +28,4 @@
         </div>
     }
 </div>
+
