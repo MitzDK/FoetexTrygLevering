@@ -4,3 +4,9 @@
 @{
     Layout = "Shared/_DeliveryLayout";
 }
+<p>
+    @if (Model.Driver != null)
+    {
+        <a class="btn btn-primary" type="button" title="Edit customer" asp-page="EditDeliveryDriver" asp-route-id="@Model.Driver.UserID">Rediger profiloplysninger</a>
+    }
+</p>

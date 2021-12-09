@@ -147,7 +147,7 @@ namespace FoetexTrygLevering.Services
                     SkipValidation = false,
                     Indented = true
                 });
-                JsonSerializer.Serialize<Order[]>(jsonWriter, _doneOrders.ToArray());
+                JsonSerializer.Serialize<Order[]>(jsonWriter, orders.ToArray());
             }
         }
 
@@ -160,7 +160,7 @@ namespace FoetexTrygLevering.Services
                     SkipValidation = false,
                     Indented = true
                 });
-                JsonSerializer.Serialize<Order[]>(jsonWriter, _pendingOrders.ToArray());
+                JsonSerializer.Serialize<Order[]>(jsonWriter, orders.ToArray());
             }
         }
 
@@ -258,10 +258,6 @@ namespace FoetexTrygLevering.Services
             _deliveryDrivers.Clear();
         }
 
-        public void SaveJsonOrders(List<Order> orderList)
-        {
-            SaveOrders(orderList);
-        }
 
         public IEnumerable<Order> GetOrders()
         {

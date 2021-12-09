@@ -25,7 +25,7 @@ namespace FoetexTrygLevering.Services
         {
             _orders.Add(ord);
             AssignID();
-            JsonFileService.SaveJsonOrders(_orders);
+            JsonFileService.SaveOrders(_orders);
         }
 
         public void CreatePendingOrder(Order ord)

@@ -4,7 +4,7 @@
     Layout = "Shared/_AdminLayout";
 }
 
-<h1>Items</h1>
+<h1>User</h1>
 <br />
 <div class="row">
     <div class="col-4"><h5>Search ID</h5></div>
@@ -18,7 +18,7 @@
     <div class="col-4">
         <form method="post" class="form-inline">
             <input asp-for="@Model.ID" class="form-control mr-1" placeholder="Enter search term" />
-            <input type="submit" asp-page-handler="NameSearch" value="Search" class="btn btn-primary" />
+            <input type="submit" asp-page-handler="IDSearch" value="Search" class="btn btn-primary" />
         </form>
     </div>
     <div class="col-4">
@@ -26,29 +26,33 @@
             <input asp-for="@Model.Name" class="form-control mr-1" placeholder="Enter search term" />
             <input type="submit" asp-page-handler="NameSearch" value="Search" class="btn btn-primary" />
         </form>
-    </div><div class="col-4">
         <div class="col-4">
             <form method="post" class="form-inline">
                 <input asp-for="@Model.Email" class="form-control mr-1" placeholder="Enter search term" />
-                <input type="submit" asp-page-handler="NameSearch" value="Search" class="btn btn-primary" />
+                <input type="submit" asp-page-handler="EmailSearch" value="Search" class="btn btn-primary" />
             </form>
         </div>
     </div><div class="col-4">
         <form method="post" class="form-inline">
             <input asp-for="@Model.Phone" class="form-control mr-1" placeholder="Enter search term" />
-            <input type="submit" asp-page-handler="NameSearch" value="Search" class="btn btn-primary" />
+            <input type="submit" asp-page-handler="PhoneSearch" value="Search" class="btn btn-primary" />
         </form>
     </div>
+    @*<div class="col-5">
+        <form method="post" class="form-inline">
+            <div class="input-group mb-3">
+                <input asp-for="ID" class="form-control mr-1" />
+            </div>
+        </form>
+    </div>*@
 
 
-
-
-    <div class="col-2"></div>
+    <div class="col-4"></div>
 </div>
 <br />
-<table class="table table-bordered table-hover table-striped table-opacity" width="60%">
+<table class="table table-bordered table-hover table-striped table-opacity" width="40%">
     <col style="width: 5%">
-    <col style="width: 77%">
+    <col style="width: 60%">
     <col style="width: 9%">
     <col style="width: 9%">
     <thead>
@@ -96,7 +100,7 @@
                                     <a class="btn btn-primary btn-sm" type="button" data-toggle="tooltip" title="Edit" asp-page="EditUser" asp-route-id="@user.UserID"><i class="fa fa-edit"></i></a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a class="btn btn-danger btn-sm " type="button" data-toggle="tooltip" data-placement="top" title="Delete" asp-page="DeleteItem" asp-route-id="@user.UserID"><i class="fa fa-trash"></i></a>
+                                    <a class="btn btn-danger btn-sm " type="button" data-toggle="tooltip" data-placement="top" title="Delete" asp-page="DeleteUser" asp-route-id="@user.UserID"><i class="fa fa-trash"></i></a>
                                 </li>
                             </ul>
                         </td>
@@ -107,6 +111,3 @@
     </tbody>
 </table>
 
-<p>
-    <a class="btn btn-primary" asp-page="EditUser"> Create a new User </a>
-</p>

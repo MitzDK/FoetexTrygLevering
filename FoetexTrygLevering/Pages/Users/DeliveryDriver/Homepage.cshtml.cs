@@ -12,15 +12,16 @@ namespace FoetexTrygLevering.Pages.Users.DeliveryDriver
     {
         public Models.Users.DeliveryDriver Driver { get; set; }
         public List<Models.Users.DeliveryDriver> Drivers { get; set; }
+
         private UserService _userService;
 
         public HomepageModel(UserService userService)
         {
             _userService = userService;
         }
-        public IActionResult OnGet()
+        public void OnGet()
         {
-            return Page();
+            Driver = _userService.SpecificDeliveryDriver(User.Identity.Name);
         }
     }
 }
