@@ -45,16 +45,16 @@
     "ShoppedItems": [
       {
         "Item": {
-          "Name": "Hakket oksek\u00F8d 4-7% fedt",
-          "Price": 34,
-          "ID": 2,
-          "Description": "Hakket oksek\u00F8d 4-7% fedt 400 g",
+          "Name": "Hakket oksek\u00F8d 8-12% fedt \u00F8ko",
+          "Price": 42,
+          "ID": 1,
+          "Description": "\u00D8kologisk hakket oksek\u00F8d 8-12% fedt 450 g",
           "ImageName": "/Assets/Hakkekoed.jpg"
         },
         "Quantity": 1
       }
     ],
-    "TotalPrice": 34,
+    "TotalPrice": 42,
     "DeliveryCity": "Haarby",
     "DeliveryStreet": "Algade 91",
     "PostalCode": 5683

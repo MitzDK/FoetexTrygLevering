@@ -24,6 +24,16 @@
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                         </li>
                     </ul>
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="btn btn-primary" asp-page="ShoppingCart">View Shoppingcart</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="btn btn-primary" type="button" title="Edit user" asp-page="GetAllUsers" asp-route-id="1">Rediger user</a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="mr-2">
                     <partial name="_LoginStatusPartial"/>

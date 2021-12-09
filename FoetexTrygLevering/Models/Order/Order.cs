@@ -45,5 +45,15 @@ namespace FoetexTrygLevering.Models.Order
             PostalCode = customer.PostalCode;
             TotalPrice = shoppedItems.Sum(i => i.Item.Price * i.Quantity);
         }
+        public int GetItems()
+        {
+            int total = 0;
+            foreach (ShoppingItem shopitem in ShoppedItems)
+            {
+                total += shopitem.Quantity;
+            }
+
+            return total;
+        }
     }
 }

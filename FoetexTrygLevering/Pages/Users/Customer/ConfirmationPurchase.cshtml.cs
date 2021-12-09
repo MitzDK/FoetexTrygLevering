@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FoetexTrygLevering.Helpers;
+using FoetexTrygLevering.Models.Items;
 using FoetexTrygLevering.Models.Order;
 using FoetexTrygLevering.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -29,6 +31,7 @@ namespace FoetexTrygLevering.Pages.Users.Customer
         public void OnGetForward(Order ord)
         {
             Order = ord;
+            Order.ShoppedItems = HttpContext.Session.GetObjectFromJson<List<ShoppingItem>>("ShoppingCart");
             Customer = _userService.SpecificCustomer(User.Identity.Name);
             CurrentTime = $"{DateTime.Now.ToString("dd/MM/yy")}: {DateTime.Now.Hour}:{DateTime.Now.Minute + 30}";
         }

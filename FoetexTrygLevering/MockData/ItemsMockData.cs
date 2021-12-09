@@ -44,6 +44,7 @@ namespace FoetexTrygLevering.MockData
             new Food(69, "Proteinbar m. kokossmag", 25, "Nutramino , Proteinbar med kokos og mælkechokoladeovertræk 66 g","Proteinbar m. kokossmag.jfif"),
             new Food(70, "Proteinbar m. hvid chokolade og mandler u. tilsat sukker", 20, "Barebells , Proteinbar med hvid chokolade og mandelsmag. Indeholder sødestoffer 55 g","Proteinbar m. hvid chokolade og mandler u. tilsat sukker.jfif"),
             new Food(71, "Protein rawbar øko", 20, "Rawbite , Økologisk daddel- og rosinbar med nødder og protein 50 g","Protein rawbar øko.jfif"),
+            new Food(72,"Pebernødder", 25,"Karen Volf 400 g", "Peberndder.jfif"),
 
             new Beverage(12,"Drikkeyoghurt m. jordbær",14,"Drikkeyoghurt m. jordbær", false,"DrikkeYoghurtJordbaer.jpg"),
             new Beverage(13,"Drikkeyoghurt m. blåbær",14,"Syrnet skummetmælk med blåbær 0,5% fedt 500 ml", false,"DrikkeYoghurtBlaabaer.jpg"),
