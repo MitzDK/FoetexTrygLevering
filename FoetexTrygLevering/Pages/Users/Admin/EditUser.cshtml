@@ -5,45 +5,77 @@
 }
 <h1>Edit User</h1>
 <form method="post">
-    <div class="form-group">
-        <label asp-for="UserID" class="control-lable"></label>
-        <input asp-for="UserID" class="form-control" readonly="@(true)" />
-    </div>
-    <div class="form-group">
-        <label asp-for="Name" class="control-lable"></label>
-        <input asp-for="Name" class="form-control" />
-        <span asp-validation-for="Name" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Email" class="control-lable"></label>
-        <input asp-for="Email" class="form-control" />
-        <span asp-validation-for="Email" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Phone" class="control-lable"></label>
-        <input asp-for="Phone" class="form-control" />
-        <span asp-validation-for="Phone" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="PostalCode" class="control-lable"></label>
-        <input asp-for="PostalCode" class="form-control" />
-        <span asp-validation-for="PostalCode" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Address" class="control-lable"></label>
-        <input asp-for="Address" class="form-control" />
-        <span asp-validation-for="Address" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="AccNumber" class="control-lable"></label>
-        <input asp-for="AccNumber" class="form-control" />
-        <span asp-validation-for="AccNumber" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Age" class="control-lable"></label>
-        <input asp-for="Age" class="form-control" />
-        <span asp-validation-for="Age" class="text-danger"></span>
-    </div>
+    @if (Model.SearchedUser is Models.Users.Customer)
+    {
+        <div class="form-group">
+            <label asp-for="UserID" class="control-lable"></label>
+            <input asp-for="UserID" class="form-control" readonly="@(true)" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Name" class="control-lable"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Phone" class="control-lable"></label>
+            <input asp-for="Phone" class="form-control" />
+            <span asp-validation-for="Phone" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Email" class="control-lable"></label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="PostalCode" class="control-lable"></label>
+            <input asp-for="PostalCode" class="form-control" />
+            <span asp-validation-for="PostalCode" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Age" class="control-lable"></label>
+            <input asp-for="Age" class="form-control" />
+            <span asp-validation-for="Age" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Address" class="control-lable"></label>
+            <input asp-for="Address" class="form-control" />
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+
+    }
+    else if (Model.SearchedUser is Models.Users.DeliveryDriver)
+    {
+        <div class="form-group">
+            <label asp-for="UserID" class="control-lable"></label>
+            <input asp-for="UserID" class="form-control" readonly="@(true)" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Name" class="control-lable"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Email" class="control-lable"></label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Phone" class="control-lable"></label>
+            <input asp-for="Phone" class="form-control" />
+            <span asp-validation-for="Phone" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="PostalCode" class="control-lable"></label>
+            <input asp-for="PostalCode" class="form-control" />
+            <span asp-validation-for="PostalCode" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="AccNumber" class="control-lable"></label>
+            <input asp-for="AccNumber" class="form-control" />
+            <span asp-validation-for="AccNumber" class="text-danger"></span>
+        </div>
+
+    }
 
     <div class="form-group">
         <input type="submit" value="Update" class="btn btn-primary" />

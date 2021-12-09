@@ -28,6 +28,7 @@ namespace FoetexTrygLevering.Pages.Users.Customer
 
         public void OnGet()
         {
+            Customer = _userService.SpecificCustomer(User.Identity.Name);
             ShoppingCart = HttpContext.Session.GetObjectFromJson<List<ShoppingItem>>("ShoppingCart");
             if (ShoppingCart != null && ShoppingCart.Count != 0)
             {

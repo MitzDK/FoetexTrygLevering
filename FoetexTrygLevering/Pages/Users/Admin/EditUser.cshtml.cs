@@ -12,11 +12,13 @@ namespace FoetexTrygLevering.Pages.Users.Admin
 {
     public class EditUserModel : PageModel
     {
+        
         private UserService _userService;
         private User _searchedUser;
         private Models.Users.Admin _admin;
         private Models.Users.Customer _customer;
         private Models.Users.DeliveryDriver _deliveryDriver;
+        public User SearchedUser { get; set; }
 
         [Display(Name = "Navn:")]
         [Required(ErrorMessage = "Der skal indtastes et navn"), MinLength(2), MaxLength(50)]
