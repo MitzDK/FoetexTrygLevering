@@ -11,7 +11,6 @@ namespace FoetexTrygLevering.Pages.Users.DeliveryDriver
     public class HomepageModel : PageModel
     {
         public Models.Users.DeliveryDriver Driver { get; set; }
-        public List<Models.Users.DeliveryDriver> Drivers { get; set; }
 
         private UserService _userService;
 
