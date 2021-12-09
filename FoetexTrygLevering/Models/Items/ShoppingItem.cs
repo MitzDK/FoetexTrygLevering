@@ -9,5 +9,16 @@ namespace FoetexTrygLevering.Models.Items
     {
         public Item Item { get; set; }
         public int Quantity { get; set; }
+
+        public ShoppingItem(Item item, int quantity)
+        {
+            Item = item;
+            Quantity = quantity;
+        }
+
+        public ShoppingItem()
+        {
+            
+        }
     }
 }

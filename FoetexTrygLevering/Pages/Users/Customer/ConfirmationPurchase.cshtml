@@ -2,77 +2,15 @@
 @using FoetexTrygLevering.Models.Order
 @model FoetexTrygLevering.Pages.Users.Customer.ConfirmationPurchaseModel
 @{
-    Layout = "Shared/_CustomerLayout";
+    Layout = "Shared/_PaymentLayout";
 }
 <!DOCTYPE html>
 <html>
-
 <head>
     <title></title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <style type="text/css">
-        body,
-        table,
-        td,
-        a {
-            -webkit-text-size-adjust: 100%;
-            -ms-text-size-adjust: 100%;
-        }
-
-        table,
-        td {
-            mso-table-lspace: 0pt;
-            mso-table-rspace: 0pt;
-        }
-
-        img {
-            -ms-interpolation-mode: bicubic;
-        }
-
-        img {
-            border: 0;
-            height: auto;
-            line-height: 100%;
-            outline: none;
-            text-decoration: none;
-        }
-
-        table {
-            border-collapse: collapse !important;
-        }
-
-        body {
-            height: 100% !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            width: 100% !important;
-        }
-
-        a[x-apple-data-detectors] {
-            color: inherit !important;
-            text-decoration: none !important;
-            font-size: inherit !important;
-            font-family: inherit !important;
-            font-weight: inherit !important;
-            line-height: inherit !important;
-        }
-
-        @@media screen and (max-width: 480px) {
-        .mobile-hide {
-            display: none !important;
-        }
-
-        .mobile-center {
-            text-align: center !important;
-        }
-        }
-
-        div[style*="margin: 16px 0;"] {
-            margin: 0 !important;
-        }
-    </style>
 
     <body style="margin: 0 !important; padding: 0 !important; background-color: #eeeeee;" bgcolor="#eeeeee">
 
@@ -164,7 +102,7 @@
                                                 <tr>
                                                     <td align="left" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px;">
                                                         <p style="font-weight: 800;">Delivery Address</p>
-                                                        <p>@Model.Customer.CityName<br>@Model.Customer.PostalCode</p>
+                                                        <p>@Model.Customer.Street <br>@Model.Customer.PostalCode @Model.Customer.CityName</p>
                                                         <br>
                                                         <p style="font-weight: 800;">Føtex oplysninger</p>
                                                         <p>Rosbjergvej 33<br>8220 Brabrand<br>Denmark<br>CVR-nummer 35 95 47 16</p>

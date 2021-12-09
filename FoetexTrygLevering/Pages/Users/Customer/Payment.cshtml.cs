@@ -22,7 +22,7 @@ namespace FoetexTrygLevering.Pages.Users.Customer
 
         public List<ShoppingItem> ShoppingCart { get; set; }
         public double TotalPrice { get; set; }
-        
+
 
         public int Quantity
         {
@@ -63,8 +63,8 @@ namespace FoetexTrygLevering.Pages.Users.Customer
             Customer = _userService.SpecificCustomer(User.Identity.Name);
             ShoppingCart = HttpContext.Session.GetObjectFromJson<List<ShoppingItem>>("ShoppingCart");
             Order o1 = new Order(Customer, ShoppingCart);
-            _orderService.CreatePendingOrder(o1);
-            return RedirectToPage("ConfirmationPurchase");
+            o1 = _orderService.NewOrder(o1);
+            return RedirectToPage("ConfirmationPurchase", "Forward", o1);
         }
     }
 }

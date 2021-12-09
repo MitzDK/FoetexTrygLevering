@@ -12,13 +12,13 @@ namespace FoetexTrygLevering.Pages.Users.Admin
 {
     public class EditUserModel : PageModel
     {
-        
+        public User SearchedUser { get; set; }
         private UserService _userService;
         private User _searchedUser;
         private Models.Users.Admin _admin;
         private Models.Users.Customer _customer;
         private Models.Users.DeliveryDriver _deliveryDriver;
-        public User SearchedUser { get; set; }
+
         [Display(Name = "Navn:")]
         [Required(ErrorMessage = "Der skal indtastes et navn"), MinLength(2), MaxLength(50)]
         [BindProperty]
@@ -40,14 +40,11 @@ namespace FoetexTrygLevering.Pages.Users.Admin
         [Range(1000, 9999)]
         [BindProperty]
         public int PostalCode { get; set; }
-        [Display(Name = "By navn")]
-        [Required(ErrorMessage = "Der skal indtastes en værdi")]
+
+        [Display(Name = "Adresse")]
+        [Required(ErrorMessage = "Der skal indtastes en adresse")]
         [BindProperty]
-        public string CityName { get; set; }
-        [Display(Name = "Vejnavn & Nr")]
-        [Required(ErrorMessage = "Der skal indtastes en værdi")]
-        [BindProperty]
-        public string Street { get; set; }
+        public string Address { get; set; }
         [Display(Name = "Alder")]
         [Required(ErrorMessage = "Der skal indtastes en alder")]
         [Range(15, 120)]
@@ -70,6 +67,7 @@ namespace FoetexTrygLevering.Pages.Users.Admin
             _searchedUser = _userService.Search(Id);
             if (_searchedUser != null)
             {
+                SearchedUser = _searchedUser;
                 if (_searchedUser is Models.Users.Admin)
                 {
                     _admin = (Models.Users.Admin) _searchedUser;
@@ -87,8 +85,8 @@ namespace FoetexTrygLevering.Pages.Users.Admin
                     Email = _customer.Email;
                     PostalCode = _customer.PostalCode;
                     Age = _customer.Age;
-                    CityName = _customer.CityName;
-                    Street = _customer.Street;
+                    Address = _customer.CityName;
+                    Address = _customer.Street;
                 }
                 else if (_searchedUser is Models.Users.DeliveryDriver)
                 {
@@ -117,8 +115,8 @@ namespace FoetexTrygLevering.Pages.Users.Admin
                 _customer.Email = Email;
                 _customer.PostalCode = PostalCode;
                 _customer.Age = Age;
-                _customer.CityName = CityName;
-                _customer.Street = Street;
+                _customer.CityName = Address;
+                _customer.Street = Address;
                 _userService.Update(UserID, _customer);
             }
             else if (_searchedUser is Models.Users.DeliveryDriver)

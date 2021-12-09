@@ -112,7 +112,6 @@ C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Ra
 C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Admin\CreateBeverage.cshtml.g.cs
 C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Admin\CreateFood.cshtml.g.cs
 C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Admin\CreateNonFood.cshtml.g.cs
-C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Admin\CreateUser.cshtml.g.cs
 C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Admin\DeleteItem.cshtml.g.cs
 C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Admin\EditItem.cshtml.g.cs
 C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Admin\EditUser.cshtml.g.cs
@@ -130,3 +129,5 @@ C:\Users\Victur\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\R
 C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Customer\DeleteCustomer.cshtml.g.cs
 C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\DeliveryDriver\DeleteDeliveryDriver.cshtml.g.cs
 C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\DeliveryDriver\EditDeliveryDriver.cshtml.g.cs
+C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Shared\_PaymentLayout.cshtml.g.cs
+C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Admin\DeleteUser.cshtml.g.cs
