@@ -11,7 +11,8 @@ namespace FoetexTrygLevering.Services
         public void CreateOrder(Order ord);
 
         public void UpdateOrder(int number, Order ord);
-        public void DeleteOrder(int number);
+        public void DeleteOrder(Order ord);
+        public void DeletePendingOrder(Order ord);
         public List<Order> FilterOrderByCustomer(string cusName);
         public IEnumerable<Order> PriceFilter(int maxPrice, int minPrice);
         public List<Order> FilterOrderByPostalCode(int inputPostalCode);
@@ -20,5 +21,7 @@ namespace FoetexTrygLevering.Services
         public List<Order> GetAll();
         public void CreatePendingOrder(Order ord);
         public Order NewOrder(Order ord);
+        public List<Order> GetAllPending();
+        public Order SearchPending(int id);
     }
 }

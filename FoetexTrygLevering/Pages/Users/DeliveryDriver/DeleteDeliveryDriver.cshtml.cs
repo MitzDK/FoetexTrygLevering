@@ -25,7 +25,7 @@ namespace FoetexTrygLevering.Pages.Users.DeliveryDriver
 
         public IActionResult OnGet(int id)
         {
-            DeliveryDriver = (Models.Users.DeliveryDriver)_userService.GetDeliveryDriver(id);
+            DeliveryDriver = _userService.SpecificDeliveryDriver(User.Identity.Name);
             if (DeliveryDriver == null) return RedirectToPage("../../Error");
 
             return Page();

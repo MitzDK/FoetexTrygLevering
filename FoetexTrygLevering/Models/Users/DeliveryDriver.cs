@@ -18,6 +18,8 @@ namespace FoetexTrygLevering.Models.Users
         [Range(1000, 9999)]
         public int PostalCode { get; set; }
 
+        public List<Order.Order> OrderHistory { get; set; } = new List<Order.Order>();
+
         public DeliveryDriver()
         {
             
@@ -32,6 +34,11 @@ namespace FoetexTrygLevering.Models.Users
         {
             AccNumber = accNumber;
             PostalCode = postalCode;
+        }
+
+        public void AddOrderToHistory(Order.Order ord)
+        {
+            OrderHistory.Add(ord);
         }
     }
 }

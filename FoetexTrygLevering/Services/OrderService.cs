@@ -55,9 +55,17 @@ namespace FoetexTrygLevering.Services
 
         }
 
-        public void DeleteOrder(int number)
+        public void DeleteOrder(Order ord)
         {
-            _orders.RemoveAt(number-1);
+            _orders.RemoveAt(_orders.IndexOf(ord));
+            AssignID();
+            //JsonFileService.SaveJsonOrders(_orders);
+            //JsonFileService.SavePendingOrders(_pendingOrders);
+        }
+        public void DeletePendingOrder(Order ord)
+        {
+            _pendingOrders.RemoveAt(_pendingOrders.IndexOf(ord));
+            _orders.Add(ord);
             AssignID();
             //JsonFileService.SaveJsonOrders(_orders);
             //JsonFileService.SavePendingOrders(_pendingOrders);
@@ -110,10 +118,25 @@ namespace FoetexTrygLevering.Services
             }
             return null;
         }
+        public Order SearchPending(int id)
+        {
+            foreach (Order ord in _pendingOrders)
+            {
+                if (id == ord.OrderID)
+                {
+                    return ord;
+                }
+            }
+            return null;
+        }
 
         public List<Order> GetAll()
         {
             return _orders;
+        }
+        public List<Order> GetAllPending()
+        {
+            return _pendingOrders;
         }
 
         public void AssignID()

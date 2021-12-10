@@ -1,5 +1,6 @@
 ﻿@page
 @using FoetexTrygLevering.Models.Items
+@using FoetexTrygLevering.Models.Order
 @model FoetexTrygLevering.Pages.Users.DeliveryDriver.HomepageModel
 @{
     Layout = "Shared/_DeliveryLayout";
@@ -14,4 +15,51 @@
         }
     }
 </p>
+
+<table>
+    <thead>
+    <tr>
+        <th>OrderID</th>
+        <th>Postnr</th>
+        <th>Leveringspunkt</th>
+        <th>Totalpris</th>
+        <th>Claim Knap</th>
+    </tr>
+    </thead>
+    <tbody>
+    @if (Model.PendingOrders != null)
+    {
+        @foreach (Order ord in Model.PendingOrders)
+        {
+            <tr>
+                <td>
+                    @ord.OrderID
+                </td>
+                <td>
+                    @ord.PostalCode
+                </td>
+                <td>
+                    @ord.DeliveryCity, @ord.DeliveryStreet
+                </td>
+                <td>
+                    @ord.TotalPrice
+                </td>
+                <td>
+                    <form method="post">
+                        <a asp-page="ActiveOrder" asp-route-id="@ord.OrderID" class="btn btn-success">Claim</a>
+                    </form>
+                </td>
+            </tr>
+        }
+    }
+    else
+    {
+        <div>
+            ord var null
+        </div>
+    }
+    </tbody>
+
+
+</table>
 

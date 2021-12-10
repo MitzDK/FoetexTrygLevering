@@ -1,0 +1,69 @@
+﻿@page "{id:int}"
+@using FoetexTrygLevering.Models.Items
+@model FoetexTrygLevering.Pages.Users.DeliveryDriver.ActiveOrderModel
+@{
+}
+
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>
+            Postnr
+        </th>
+        <th>
+            Adresse
+        </th>
+        <th>
+            Pris
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+            @Model.Order.PostalCode
+        </td>
+        <td>
+            @Model.Order.DeliveryCity, @Model.Order.DeliveryStreet
+        </td>
+        <td>
+            @Model.Order.TotalPrice
+        </td>
+        <td>
+            <form method="post">
+                <a asp-page="OrderHistorik" asp-route-id="@Model.Order.OrderID" class="btn btn-success">Done!</a>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+    <thead class="">
+    <tr>
+        <td>
+            <b>Billede</b>
+        </td>
+        <td>
+            <b>Navn</b>
+        </td>
+        <td>
+            <b>Hvor mange</b>
+        </td>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (ShoppingItem shopItem in @Model.Order.ShoppedItems)
+    {
+        <tr>
+            <td>
+                <img src="@shopItem.Item.ImageName" alt="" class="orderitem-picture">
+            </td>
+            <td>
+                @shopItem.Item.Name
+            </td>
+            <td>
+                @shopItem.Quantity
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

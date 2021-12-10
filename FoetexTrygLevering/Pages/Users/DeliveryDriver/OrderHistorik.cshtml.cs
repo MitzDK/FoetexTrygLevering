@@ -9,25 +9,26 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace FoetexTrygLevering.Pages.Users.DeliveryDriver
 {
-    public class HomepageModel : PageModel
+    public class OrderHistorikModel : PageModel
     {
+        public Order Order { get; set; }
         public Models.Users.DeliveryDriver Driver { get; set; }
-        public List<Order> PendingOrders { get; set; }
-
         private UserService _userService;
         private OrderService _orderService;
         private ItemService _itemService;
 
-        public HomepageModel(UserService userService, OrderService orderService, ItemService itemService)
+        public OrderHistorikModel(UserService userService, OrderService orderService, ItemService itemService)
         {
             _userService = userService;
             _orderService = orderService;
             _itemService = itemService;
         }
-        public void OnGet()
+        public void OnGet(int id)
         {
             Driver = _userService.SpecificDeliveryDriver(User.Identity.Name);
-            PendingOrders = _orderService.GetAllPending();
+            Order = _orderService.SearchPending(id);
+            Driver.AddOrderToHistory(Order);
+            _orderService.DeletePendingOrder(Order);
         }
     }
 }

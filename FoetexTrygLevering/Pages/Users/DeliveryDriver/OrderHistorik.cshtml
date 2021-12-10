@@ -1,0 +1,44 @@
+﻿@page
+@using FoetexTrygLevering.Models.Users
+@using FoetexTrygLevering.Models.Order
+@model FoetexTrygLevering.Pages.Users.DeliveryDriver.OrderHistorikModel
+@{
+}
+
+<h2>@Model.Driver.Name</h2>
+<table>
+    <thead>
+    <tr>
+        <th>
+            OrderID
+        </th>
+        <th>
+            Kundens Navn
+        </th>
+        <th>
+            Totalpris
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    @if (Model.Driver.OrderHistory.Count != 0)
+    {
+        @foreach (Order ord in @Model.Driver.OrderHistory)
+        {
+            <tr>
+                <td>
+                    @ord.OrderID
+                </td>
+                <td>
+                    @ord.Customer.Name
+                </td>
+                <td>
+                    @ord.TotalPrice
+                </td>
+            </tr>
+        }
+    }
+    </tbody>
+</table>
+
+

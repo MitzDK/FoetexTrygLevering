@@ -20,20 +20,60 @@ namespace FoetexTrygLevering.Pages.Users.Customer
         private OrderService _orderService;
         public int Id { get; set; }
         public string CurrentTime { get; set; }
+        private int _currentHour;
+        private int _currentMinute;
+        private Random rnd = new Random();
 
         public ConfirmationPurchaseModel(UserService userService, ItemService itemService, OrderService orderService)
         {
             _userService = userService;
             _itemService = itemService;
             _orderService = orderService;
-
         }
+
+        public void CheckTime()
+        {
+            if (_currentMinute >= 60)
+            {
+                if (_currentHour != 23)
+                {
+                    _currentHour += 1;
+                    _currentMinute -= 60;
+                }
+                else if (_currentHour == 23)
+                {
+                    _currentHour = 0;
+                    _currentMinute -= 60;
+                }
+            }
+
+            if (_currentHour < 10)
+            {
+                CurrentTime = $"0{_currentHour}";
+            }
+            else
+            {
+                CurrentTime = $"{_currentHour}";
+            }
+
+            if (_currentMinute < 10)
+            {
+                CurrentTime += $":0{_currentMinute}";
+            }
+            else
+            {
+                CurrentTime += $":{_currentMinute}";
+            }
+        }
+
         public void OnGetForward(Order ord)
         {
+            _currentHour = DateTime.Now.Hour;
+            _currentMinute = DateTime.Now.Minute + rnd.Next(25, 60);
+            CheckTime();
             Order = ord;
             Order.ShoppedItems = HttpContext.Session.GetObjectFromJson<List<ShoppingItem>>("ShoppingCart");
             Customer = _userService.SpecificCustomer(User.Identity.Name);
-            CurrentTime = $"{DateTime.Now.ToString("dd/MM/yy")}: {DateTime.Now.Hour}:{DateTime.Now.Minute + 30}";
         }
     }
 }
