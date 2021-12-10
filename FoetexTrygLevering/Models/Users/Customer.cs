@@ -10,18 +10,18 @@ namespace FoetexTrygLevering.Models.Users
 {
     public class Customer : User
     {
-        [Display(Name = "Bynavn")]
+        [Display(Name = "City Name")]
         [Required(ErrorMessage = "Der skal indtastes en adresse")]
 
         public string CityName { get; set; }
-        [Display(Name = "Vejnavn")]
+        [Display(Name = "Street Information")]
         [Required(ErrorMessage = "Der skal indtastes en adresse")]
         public string Street { get; set; }
-        [Display(Name = "Alder")]
+        [Display(Name = "Age")]
         [Required(ErrorMessage = "Der skal indtastes en alder")]
         [Range(15, 120)]
         public int Age { get; set; }
-        [Display(Name = "Post nummer:")]
+        [Display(Name = "Postal Code:")]
         [Required(ErrorMessage = "Der skal angives et postnummer.")]
         [Range(1000, 9999)]
         public int PostalCode { get; set; }

@@ -39,7 +39,7 @@
         </div>
 
         <div class="form-group">
-            <input type="submit" value="Opdater oplysninger" class="btn btn-primary" />
+            <input type="submit" value="Update Information" class="btn btn-primary" />
         </div>
     </form>
 }
@@ -78,12 +78,12 @@ else
         </div>
 
         <div class="form-group">
-            <input type="submit" value="Opdater oplysninger" class="btn btn-primary" />
+            <input type="submit" value="Update Information" class="btn btn-primary" />
         </div>
     </form>
 }
 
 
 <div>
-    <a class="btn btn-primary"asp-page="Homepage">Tilbage til forsiden</a>    @if(Model.Driver.Name != "TestDriver"){ <a class="btn btn-danger"asp-page="DeleteDeliveryDriver" asp-route-id="@Model.Driver.UserID">Slet min profil</a>}
+    <a class="btn btn-primary"asp-page="Homepage">Back to Homepage</a>    @if(Model.Driver.Name != "TestDriver"){ <a class="btn btn-danger"asp-page="DeleteDeliveryDriver" asp-route-id="@Model.Driver.UserID">Delete my Profile</a>}
 </div>

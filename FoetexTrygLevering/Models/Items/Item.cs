@@ -21,7 +21,7 @@ namespace FoetexTrygLevering.Models.Items
 
         public int ID { get; set; }
 
-        [Display(Name = "Item description")]
+        [Display(Name = "Item Description")]
         [Required(ErrorMessage = "A description is required"), MaxLength(10000000)]
         public string Description { get; set; }
 

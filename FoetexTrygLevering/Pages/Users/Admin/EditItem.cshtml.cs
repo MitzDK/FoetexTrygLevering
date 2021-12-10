@@ -25,17 +25,17 @@ public class EditItemModel : PageModel
         [BindProperty] 
         public int Id { get; set; }
 
-        [Display(Name = "Navn:")]
+        [Display(Name = "Name:")]
         [Required(ErrorMessage = "Der skal indtastes et navn")]
         [BindProperty]
         public string Name { get; set; }
 
-        [Display(Name ="Item beskrivelse")]
+        [Display(Name ="Item Description")]
         [Required(ErrorMessage = "Der skal indtastes en beskrivelse")]
         [BindProperty]
         public string Description { get; set; } 
 
-        [Display(Name ="Pris:")]
+        [Display(Name ="Price:")]
         [Required(ErrorMessage = "Der skal indtastes en pris")]
         [BindProperty]
         public double Price { get; set; }

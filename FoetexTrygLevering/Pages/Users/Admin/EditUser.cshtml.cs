@@ -19,11 +19,11 @@ namespace FoetexTrygLevering.Pages.Users.Admin
         private Models.Users.Customer _customer;
         private Models.Users.DeliveryDriver _deliveryDriver;
 
-        [Display(Name = "Navn:")]
+        [Display(Name = "Name:")]
         [Required(ErrorMessage = "Der skal indtastes et navn"), MinLength(2), MaxLength(50)]
         [BindProperty]
         public string Name { get; set; }
-        [Display(Name = "Telefon:")]
+        [Display(Name = "Phone #:")]
         [Required(ErrorMessage = "Der skal indtastes et telefonnummer.")]
         [RegularExpression(@"([0-9]+)", ErrorMessage = "Må kun indeholde tal:"), MinLength(8), MaxLength(8)]
         [BindProperty]
@@ -35,17 +35,17 @@ namespace FoetexTrygLevering.Pages.Users.Admin
         [BindProperty]
         public int UserID { get; set; }
 
-        [Display(Name = "Post nummer:")]
+        [Display(Name = "Postal code:")]
         [Required(ErrorMessage = "Der skal angives et postnummer.")]
         [Range(1000, 9999)]
         [BindProperty]
         public int PostalCode { get; set; }
 
-        [Display(Name = "Adresse")]
+        [Display(Name = "Address")]
         [Required(ErrorMessage = "Der skal indtastes en adresse")]
         [BindProperty]
         public string Address { get; set; }
-        [Display(Name = "Alder")]
+        [Display(Name = "Age")]
         [Required(ErrorMessage = "Der skal indtastes en alder")]
         [Range(15, 120)]
         [BindProperty]
