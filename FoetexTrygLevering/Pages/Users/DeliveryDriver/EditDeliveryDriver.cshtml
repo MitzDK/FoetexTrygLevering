@@ -3,43 +3,87 @@
 @{
     Layout = "Shared/_DeliveryLayout";
 }
-<form method="post">
-    <div class="form-group">
-        <label asp-for="DeliveryDriver.Name"></label>
-        <input asp-for="DeliveryDriver.Name" class="form-control"></>
-        <span asp-validation-for="DeliveryDriver.Name" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="DeliveryDriver.Email"></label>
-        <input id="Email" type="email" asp-for="DeliveryDriver.Email" class="form-control"></>
-        <span asp-validation-for="DeliveryDriver.Email" class="text-danger"></span>
 
-    </div>
-    <div class="form-group">
-        <label asp-for="DeliveryDriver.Phone"></label>
-        <input asp-for="DeliveryDriver.Phone" class="form-control"></>
-        <span asp-validation-for="DeliveryDriver.Phone" class="text-danger"></span>
+@if (Model.Driver.Name != "TestDriver")
+{
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="Driver.Name"></label>
+            <input asp-for="Driver.Name" class="form-control" />
+            <span asp-validation-for="Driver.Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Driver.Email"></label>
+            <input id="Email" type="email" asp-for="Driver.Email" class="form-control" />
+            <span asp-validation-for="Driver.Email" class="text-danger"></span>
 
-    </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Driver.Phone"></label>
+            <input asp-for="Driver.Phone" class="form-control" />
+            <span asp-validation-for="Driver.Phone" class="text-danger"></span>
 
-    <div class="form-group">
-        <label asp-for="DeliveryDriver.PostalCode"></label>
-        <input asp-for="DeliveryDriver.PostalCode" class="form-control"></>
-        <span asp-validation-for="DeliveryDriver.PostalCode" class="text-danger"></span>
-    </div>
+        </div>
 
-    <div class="form-group">
-        <label asp-for="DeliveryDriver.AccNumber"></label>
-        <input asp-for="DeliveryDriver.AccNumber" class="form-control"></>
-        <span asp-validation-for="DeliveryDriver.AccNumber" class="text-danger"></span>
+        <div class="form-group">
+            <label asp-for="Driver.PostalCode"></label>
+            <input asp-for="Driver.PostalCode" class="form-control" />
+            <span asp-validation-for="Driver.PostalCode" class="text-danger"></span>
+        </div>
 
-    </div>
+        <div class="form-group">
+            <label asp-for="Driver.AccNumber"></label>
+            <input asp-for="Driver.AccNumber" class="form-control" />
+            <span asp-validation-for="Driver.AccNumber" class="text-danger"></span>
 
-    <div class="form-group">
-        <input type="submit" value="Opdater oplysninger" class="btn btn-primary" />
-    </div>
-</form>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Opdater oplysninger" class="btn btn-primary" />
+        </div>
+    </form>
+}
+else
+{
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="Driver.Name"></label>
+            <input asp-for="Driver.Name" class="form-control" readonly="readonly"/>
+            <span asp-validation-for="Driver.Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Driver.Email"></label>
+            <input id="Email" type="email" asp-for="Driver.Email" class="form-control" readonly="readonly"/>
+            <span asp-validation-for="Driver.Email" class="text-danger"></span>
+
+        </div>
+        <div class="form-group">
+            <label asp-for="Driver.Phone"></label>
+            <input asp-for="Driver.Phone" class="form-control" readonly="readonly"/>
+            <span asp-validation-for="Driver.Phone" class="text-danger"></span>
+
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Driver.PostalCode"></label>
+            <input asp-for="Driver.PostalCode" class="form-control" readonly="readonly"/>
+            <span asp-validation-for="Driver.PostalCode" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Driver.AccNumber"></label>
+            <input asp-for="Driver.AccNumber" class="form-control" readonly="readonly"/>
+            <span asp-validation-for="Driver.AccNumber" class="text-danger"></span>
+
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Opdater oplysninger" class="btn btn-primary" />
+        </div>
+    </form>
+}
+
 
 <div>
-    <a asp-page="Users/DeliveryDriver/Homepage">Tilbage til forsiden</a>
+    <a class="btn btn-primary"asp-page="Homepage">Tilbage til forsiden</a>    @if(Model.Driver.Name != "TestDriver"){ <a class="btn btn-danger"asp-page="DeleteDeliveryDriver" asp-route-id="@Model.Driver.UserID">Slet min profil</a>}
 </div>

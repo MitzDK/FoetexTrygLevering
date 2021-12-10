@@ -7,7 +7,7 @@ using FoetexTrygLevering.Models.Users;
 
 namespace FoetexTrygLevering.Models.Order
 {
-    public class Order
+    public class Order : IComparable<Order>
     {
         public int OrderID { get; set; }
         public bool IsDelivered { get; set; }
@@ -44,6 +44,20 @@ namespace FoetexTrygLevering.Models.Order
             DeliveryStreet = customer.Street;
             PostalCode = customer.PostalCode;
             TotalPrice = shoppedItems.Sum(i => i.Item.Price * i.Quantity);
+        }
+        public int CompareTo(Order? other)
+        {
+            if (this.PostalCode > other.PostalCode)
+            {
+                return 1;
+            }
+
+            if (this.PostalCode == other.PostalCode)
+            {
+                return 0;
+            }
+
+            return -1;
         }
         public int GetItems()
         {

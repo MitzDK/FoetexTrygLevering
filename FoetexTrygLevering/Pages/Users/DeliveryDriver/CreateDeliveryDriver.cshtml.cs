@@ -12,7 +12,7 @@ namespace FoetexTrygLevering.Pages.Users.DeliveryDriver
     {
         private UserService _userService;
         [BindProperty]
-        public Models.Users.DeliveryDriver DeliveryDriver { get; set; }
+        public Models.Users.DeliveryDriver Driver { get; set; }
 
         public CreateDeliveryDriverModel(UserService userService)
         {
@@ -29,7 +29,7 @@ namespace FoetexTrygLevering.Pages.Users.DeliveryDriver
             {
                 return Page();
             }
-            _userService.Add(DeliveryDriver);
+            _userService.Add(Driver);
             return RedirectToPage("Homepage");
         }
     }

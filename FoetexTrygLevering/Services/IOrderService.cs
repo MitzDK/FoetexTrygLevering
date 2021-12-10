@@ -23,5 +23,6 @@ namespace FoetexTrygLevering.Services
         public Order NewOrder(Order ord);
         public List<Order> GetAllPending();
         public Order SearchPending(int id);
+        public void SortByPostalCode(List<Order> orderList);
     }
 }

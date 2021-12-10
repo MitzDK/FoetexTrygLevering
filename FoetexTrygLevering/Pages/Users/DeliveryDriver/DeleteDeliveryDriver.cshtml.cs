@@ -14,7 +14,7 @@ namespace FoetexTrygLevering.Pages.Users.DeliveryDriver
     {
         private UserService _userService;
 
-        [BindProperty] public Models.Users.DeliveryDriver DeliveryDriver { get; set; }
+        [BindProperty] public Models.Users.DeliveryDriver Driver { get; set; }
         public int UserID { get; set; }
 
 
@@ -25,8 +25,8 @@ namespace FoetexTrygLevering.Pages.Users.DeliveryDriver
 
         public IActionResult OnGet(int id)
         {
-            DeliveryDriver = _userService.SpecificDeliveryDriver(User.Identity.Name);
-            if (DeliveryDriver == null) return RedirectToPage("../../Error");
+            Driver = _userService.SpecificDeliveryDriver(User.Identity.Name);
+            if (Driver == null) return RedirectToPage("../../Error");
 
             return Page();
         }
@@ -35,7 +35,7 @@ namespace FoetexTrygLevering.Pages.Users.DeliveryDriver
         {
 
             UserID = _userService.SpecificDeliveryDriver(User.Identity.Name).UserID;
-            DeliveryDriver.UserID = UserID;
+            Driver.UserID = UserID;
             _userService.Delete(UserID);
 
             return RedirectToPage("../../LogOut");

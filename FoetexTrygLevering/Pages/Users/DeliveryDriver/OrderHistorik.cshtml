@@ -3,10 +3,11 @@
 @using FoetexTrygLevering.Models.Order
 @model FoetexTrygLevering.Pages.Users.DeliveryDriver.OrderHistorikModel
 @{
+    Layout = "Shared/_DeliveryLayout";
 }
 
 <h2>@Model.Driver.Name</h2>
-<table>
+<table class="table table-bordered table-hover table-striped table-opacity">
     <thead>
     <tr>
         <th>

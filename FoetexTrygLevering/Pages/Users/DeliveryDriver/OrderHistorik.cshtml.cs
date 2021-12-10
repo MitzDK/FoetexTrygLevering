@@ -23,12 +23,17 @@ namespace FoetexTrygLevering.Pages.Users.DeliveryDriver
             _orderService = orderService;
             _itemService = itemService;
         }
-        public void OnGet(int id)
+        public void OnGetNewOrder(int id)
         {
             Driver = _userService.SpecificDeliveryDriver(User.Identity.Name);
             Order = _orderService.SearchPending(id);
             Driver.AddOrderToHistory(Order);
             _orderService.DeletePendingOrder(Order);
+        }
+
+        public void OnGet()
+        {
+            Driver = _userService.SpecificDeliveryDriver(User.Identity.Name);
         }
     }
 }

@@ -16,6 +16,7 @@ namespace FoetexTrygLevering.Services
     {
         private List<Order> _orders;
         private List<Order> _pendingOrders;
+        private bool _isOrderSorted;
         private JsonFileService JsonFileService { get; set; }
 
         public OrderService(JsonFileService jsonFileService)
@@ -128,6 +129,21 @@ namespace FoetexTrygLevering.Services
                 }
             }
             return null;
+        }
+
+        public void SortByPostalCode(List<Order> orderList)
+        {
+            if (_isOrderSorted == false)
+            {
+                orderList.Sort();
+                _isOrderSorted = true;
+            }
+            else
+            {
+                orderList.Reverse();
+                _isOrderSorted = false;
+            }
+
         }
 
         public List<Order> GetAll()

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FoetexTrygLevering.Models.Users
 {
-    public abstract class User
+    public class User
     {
         [Display(Name="Navn:")]
         [Required(ErrorMessage = "Der skal indtastes et navn"), MinLength(2), MaxLength(50)]

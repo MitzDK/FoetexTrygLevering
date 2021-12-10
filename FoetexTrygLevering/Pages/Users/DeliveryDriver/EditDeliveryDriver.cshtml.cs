@@ -17,7 +17,7 @@ namespace FoetexTrygLevering.Pages.Users.DeliveryDriver
         private UserService _userService;
 
         [BindProperty]
-        public Models.Users.DeliveryDriver DeliveryDriver { get; set; }
+        public Models.Users.DeliveryDriver Driver { get; set; }
 
         public int UserID { get; set; }
 
@@ -28,8 +28,8 @@ namespace FoetexTrygLevering.Pages.Users.DeliveryDriver
 
         public IActionResult OnGet(int id)
         {
-            DeliveryDriver = _userService.SpecificDeliveryDriver(User.Identity.Name);
-            if (DeliveryDriver == null) return RedirectToPage("../../Error");
+            Driver = _userService.SpecificDeliveryDriver(User.Identity.Name);
+            if (Driver == null) return RedirectToPage("../../Error");
 
             return Page();
         }
@@ -41,12 +41,12 @@ namespace FoetexTrygLevering.Pages.Users.DeliveryDriver
                 return Page();
             }
             UserID = _userService.SpecificDeliveryDriver(User.Identity.Name).UserID;
-            DeliveryDriver.UserID = UserID;
-            _userService.UpdateDeliveryDriver(UserID, DeliveryDriver); //UpdateDeliveryDriver skal implementeres
+            Driver.UserID = UserID;
+            _userService.UpdateDeliveryDriver(UserID, Driver); //UpdateDeliveryDriver skal implementeres
 
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Name, DeliveryDriver.Name)
+                new Claim(ClaimTypes.Name, Driver.Name)
             };
             var identity = new ClaimsIdentity(claims, "MyCookieAuth");
             ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);

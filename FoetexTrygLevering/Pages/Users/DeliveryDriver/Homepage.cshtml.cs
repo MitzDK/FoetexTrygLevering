@@ -29,5 +29,12 @@ namespace FoetexTrygLevering.Pages.Users.DeliveryDriver
             Driver = _userService.SpecificDeliveryDriver(User.Identity.Name);
             PendingOrders = _orderService.GetAllPending();
         }
+
+        public void OnPostSort()
+        {
+            Driver = _userService.SpecificDeliveryDriver(User.Identity.Name);
+            PendingOrders = _orderService.GetAllPending();
+            _orderService.SortByPostalCode(PendingOrders);
+        }
     }
 }

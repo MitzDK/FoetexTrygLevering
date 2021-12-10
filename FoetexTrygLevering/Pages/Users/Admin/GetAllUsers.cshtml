@@ -3,77 +3,71 @@
 @{
     Layout = "Shared/_AdminLayout";
 }
+<h1>User Information</h1>
+<table>
+    <tr>
+        <th>
+            <div class="w3-quarter">
 
-<h1>User</h1>
-<br />
-<div class="row">
-    <div class="col-4"><h5>Search ID</h5></div>
-    <div class="col-4"><h5>Search Name</h5></div>
-    <div class="col-4"><h5>Search Email</h5></div>
-    <div class="col-4"><h5>Search Phone</h5></div>
-    <div class="col-4"></div>
-</div>
+                <h5>Search id</h5>
+                <form method="post" class="form-inline">
+                    <input asp-for="@Model.ID" class="form-control mr-1" placeholder="Enter search term" />
+                    <input type="submit" asp-page-handler="IDSearch" value="Search" class="btn btn-primary" />
+                </form>
+            </div>
 
-<div class="row">
-    <div class="col-4">
-        <form method="post" class="form-inline">
-            <input asp-for="@Model.ID" class="form-control mr-1" placeholder="Enter search term" />
-            <input type="submit" asp-page-handler="IDSearch" value="Search" class="btn btn-primary" />
-        </form>
-    </div>
-    <div class="col-4">
-        <form method="post" class="form-inline">
-            <input asp-for="@Model.Name" class="form-control mr-1" placeholder="Enter search term" />
-            <input type="submit" asp-page-handler="NameSearch" value="Search" class="btn btn-primary" />
-        </form>
-        <div class="col-4">
-            <form method="post" class="form-inline">
-                <input asp-for="@Model.Email" class="form-control mr-1" placeholder="Enter search term" />
-                <input type="submit" asp-page-handler="EmailSearch" value="Search" class="btn btn-primary" />
-            </form>
-        </div>
-    </div><div class="col-4">
-        <form method="post" class="form-inline">
-            <input asp-for="@Model.Phone" class="form-control mr-1" placeholder="Enter search term" />
-            <input type="submit" asp-page-handler="PhoneSearch" value="Search" class="btn btn-primary" />
-        </form>
-    </div>
-    @*<div class="col-5">
-            <form method="post" class="form-inline">
-                <div class="input-group mb-3">
-                    <input asp-for="ID" class="form-control mr-1" />
-                </div>
-            </form>
-        </div>*@
+            <div class="w3-quarter">
+
+                <h5>Search Name</h5>
+                <form method="post">
+                    <input asp-for="@Model.Name" class="form-control mr-1" placeholder="Enter search term" />
+                    <input type="submit" asp-page-handler="NameSearch" value="Search" class="btn btn-primary" />
+                </form>
+            </div>
+
+            <div class="w3-quarter">
+
+                <h5>Search Email</h5>
+                <form method="post">
+                    <input asp-for="@Model.Email" class="form-control mr-1" placeholder="Enter search term" />
+                    <input type="submit" asp-page-handler="EmailSearch" value="Search" class="btn btn-primary" />
+                </form>
+            </div>
+
+            <div class="w3-quarter">
+
+                <h5>Search phone</h5>
+                <form method="post">
+                    <input asp-for="@Model.Phone" class="form-control mr-1" placeholder="Enter search term" />
+                    <input type="submit" asp-page-handler="PhoneSearch" value="Search" class="btn btn-primary" />
+                </form>
+            </div>
+        </th>
+    </tr>
+</table>
 
 
-    <div class="col-4"></div>
-</div>
-<br />
-<table class="table table-bordered table-hover table-striped table-opacity" width="40%">
-    <col style="width: 5%">
-    <col style="width: 60%">
-    <col style="width: 9%">
-    <col style="width: 9%">
+
+<table class="table table-borderless table-hover table-striped table-opacity" width="40%">
     <thead>
-        <tr class="btn-secondary active">
-            <th>
-                Id
-            </th>
-            <th>
-                Name
-            </th>
-            <th>
-                Email
-            </th>
-            <th>
-                Phone
-            </th>
-            <th>
-                Actions
-            </th>
-        </tr>
+    <th>
+        Name
+    </th>
+    <th>
+        Id
+    </th>
+    <th>
+        Email
+    </th>
+    <th>
+        Phone
+    </th>
+    <th>
+        Actions
+    </th>
     </thead>
+
+
     <tbody>
         @if (@Model.ListUsers != null)
         {
@@ -81,32 +75,36 @@
             {
                 if (!(user is Models.Users.Admin))
                 {
-                    <tr class="btn-secondary">
-                        <td>
-                            @user.UserID
-                        </td>
-                        <td>
-                            @user.Name
-                        </td>
-                        <td>
-                            @user.Email
-                        </td>
-                        <td>
-                            @user.Phone
-                        </td>
-                        <td>
-                            <ul class="list-inline m-0">
-                                <li class="list-inline-item">
-                                    <a class="btn btn-primary btn-sm" type="button" data-toggle="tooltip" title="Edit" asp-page="EditUser" asp-route-id="@user.UserID"><i class="fa fa-edit"></i></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a class="btn btn-danger btn-sm " type="button" data-toggle="tooltip" data-placement="top" title="Delete" asp-page="DeleteUser" asp-route-id="@user.UserID"><i class="fa fa-trash"></i></a>
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
+                 <tr>
+                     <td>
+                       @user.UserID
+                     </td>
+                     <td>
+                         @user.Name
+                     </td>
+                     <td>
+                         @user.Email
+                     </td>
+                     <td>
+                         @user.Phone
+                     </td>
+                     <td>
+                         <form class="form-inline">
+                             <form method="post">
+                                 <a class="btn btn-primary btn-sm" type="button" data-toggle="tooltip" title="Edit" asp-page="EditUser" asp-route-id="@user.UserID"><i class="fa fa-edit"></i></a>
+                             </form>
+                             <form method="post">
+                                 <a class="btn btn-danger btn-sm " type="button" data-toggle="tooltip" data-placement="top" title="Delete" asp-page="DeleteUser" asp-route-id="@user.UserID"><i class="fa fa-trash"></i></a>
+                             </form>
+                         </form>
+                         
+                     </td>
+
+                     </tr>
+                    
                 }
             }
         }
     </tbody>
 </table>
+

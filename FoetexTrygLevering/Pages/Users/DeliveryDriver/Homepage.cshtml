@@ -5,26 +5,27 @@
 @{
     Layout = "Shared/_DeliveryLayout";
 }
-<p>
-    @if (Model.Driver != null)
-    {
-        <a class="btn btn-primary" type="button" title="Edit customer" asp-page="EditDeliveryDriver" asp-route-id="@Model.Driver.UserID">Rediger profiloplysninger</a>
-        @if (Model.Driver.UserID != 16)
-        {
-            <a class="btn btn-primary" type="button" title="Edit customer" asp-page="DeleteDeliveryDriver" asp-route-id="@Model.Driver.UserID">Slet konto</a>
-        }
-    }
-</p>
-
-<table>
+<table class="table table-bordered table-hover table-striped table-opacity" width="40%">
     <thead>
-    <tr>
-        <th>OrderID</th>
-        <th>Postnr</th>
-        <th>Leveringspunkt</th>
-        <th>Totalpris</th>
-        <th>Claim Knap</th>
-    </tr>
+        <tr>
+            <th>OrderID</th>
+
+            <th>
+                <div class="myContainer">
+                    <div class="align-left mt-5">Postnr
+                    </div>
+                    <div class="align-right mt-5">
+                        <form method="post" asp-page="HomepageModel">
+                            <input type="submit" value="Sort" asp-page-handler="Sort" class="btn btn-primary btn-resize"/>
+                        </form>
+                    </div>
+                </div>
+            </th>
+
+            <th>Leveringspunkt</th>
+            <th>Totalpris</th>
+            <th></th>
+        </tr>
     </thead>
     <tbody>
     @if (Model.PendingOrders != null)
@@ -59,7 +60,4 @@
         </div>
     }
     </tbody>
-
-
 </table>
-

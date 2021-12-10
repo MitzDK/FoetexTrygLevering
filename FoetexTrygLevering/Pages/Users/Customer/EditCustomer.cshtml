@@ -48,6 +48,10 @@
         <input type="submit" value="Opdater oplysninger" class="btn btn-primary" />
     </div>
 </form>
+@if (Model.Customer.UserID != 1)
+{
+    <a class="btn btn-danger" type="button" title="Slet konto" asp-page="DeleteCustomer" asp-route-id="@Model.Customer.UserID">Slet konto</a>
+}
 
 <div>
     <a asp-page="Users/Customer/Homepage">Tilbage til forsiden</a>
