@@ -71,8 +71,15 @@ namespace FoetexTrygLevering.Pages.Users.Customer
             _currentHour = DateTime.Now.Hour;
             _currentMinute = DateTime.Now.Minute + rnd.Next(25, 60);
             CheckTime();
-            Order = ord;
-            Order.ShoppedItems = HttpContext.Session.GetObjectFromJson<List<ShoppingItem>>("ShoppingCart");
+            if (ord.IsDelivered == false)
+            {
+                Order = _orderService.SearchPending(ord.OrderID);
+            }
+            else
+            {
+                Order = _orderService.Search(ord.OrderID);
+            }
+
             Customer = _userService.SpecificCustomer(User.Identity.Name);
         }
     }

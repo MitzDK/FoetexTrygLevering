@@ -312,7 +312,11 @@ namespace FoetexTrygLevering.MockData
             })
             
         };
-        
+
+        public static void AddPending(Order ord)
+        {
+            _pendingOrders.Add(ord);
+        }
         public static List<Order> GetAllOrders()
         {
             return _orders;

@@ -16,13 +16,16 @@ namespace FoetexTrygLevering.Services
         public List<Order> FilterOrderByCustomer(string cusName);
         public IEnumerable<Order> PriceFilter(int maxPrice, int minPrice);
         public List<Order> FilterOrderByPostalCode(int inputPostalCode);
-        public void AssignID();
         public Order Search(int id);
         public List<Order> GetAll();
         public void CreatePendingOrder(Order ord);
-        public Order NewOrder(Order ord);
+        public Order NewPendingOrder(Order ord);
+        public Order NewDoneOrder(Order ord);
         public List<Order> GetAllPending();
         public Order SearchPending(int id);
         public void SortByPostalCode(List<Order> orderList);
+        public void AssignPendingID();
+
+        public void AssignID();
     }
 }

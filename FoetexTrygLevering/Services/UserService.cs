@@ -28,6 +28,7 @@ namespace FoetexTrygLevering.Services
 
         public User Search(int number)
         {
+
             foreach (User user in _userList)
             {
                 if (number == user.UserID)

@@ -10,8 +10,8 @@
             <div>
                 <h5>Search id</h5>
                 <form method="post">
-                    <input asp-for="@Model.ID" class="form-control" placeholder="Enter search term"/>
-                    <input type="submit" asp-page-handler="IDSearch" value="Search" class="btn btn-success"/>
+                    <input asp-for="@Model.SearchID" class="form-control" placeholder="Enter search term"/>
+                    <input type="submit" asp-page-handler="IDSearch" value="Search" width="280" class="btn btn-success"/>
                 </form>
             </div>
         </th>
@@ -20,7 +20,7 @@
                 <h5>Search Name</h5>
                 <form method="post">
                     <input asp-for="@Model.Name" class="form-control" placeholder="Enter search term" />
-                    <input type="submit" asp-page-handler="NameSearch" value="Search" class="btn btn-success" />
+                    <input type="submit" asp-page-handler="NameSearch" value="Search" width="280" class="btn btn-success" />
                 </form>
             </div>
         </th>
@@ -29,7 +29,7 @@
                 <h5>Search Email</h5>
                 <form method="post">
                     <input asp-for="@Model.Email" class="form-control" placeholder="Enter search term" />
-                    <input type="submit" asp-page-handler="EmailSearch" value="Search" class="btn btn-success" />
+                    <input type="submit" asp-page-handler="EmailSearch" value="Search" width="280" class="btn btn-success" />
                 </form>
             </div>
         </th>
@@ -38,7 +38,7 @@
                 <h5>Search phone</h5>
                 <form method="post">
                     <input asp-for="@Model.Phone" class="form-control" placeholder="Enter search term" />
-                    <input type="submit" asp-page-handler="PhoneSearch" value="Search" class="btn btn-success" />
+                    <input type="submit" asp-page-handler="PhoneSearch" value="Search" width="280" class="btn btn-success" />
                 </form>
             </div>
         </th>
@@ -51,10 +51,10 @@
     <thead>
         <tr>
             <th>
-                Name
+                User ID
             </th>
             <th>
-                Id
+                Name
             </th>
             <th>
                 Email
@@ -74,35 +74,57 @@
         {
             foreach (var user in Model.ListUsers)
             {
-                if (!(user is Models.Users.Admin))
+                if (user is Models.Users.Admin && user != null)
                 {
-                 <tr>
-                     <td>
-                       @user.UserID
-                     </td>
-                     <td>
-                         @user.Name
-                     </td>
-                     <td>
-                         @user.Email
-                     </td>
-                     <td>
-                         @user.Phone
-                     </td>
-                     <td>
-                         <form class="form-inline">
-                             <form method="post">
-                                 <a class="btn btn-primary btn-sm" type="button" data-toggle="tooltip" title="Edit" asp-page="EditUser" asp-route-id="@user.UserID"><i class="fa fa-edit"></i></a>
-                             </form>
-                             <form method="post">
-                                 <a class="btn btn-danger btn-sm " type="button" data-toggle="tooltip" data-placement="top" title="Delete" asp-page="DeleteUser" asp-route-id="@user.UserID"><i class="fa fa-trash"></i></a>
-                             </form>
-                         </form>
-                         
-                     </td>
+                    <tr>
 
-                     </tr>
-                    
+                        <td>
+                            @user.UserID
+                        </td>
+                        <td>
+                            @user.Name
+                        </td>
+                        <td>
+                            @user.Email
+                        </td>
+                        <td>
+                            @user.Phone
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                }
+                if (!(user is Models.Users.Admin) && user != null)
+                {
+                    <tr>
+
+                        <td>
+                            @user.UserID
+                        </td>
+                        <td>
+                            @user.Name
+                        </td>
+                        <td>
+                            @user.Email
+                        </td>
+                        <td>
+                            @user.Phone
+                        </td>
+                        <td>
+                            <div class="myContainer">
+                                <form method="post">
+                                    <div class="align-left">
+                                        <a class="btn btn-primary btn-sm" type="button" data-toggle="tooltip" title="Edit" asp-page="EditUser" asp-route-id="@user.UserID"><i class="fa fa-edit"></i></a>
+                                    </div>
+                                </form>
+                                <form method="post">
+                                    <div class="align-right">
+                                        <a class="btn btn-danger btn-sm " type="button" data-toggle="tooltip" data-placement="top" title="Delete" asp-page="DeleteUser" asp-route-id="@user.UserID"><i class="fa fa-trash"></i></a>
+                                    </div>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
                 }
             }
         }

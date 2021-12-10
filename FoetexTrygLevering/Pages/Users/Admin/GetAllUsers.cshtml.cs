@@ -17,7 +17,8 @@ namespace FoetexTrygLevering.Pages.Users.Admin
         [BindProperty] public string Name { get; set; }
         [BindProperty] public string Email { get; set; }
         [BindProperty] public string Phone { get; set; }
-        [BindProperty] public int ID { get; set; }
+        [BindProperty] public string SearchID { get; set; }
+        private int _searchID;
 
         public GetAllUsersModel(UserService userService)
         {
@@ -48,8 +49,21 @@ namespace FoetexTrygLevering.Pages.Users.Admin
         public IActionResult OnPostIDSearch()
         {
             List<User> searchList = new List<User>();
-            searchList.Add(_userService.Search(ID));
+            try
+            {
+                _searchID = Convert.ToInt32(SearchID);
+            }
+            catch
+            {
+                SearchID = "Du skal taste et tal!";
+                return Page();
+            }
+            searchList.Add(_userService.Search(_searchID));
             ListUsers = searchList;
+            if (ListUsers[0] == null)
+            {
+                ListUsers = _userService.GetAll();
+            }
             return Page();
         }
 

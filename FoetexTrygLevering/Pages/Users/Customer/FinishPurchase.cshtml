@@ -7,9 +7,9 @@
 }
 <body>
 
-<h3>Cart</h3>
+    <h3>Cart</h3>
 <form method="post" asp-page="ShoppingCart" asp-page-handler="update">
-    <table class="table">
+    <table class="table table-bordered table-hover">
         <tr>
             <th>Action</th>
             <th>Id</th>
@@ -19,7 +19,8 @@
             <th>Quantity <input type="submit" value="Update" /></th>
             <th>Sub Total</th>
         </tr>
-        @if (Model.ShoppingCart != null){
+        @if (Model.ShoppingCart != null)
+        {
             @foreach (var item in Model.ShoppingCart)
             {
                 <tr align="center">
@@ -42,6 +43,9 @@
             </tr>
         }
     </table>
+    <table class="table">
+    </table>
 </form>
+<a asp-page="Payment" class="btn btn-success">Pay for Delivery </a>
+<a asp-page="FinishPurchase" class="btn btn-success" asp-page-handler="PickUp">Pick-up at store</a>
 </body>
-<a asp-page="Payment" class="btn btn-success">Pay for Delivery </a> <a style="float: right" class="btn btn-success" asp-page="ConfirmationPurchase" asp-route-id="">Pick-up at store</a>

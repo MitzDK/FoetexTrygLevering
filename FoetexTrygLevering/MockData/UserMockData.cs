@@ -21,7 +21,7 @@ namespace FoetexTrygLevering.MockData
             
             //Customer
             //int userId, string name, string phone, string email, string address, int age
-            new Customer(1, "Guest", "00000000", "123@email.com", "Haarby", "Algade 91", 5683, 18),
+            new Customer(1, "Guest", "00000000", "123@email.com", "GuestCity", "GuestGade 91", 5683, 18),
             new Customer(7, "Kent Jørgen", "23568790", "KentJørgen@gmail.com", "København K", "Frørupvej 83", 1146, 65),
             new Customer(8, "Birgitte Thomsen", "12436986", "BThomsen@email.com", "København K", "Slipager 9", 1434, 45),
             new Customer(9, "Lars Karlsen", "43512389", "LArskoarlsen@email.com", "Skodsborg", "Hans Schacksvej 8", 2942, 32),

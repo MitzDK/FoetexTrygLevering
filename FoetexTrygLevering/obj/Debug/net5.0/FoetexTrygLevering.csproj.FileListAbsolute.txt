@@ -458,3 +458,4 @@ C:\Users\Victur\Desktop\FoetexTrygLevering\FoetexTrygLevering\bin\Debug\net5.0\t
 C:\Users\Victur\Desktop\FoetexTrygLevering\FoetexTrygLevering\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\Victur\Desktop\FoetexTrygLevering\FoetexTrygLevering\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\Victur\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\FoetexTrygLevering.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Victur\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Admin\OrderStatistics.cshtml.g.cs

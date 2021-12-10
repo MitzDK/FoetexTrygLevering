@@ -3,8 +3,8 @@
     "OrderID": 1,
     "IsDelivered": false,
     "Customer": {
-      "CityName": "Haarby",
-      "Street": "Algade 91",
+      "CityName": "GuestCity",
+      "Street": "GuestGade 91",
       "Age": 18,
       "PostalCode": 5683,
       "Name": "Guest",
@@ -65,8 +65,8 @@
       }
     ],
     "TotalPrice": 823,
-    "DeliveryCity": "Haarby",
-    "DeliveryStreet": "Algade 91",
+    "DeliveryCity": "GuestCity",
+    "DeliveryStreet": "GuestGade 91",
     "PostalCode": 5683
   },
   {
@@ -393,8 +393,8 @@
     "OrderID": 6,
     "IsDelivered": false,
     "Customer": {
-      "CityName": "Haarby",
-      "Street": "Algade 91",
+      "CityName": "GuestCity",
+      "Street": "GuestGade 91",
       "Age": 18,
       "PostalCode": 5683,
       "Name": "Guest",
@@ -425,8 +425,8 @@
       }
     ],
     "TotalPrice": 222,
-    "DeliveryCity": "Haarby",
-    "DeliveryStreet": "Algade 91",
+    "DeliveryCity": "GuestCity",
+    "DeliveryStreet": "GuestGade 91",
     "PostalCode": 5683
   },
   {
@@ -833,8 +833,8 @@
     "OrderID": 11,
     "IsDelivered": false,
     "Customer": {
-      "CityName": "Haarby",
-      "Street": "Algade 91",
+      "CityName": "GuestCity",
+      "Street": "GuestGade 91",
       "Age": 18,
       "PostalCode": 5683,
       "Name": "Guest",
@@ -955,8 +955,8 @@
       }
     ],
     "TotalPrice": 1313,
-    "DeliveryCity": "Haarby",
-    "DeliveryStreet": "Algade 91",
+    "DeliveryCity": "GuestCity",
+    "DeliveryStreet": "GuestGade 91",
     "PostalCode": 5683
   },
   {
@@ -1343,8 +1343,8 @@
     "OrderID": 16,
     "IsDelivered": false,
     "Customer": {
-      "CityName": "Haarby",
-      "Street": "Algade 91",
+      "CityName": "GuestCity",
+      "Street": "GuestGade 91",
       "Age": 18,
       "PostalCode": 5683,
       "Name": "Guest",
@@ -1355,18 +1355,18 @@
     "ShoppedItems": [
       {
         "Item": {
-          "Name": "Drikkeyoghurt m. hindb\u00E6r",
-          "Price": 14,
-          "ID": 14,
-          "Description": "Syrnet m\u00E6lk med hindb\u00E6r 0,6% fedt 500 ml",
-          "ImageName": "/Assets/DrikkeYoghurtHindbaer.jpg"
+          "Name": "Kernerugbr\u00F8d",
+          "Price": 22,
+          "ID": 55,
+          "Description": "Schulstad Signaturbr\u00F8d, Rugbr\u00F8d med kerner 750 g",
+          "ImageName": "/Assets/Kernerugbr\u00F8d.jfif"
         },
-        "Quantity": 1
+        "Quantity": 1203
       }
     ],
-    "TotalPrice": 14,
-    "DeliveryCity": "Haarby",
-    "DeliveryStreet": "Algade 91",
+    "TotalPrice": 26466,
+    "DeliveryCity": "GuestCity",
+    "DeliveryStreet": "GuestGade 91",
     "PostalCode": 5683
   }
 ]

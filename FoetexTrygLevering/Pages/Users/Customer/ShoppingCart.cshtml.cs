@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using FoetexTrygLevering.Helpers;
 using FoetexTrygLevering.Models.Items;
+using FoetexTrygLevering.Models.Order;
 using FoetexTrygLevering.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -15,12 +16,13 @@ namespace FoetexTrygLevering.Pages.Users.Customer
         public double TotalPrice { get; set; }
         private UserService _userService;
         private ItemService _itemService;
+        private OrderService _orderService;
 
-        public ShoppingCartModel(UserService userService, ItemService itemService)
+        public ShoppingCartModel(UserService userService, ItemService itemService, OrderService orderService)
         {
             _userService = userService;
             _itemService = itemService;
-
+            _orderService = orderService;
         }
         public void OnGet()
         {

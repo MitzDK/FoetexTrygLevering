@@ -1,0 +1,34 @@
+﻿@page
+@using FoetexTrygLevering.Models.Items
+@model FoetexTrygLevering.Pages.Users.Admin.OrderStatisticsModel
+@{
+    Layout = "Shared/_AdminLayout";
+}
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Statistik</th>
+        <th>Resultat</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                Hvilken vare er købt mest?
+            </td>
+            <td>@Model.MostBought().Name  : @Model.AmountBought(@Model.MostBought())stk </td>
+        </tr>
+        <tr>
+            <td>Hvor meger er der handlet ind for i alt?</td>
+            <td>@Model.CombinePrices(),-</td>
+        </tr>
+        <tr>
+            <td>Hvor mange kunder har vi?</td>
+            <td>@Model.TotalCustomers()</td>
+        </tr>
+        <tr>
+            <td>Hvor mange kurerer har vi?</td>
+            <td>@Model.TotalDrivers()</td>
+        </tr>
+    </tbody>
+</table>

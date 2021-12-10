@@ -148,8 +148,8 @@ span.price {
     width: 60%;
 }
 .orderitem-picture {
-    height: 20%;
-    width: 20%;
+    height: 90%;
+    width: 90%;
 }
 
 .myContainer {
@@ -174,4 +174,7 @@ span.price {
     cursor: pointer;
     font-size: 14px;
 }
-
+.myitem-picture {
+    height: 80px;
+    width: 80px;
+}
