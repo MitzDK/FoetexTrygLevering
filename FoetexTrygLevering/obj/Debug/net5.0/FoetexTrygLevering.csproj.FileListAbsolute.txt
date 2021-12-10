@@ -137,7 +137,6 @@ C:\Users\Victur\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\R
 C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\DeliveryDriver\ActiveOrder.cshtml.g.cs
 C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\DeliveryDriver\OrderHistorik.cshtml.g.cs
 C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Customer\ShoppingCart2.cshtml.g.cs
-C:\Users\Victur\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Customer\ShoppingCart2.cshtml.g.cs
 C:\Users\Victur\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\DeliveryDriver\ActiveOrder.cshtml.g.cs
 C:\Users\Victur\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\DeliveryDriver\ContactCustomer.cshtml.g.cs
 C:\Users\Victur\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\DeliveryDriver\OrderHistorik.cshtml.g.cs
@@ -459,3 +458,4 @@ C:\Users\Victur\Desktop\FoetexTrygLevering\FoetexTrygLevering\bin\Debug\net5.0\z
 C:\Users\Victur\Desktop\FoetexTrygLevering\FoetexTrygLevering\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\Victur\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\FoetexTrygLevering.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Victur\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Admin\OrderStatistics.cshtml.g.cs
+C:\Users\Victur\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Customer\ShoppingCart - Copy.cshtml.g.cs

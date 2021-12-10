@@ -1,8 +1,9 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using FoetexTrygLevering.Helpers;
 using FoetexTrygLevering.Models.Items;
-using FoetexTrygLevering.Models.Order;
 using FoetexTrygLevering.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -16,20 +17,19 @@ namespace FoetexTrygLevering.Pages.Users.Customer
         public double TotalPrice { get; set; }
         private UserService _userService;
         private ItemService _itemService;
-        private OrderService _orderService;
 
-        public ShoppingCartModel(UserService userService, ItemService itemService, OrderService orderService)
+        public ShoppingCartModel(UserService userService, ItemService itemService)
         {
             _userService = userService;
             _itemService = itemService;
-            _orderService = orderService;
+
         }
         public void OnGet()
         {
             Customer = _userService.SpecificCustomer(User.Identity.Name);
             ShoppingCart = HttpContext.Session.GetObjectFromJson<List<ShoppingItem>>("ShoppingCart");
 
-            if (ShoppingCart != null && ShoppingCart.Count != 0) 
+            if (ShoppingCart != null && ShoppingCart.Count != 0)
             {
                 TotalPrice = ShoppingCart.Sum(i => i.Item.Price * i.Quantity);
             }
