@@ -13,7 +13,7 @@ namespace FoetexTrygLevering.Models.Users
         public string AccNumber { get; set; }
 
 
-        [Display(Name = "Post nummer:")]
+        [Display(Name = "Postal Code:")]
         [Required(ErrorMessage = "Der skal angives et postnummer.")]
         [Range(1000, 9999)]
         public int PostalCode { get; set; }

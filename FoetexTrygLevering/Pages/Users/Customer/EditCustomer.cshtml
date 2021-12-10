@@ -3,56 +3,106 @@
 @{
     Layout = "Shared/_CustomerLayout";
 }
+
 <form method="post">
-    <div class="form-group">
+    @if (Model.Customer.Name != "Guest")
+    {
+        <div class="form-group">
         <label asp-for="Customer.Name"></label>
-        <input asp-for="Customer.Name" class="form-control"></>
+            <input asp-for="Customer.Name" class="form-control"/>
         <span asp-validation-for="Customer.Name" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Customer.Email"></label>
-        <input id="Email" type="email" asp-for="Customer.Email" class="form-control"></>
+        <input id="Email" type="email" asp-for="Customer.Email" class="form-control"/>
         <span asp-validation-for="Customer.Email" class="text-danger"></span>
 
     </div>
     <div class="form-group">
         <label asp-for="Customer.Phone"></label>
-        <input asp-for="Customer.Phone" class="form-control"></>
+        <input asp-for="Customer.Phone" class="form-control"/>
         <span asp-validation-for="Customer.Phone" class="text-danger"></span>
 
     </div>
     <div class="form-group">
         <label asp-for="Customer.Age"></label>
-        <input asp-for="Customer.Age" class="form-control"></>
+        <input asp-for="Customer.Age" class="form-control"/>
         <span asp-validation-for="Customer.Age" class="text-danger"></span>
 
     </div>
     <div class="form-group">
         <label asp-for="Customer.CityName"></label>
-        <input asp-for="Customer.CityName" class="form-control"></>
+        <input asp-for="Customer.CityName" class="form-control"/>
         <span asp-validation-for="Customer.CityName" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Customer.Street"></label>
-        <input asp-for="Customer.Street" class="form-control"></>
+        <input asp-for="Customer.Street" class="form-control"/>
         <span asp-validation-for="Customer.Street" class="text-danger"></span>
     </div>
 
     <div class="form-group">
         <label asp-for="Customer.PostalCode"></label>
-        <input asp-for="Customer.PostalCode" class="form-control"></>
+        <input asp-for="Customer.PostalCode" class="form-control"/>
         <span asp-validation-for="Customer.PostalCode" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <input type="submit" value="Opdater oplysninger" class="btn btn-primary" />
+        <input type="submit" value="Update Information" class="btn btn-primary"/>
     </div>
+    }
+    else
+    {
+        <div class="form-group">
+            <label asp-for="Customer.Name"></label>
+            <input asp-for="Customer.Name" class="form-control" readonly="readonly"/>
+            <span asp-validation-for="Customer.Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Customer.Email"></label>
+            <input id="Email" type="email" asp-for="Customer.Email" class="form-control" readonly="readonly"/>
+            <span asp-validation-for="Customer.Email" class="text-danger"></span>
+
+        </div>
+        <div class="form-group">
+            <label asp-for="Customer.Phone"></label>
+            <input asp-for="Customer.Phone" class="form-control" readonly="readonly"/>
+            <span asp-validation-for="Customer.Phone" class="text-danger"></span>
+
+        </div>
+        <div class="form-group">
+            <label asp-for="Customer.Age"></label>
+            <input asp-for="Customer.Age" class="form-control" readonly="readonly"/>
+            <span asp-validation-for="Customer.Age" class="text-danger"></span>
+
+        </div>
+        <div class="form-group">
+            <label asp-for="Customer.CityName"></label>
+            <input asp-for="Customer.CityName" class="form-control" readonly="readonly"/>
+            <span asp-validation-for="Customer.CityName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Customer.Street"></label>
+            <input asp-for="Customer.Street" class="form-control" readonly="readonly"/>
+            <span asp-validation-for="Customer.Street" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Customer.PostalCode"></label>
+            <input asp-for="Customer.PostalCode" class="form-control" readonly="readonly"/>
+            <span asp-validation-for="Customer.PostalCode" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Update Information" class="btn btn-primary"/>
+        </div>
+    }
 </form>
-@if (Model.Customer.UserID != 1)
+@if (Model.Customer.Name != "Guest")
 {
-    <a class="btn btn-danger" type="button" title="Slet konto" asp-page="DeleteCustomer" asp-route-id="@Model.Customer.UserID">Slet konto</a>
+    <a class="btn btn-danger" type="button" title="Slet konto" asp-page="DeleteCustomer" asp-route-id="@Model.Customer.UserID">Delete my Profile</a>
 }
 
 <div>
-    <a asp-page="Users/Customer/Homepage">Tilbage til forsiden</a>
+    <a asp-page="Homepage" class="btn btn-primary">Back to Homepage</a>
 </div>
