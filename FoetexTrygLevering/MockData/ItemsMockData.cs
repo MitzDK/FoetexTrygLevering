@@ -25,7 +25,7 @@ namespace FoetexTrygLevering.MockData
 
             new Food(52, "Softkernerugbrød øko", 45, "Emmerys , Økologisk kernerugbrød 1 kg","Softkernerugbrød øko.jfif"),
             new Food(53, "Ølandsbrød øko", 45, "Emmerys , Økologisk ølandsbrød 650 g","Ølandsbrød øko.jfif"),
-            new Food(54, "Skiveskåret softkernerugbrød øko", 45, "Emmerys , Økologisk rugbrød med solsikke- og græskarkerner 950 g","Skiveskåret softkernerugbrød øko.jfif"),
+            new Food(54, "Skiveskåret rugbrød øko", 45, "Emmerys , Økologisk rugbrød med solsikke- og græskarkerner 950 g","Skiveskåret softkernerugbrød øko.jfif"),
             new Food(55, "Kernerugbrød", 22, "Schulstad Signaturbrød, Rugbrød med kerner 750 g","Kernerugbrød.jfif"),
             new Food(56, "Solsikkerugbrød", 21, "Schulstad Det Gode, Rugbrød med solsikkekerner 950 g","Solsikkerugbrød.jfif"),
             new Food(57, "Gulerødder øko", 11, "Salling ØKO , Økologiske gulerødder 1 kg","Gulerødder øko.jfif"),
@@ -36,13 +36,13 @@ namespace FoetexTrygLevering.MockData
 
             new Food(62, "Müslibar m. mælkechokolade", 11, "Salling , Müslibar med havreflager og mælkechokolade 150 g","Müslibar m. mælkechokolade.jfif"),
             new Food(63, "Müslibarer m. chokolade", 21, "Corny , Müslibarer med mælkechokoladeovertræk 150 g","Müslibarer m. chokolade.jfif"),
-            new Food(64, "Müslibarer m. mørk chokolade og hasselnødder", 11, "Ravensbergen Muesli+, Müslibarer med mørk chokolade og hasselnødder 126 g","Müslibarer m. mørk chokolade og hasselnødder.jfif"),
-            new Food(65, "Müslibarer m. chokolade og banan", 21, "Corny , Müslibarer med banan og mælkechokoladeovertræk 150 g","Müslibarer m. chokolade og banan.jfif"),
+            new Food(64, "Müslibarer m. mørk chokolade", 11, "Ravensbergen Muesli+, Müslibarer med mørk chokolade og hasselnødder 126 g","Müslibarer m. mørk chokolade og hasselnødder.jfif"),
+            new Food(65, "Müslibarer m. choko/banan", 21, "Corny , Müslibarer med banan og mælkechokoladeovertræk 150 g","Müslibarer m. chokolade og banan.jfif"),
             new Food(66, "Müslibarer m. blåbær", 18, "Ravensbergen Muesli+, Müslibarer med blåbær 120 g","Müslibarer m. blåbær.jfif"),
             new Food(67, "Proteinbar m. cookies & cream", 20, "Barebells , Proteinbar med mælkechokolade. Indeholder sødestoffer 55 g","Proteinbar m. cookies & cream.jfif"),
-            new Food(68, "Proteinbar m. karamelknas u. tilsat sukker", 20, "Barebells Double Bite, Proteinbar med karamelsmag. Indeholder sødestoffer 55 g","Proteinbar m. karamelknas u. tilsat sukker.jfif"),
+            new Food(68, "Proteinbar m. karamel u. sukker", 20, "Barebells Double Bite, Proteinbar med karamelsmag. Indeholder sødestoffer 55 g","Proteinbar m. karamelknas u. tilsat sukker.jfif"),
             new Food(69, "Proteinbar m. kokossmag", 25, "Nutramino , Proteinbar med kokos og mælkechokoladeovertræk 66 g","Proteinbar m. kokossmag.jfif"),
-            new Food(70, "Proteinbar m. hvid chokolade og mandler u. tilsat sukker", 20, "Barebells , Proteinbar med hvid chokolade og mandelsmag. Indeholder sødestoffer 55 g","Proteinbar m. hvid chokolade og mandler u. tilsat sukker.jfif"),
+            new Food(70, "Proteinbar m. hvid chokolade", 20, "Barebells , Proteinbar med hvid chokolade og mandelsmag. Indeholder sødestoffer 55 g","Proteinbar m. hvid chokolade og mandler u. tilsat sukker.jfif"),
             new Food(71, "Protein rawbar øko", 20, "Rawbite , Økologisk daddel- og rosinbar med nødder og protein 50 g","Protein rawbar øko.jfif"),
             new Food(72,"Pebernødder", 25,"Karen Volf 400 g", "Peberndder.jfif"),
 

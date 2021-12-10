@@ -136,3 +136,4 @@ C:\Users\Victur\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\R
 C:\Users\Victur\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\DeliveryDriver\DeleteDeliveryDriver.cshtml.g.cs
 C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\DeliveryDriver\ActiveOrder.cshtml.g.cs
 C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\DeliveryDriver\OrderHistorik.cshtml.g.cs
+C:\Users\victo\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Customer\ShoppingCart2.cshtml.g.cs

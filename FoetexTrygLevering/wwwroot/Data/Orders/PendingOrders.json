@@ -15,22 +15,382 @@
     "ShoppedItems": [
       {
         "Item": {
+          "Name": "Hakket oksek\u00F8d 4-7% fedt",
+          "Price": 34,
+          "ID": 2,
+          "Description": "Hakket oksek\u00F8d 4-7% fedt 400 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
           "Name": "Hakket oksek\u00F8d 14-18% fedt",
           "Price": 30,
           "ID": 3,
           "Description": "Hakket oksek\u00F8d 14-18% fedt 500 g",
           "ImageName": "/Assets/Hakkekoed.jpg"
         },
+        "Quantity": 4
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 4-7% fedt \u00F8ko",
+          "Price": 50,
+          "ID": 4,
+          "Description": "\u00D8kologisk hakket oksek\u00F8d 4-7% fedt 400 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 5
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 14-18% fedt",
+          "Price": 65,
+          "ID": 5,
+          "Description": "Hakket oksek\u00F8d 14-18% fedt 1000 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
         "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 4-7% fedt",
+          "Price": 78,
+          "ID": 6,
+          "Description": "Hakket oksek\u00F8d 4-7% fedt 1000 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 2
       }
     ],
-    "TotalPrice": 90,
+    "TotalPrice": 823,
     "DeliveryCity": "Haarby",
     "DeliveryStreet": "Algade 91",
     "PostalCode": 5683
   },
   {
     "OrderID": 2,
+    "IsDelivered": false,
+    "Customer": {
+      "CityName": "K\u00F8benhavn K",
+      "Street": "Fr\u00F8rupvej 83",
+      "Age": 65,
+      "PostalCode": 1146,
+      "Name": "Kent J\u00F8rgen",
+      "Phone": "23568790",
+      "Email": "KentJ\u00F8rgen@gmail.com",
+      "UserID": 7
+    },
+    "ShoppedItems": [
+      {
+        "Item": {
+          "Name": "Drikkeyoghurt m. hindb\u00E6r",
+          "Price": 14,
+          "ID": 14,
+          "Description": "Syrnet m\u00E6lk med hindb\u00E6r 0,6% fedt 500 ml",
+          "ImageName": "/Assets/DrikkeYoghurtHindbaer.jpg"
+        },
+        "Quantity": 1
+      },
+      {
+        "Item": {
+          "Name": "M\u00FCslibarer m. bl\u00E5b\u00E6r",
+          "Price": 18,
+          "ID": 66,
+          "Description": "Ravensbergen Muesli\u002B, M\u00FCslibarer med bl\u00E5b\u00E6r 120 g",
+          "ImageName": "/Assets/M\u00FCslibarer m. bl\u00E5b\u00E6r.jfif"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Flanksteak",
+          "Price": 65,
+          "ID": 11,
+          "Description": "Okseflanksteak 500 g",
+          "ImageName": "/Assets/Flanksteak.jpg"
+        },
+        "Quantity": 5
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 4-7% fedt \u00F8ko",
+          "Price": 50,
+          "ID": 4,
+          "Description": "\u00D8kologisk hakket oksek\u00F8d 4-7% fedt 400 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Solsikkerugbr\u00F8d",
+          "Price": 21,
+          "ID": 56,
+          "Description": "Schulstad Det Gode, Rugbr\u00F8d med solsikkekerner 950 g",
+          "ImageName": "/Assets/Solsikkerugbr\u00F8d.jfif"
+        },
+        "Quantity": 2
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 8-12% fedt",
+          "Price": 150,
+          "ID": 7,
+          "Description": "Hakket oksek\u00F8d 8-12% fedt 2100 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 4
+      }
+    ],
+    "TotalPrice": 1185,
+    "DeliveryCity": "K\u00F8benhavn K",
+    "DeliveryStreet": "Fr\u00F8rupvej 83",
+    "PostalCode": 1146
+  },
+  {
+    "OrderID": 3,
+    "IsDelivered": false,
+    "Customer": {
+      "CityName": "K\u00F8benhavn K",
+      "Street": "Slipager 9",
+      "Age": 45,
+      "PostalCode": 1434,
+      "Name": "Birgitte Thomsen",
+      "Phone": "12436986",
+      "Email": "BThomsen@email.com",
+      "UserID": 8
+    },
+    "ShoppedItems": [
+      {
+        "Item": {
+          "Name": "Skummetm\u00E6lk 0,1% fedt \u00F8ko",
+          "Price": 12,
+          "ID": 17,
+          "Description": "\u00D8kologisk skummetm\u00E6lk 1 liter",
+          "ImageName": "/Assets/Skummetmaelk.jpg"
+        },
+        "Quantity": 2
+      },
+      {
+        "Item": {
+          "Name": "Softkernerugbr\u00F8d \u00F8ko",
+          "Price": 45,
+          "ID": 52,
+          "Description": "Emmerys , \u00D8kologisk kernerugbr\u00F8d 1 kg",
+          "ImageName": "/Assets/Softkernerugbr\u00F8d \u00F8ko.jfif"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Drikkeyoghurt m. jordb\u00E6r",
+          "Price": 14,
+          "ID": 12,
+          "Description": "Drikkeyoghurt m. jordb\u00E6r",
+          "ImageName": "/Assets/DrikkeYoghurtJordbaer.jpg"
+        },
+        "Quantity": 1
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 14-18% fedt",
+          "Price": 65,
+          "ID": 5,
+          "Description": "Hakket oksek\u00F8d 14-18% fedt 1000 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Solsikkerugbr\u00F8d",
+          "Price": 21,
+          "ID": 56,
+          "Description": "Schulstad Det Gode, Rugbr\u00F8d med solsikkekerner 950 g",
+          "ImageName": "/Assets/Solsikkerugbr\u00F8d.jfif"
+        },
+        "Quantity": 2
+      },
+      {
+        "Item": {
+          "Name": "Proteinbar m. cookies \u0026 cream",
+          "Price": 20,
+          "ID": 67,
+          "Description": "Barebells , Proteinbar med m\u00E6lkechokolade. Indeholder s\u00F8destoffer 55 g",
+          "ImageName": "/Assets/Proteinbar m. cookies \u0026 cream.jfif"
+        },
+        "Quantity": 4
+      }
+    ],
+    "TotalPrice": 490,
+    "DeliveryCity": "K\u00F8benhavn K",
+    "DeliveryStreet": "Slipager 9",
+    "PostalCode": 1434
+  },
+  {
+    "OrderID": 4,
+    "IsDelivered": false,
+    "Customer": {
+      "CityName": "Terndrup",
+      "Street": "Hovbanken 8",
+      "Age": 25,
+      "PostalCode": 9575,
+      "Name": "Sebastian Jensen",
+      "Phone": "23567512",
+      "Email": "Sebastian@email.com",
+      "UserID": 10
+    },
+    "ShoppedItems": [
+      {
+        "Item": {
+          "Name": "Kartofler \u00F8ko",
+          "Price": 11,
+          "ID": 58,
+          "Description": "\u00D8kologiske kartofler 1 kg",
+          "ImageName": "/Assets/Kartofler \u00F8ko.jfif"
+        },
+        "Quantity": 2
+      },
+      {
+        "Item": {
+          "Name": "M\u00FCslibar m. m\u00E6lkechokolade",
+          "Price": 11,
+          "ID": 62,
+          "Description": "Salling , M\u00FCslibar med havreflager og m\u00E6lkechokolade 150 g",
+          "ImageName": "/Assets/M\u00FCslibar m. m\u00E6lkechokolade.jfif"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 4-7% fedt \u00F8ko",
+          "Price": 50,
+          "ID": 4,
+          "Description": "\u00D8kologisk hakket oksek\u00F8d 4-7% fedt 400 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 5
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 14-18% fedt",
+          "Price": 65,
+          "ID": 5,
+          "Description": "Hakket oksek\u00F8d 14-18% fedt 1000 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Solsikkerugbr\u00F8d",
+          "Price": 21,
+          "ID": 56,
+          "Description": "Schulstad Det Gode, Rugbr\u00F8d med solsikkekerner 950 g",
+          "ImageName": "/Assets/Solsikkerugbr\u00F8d.jfif"
+        },
+        "Quantity": 2
+      },
+      {
+        "Item": {
+          "Name": "Letm\u00E6lk 1,5% fedt \u00F8ko",
+          "Price": 13,
+          "ID": 16,
+          "Description": "\u00D8kologisk letm\u00E6lk 1 liter",
+          "ImageName": "/Assets/Minimaelk.jpg"
+        },
+        "Quantity": 4
+      }
+    ],
+    "TotalPrice": 594,
+    "DeliveryCity": "Terndrup",
+    "DeliveryStreet": "Hovbanken 8",
+    "PostalCode": 9575
+  },
+  {
+    "OrderID": 5,
+    "IsDelivered": false,
+    "Customer": {
+      "CityName": "Skodsborg",
+      "Street": "Hans Schacksvej 8",
+      "Age": 32,
+      "PostalCode": 2942,
+      "Name": "Lars Karlsen",
+      "Phone": "43512389",
+      "Email": "LArskoarlsen@email.com",
+      "UserID": 9
+    },
+    "ShoppedItems": [
+      {
+        "Item": {
+          "Name": "Proteinbar m. karamel u. sukker",
+          "Price": 20,
+          "ID": 68,
+          "Description": "Barebells Double Bite, Proteinbar med karamelsmag. Indeholder s\u00F8destoffer 55 g",
+          "ImageName": "/Assets/Proteinbar m. karamelknas u. tilsat sukker.jfif"
+        },
+        "Quantity": 2
+      },
+      {
+        "Item": {
+          "Name": "\u00D8landsbr\u00F8d \u00F8ko",
+          "Price": 45,
+          "ID": 53,
+          "Description": "Emmerys , \u00D8kologisk \u00F8landsbr\u00F8d 650 g",
+          "ImageName": "/Assets/\u00D8landsbr\u00F8d \u00F8ko.jfif"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 4-7% fedt \u00F8ko",
+          "Price": 50,
+          "ID": 4,
+          "Description": "\u00D8kologisk hakket oksek\u00F8d 4-7% fedt 400 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 5
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 14-18% fedt",
+          "Price": 65,
+          "ID": 5,
+          "Description": "Hakket oksek\u00F8d 14-18% fedt 1000 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Solsikkerugbr\u00F8d",
+          "Price": 21,
+          "ID": 56,
+          "Description": "Schulstad Det Gode, Rugbr\u00F8d med solsikkekerner 950 g",
+          "ImageName": "/Assets/Solsikkerugbr\u00F8d.jfif"
+        },
+        "Quantity": 2
+      },
+      {
+        "Item": {
+          "Name": "Proteinbar m. cookies \u0026 cream",
+          "Price": 20,
+          "ID": 67,
+          "Description": "Barebells , Proteinbar med m\u00E6lkechokolade. Indeholder s\u00F8destoffer 55 g",
+          "ImageName": "/Assets/Proteinbar m. cookies \u0026 cream.jfif"
+        },
+        "Quantity": 4
+      }
+    ],
+    "TotalPrice": 742,
+    "DeliveryCity": "Skodsborg",
+    "DeliveryStreet": "Hans Schacksvej 8",
+    "PostalCode": 2942
+  },
+  {
+    "OrderID": 6,
     "IsDelivered": false,
     "Customer": {
       "CityName": "Haarby",
@@ -45,16 +405,966 @@
     "ShoppedItems": [
       {
         "Item": {
-          "Name": "Hakket oksek\u00F8d 8-12% fedt \u00F8ko",
-          "Price": 42,
-          "ID": 1,
-          "Description": "\u00D8kologisk hakket oksek\u00F8d 8-12% fedt 450 g",
+          "Name": "Hakket oksek\u00F8d 4-7% fedt",
+          "Price": 34,
+          "ID": 2,
+          "Description": "Hakket oksek\u00F8d 4-7% fedt 400 g",
           "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 14-18% fedt",
+          "Price": 30,
+          "ID": 3,
+          "Description": "Hakket oksek\u00F8d 14-18% fedt 500 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 4
+      }
+    ],
+    "TotalPrice": 222,
+    "DeliveryCity": "Haarby",
+    "DeliveryStreet": "Algade 91",
+    "PostalCode": 5683
+  },
+  {
+    "OrderID": 7,
+    "IsDelivered": false,
+    "Customer": {
+      "CityName": "K\u00F8benhavn K",
+      "Street": "Fr\u00F8rupvej 83",
+      "Age": 65,
+      "PostalCode": 1146,
+      "Name": "Kent J\u00F8rgen",
+      "Phone": "23568790",
+      "Email": "KentJ\u00F8rgen@gmail.com",
+      "UserID": 7
+    },
+    "ShoppedItems": [
+      {
+        "Item": {
+          "Name": "Drikkeyoghurt m. hindb\u00E6r",
+          "Price": 14,
+          "ID": 14,
+          "Description": "Syrnet m\u00E6lk med hindb\u00E6r 0,6% fedt 500 ml",
+          "ImageName": "/Assets/DrikkeYoghurtHindbaer.jpg"
+        },
+        "Quantity": 1
+      },
+      {
+        "Item": {
+          "Name": "M\u00FCslibarer m. bl\u00E5b\u00E6r",
+          "Price": 18,
+          "ID": 66,
+          "Description": "Ravensbergen Muesli\u002B, M\u00FCslibarer med bl\u00E5b\u00E6r 120 g",
+          "ImageName": "/Assets/M\u00FCslibarer m. bl\u00E5b\u00E6r.jfif"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Flanksteak",
+          "Price": 65,
+          "ID": 11,
+          "Description": "Okseflanksteak 500 g",
+          "ImageName": "/Assets/Flanksteak.jpg"
+        },
+        "Quantity": 5
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 4-7% fedt \u00F8ko",
+          "Price": 50,
+          "ID": 4,
+          "Description": "\u00D8kologisk hakket oksek\u00F8d 4-7% fedt 400 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Solsikkerugbr\u00F8d",
+          "Price": 21,
+          "ID": 56,
+          "Description": "Schulstad Det Gode, Rugbr\u00F8d med solsikkekerner 950 g",
+          "ImageName": "/Assets/Solsikkerugbr\u00F8d.jfif"
+        },
+        "Quantity": 2
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 8-12% fedt",
+          "Price": 150,
+          "ID": 7,
+          "Description": "Hakket oksek\u00F8d 8-12% fedt 2100 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 4
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 4-7% fedt \u00F8ko",
+          "Price": 50,
+          "ID": 4,
+          "Description": "\u00D8kologisk hakket oksek\u00F8d 4-7% fedt 400 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 1
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 14-18% fedt",
+          "Price": 30,
+          "ID": 3,
+          "Description": "Hakket oksek\u00F8d 14-18% fedt 500 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 4-7% fedt",
+          "Price": 34,
+          "ID": 2,
+          "Description": "Hakket oksek\u00F8d 4-7% fedt 400 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 5
+      },
+      {
+        "Item": {
+          "Name": "Drikkeyoghurt m. jordb\u00E6r",
+          "Price": 14,
+          "ID": 12,
+          "Description": "Drikkeyoghurt m. jordb\u00E6r",
+          "ImageName": "/Assets/DrikkeYoghurtJordbaer.jpg"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 4-7% fedt",
+          "Price": 34,
+          "ID": 2,
+          "Description": "Hakket oksek\u00F8d 4-7% fedt 400 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 2
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 8-12% fedt",
+          "Price": 150,
+          "ID": 7,
+          "Description": "Hakket oksek\u00F8d 8-12% fedt 2100 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 4
+      }
+    ],
+    "TotalPrice": 2205,
+    "DeliveryCity": "K\u00F8benhavn K",
+    "DeliveryStreet": "Fr\u00F8rupvej 83",
+    "PostalCode": 1146
+  },
+  {
+    "OrderID": 8,
+    "IsDelivered": false,
+    "Customer": {
+      "CityName": "K\u00F8benhavn K",
+      "Street": "Slipager 9",
+      "Age": 45,
+      "PostalCode": 1434,
+      "Name": "Birgitte Thomsen",
+      "Phone": "12436986",
+      "Email": "BThomsen@email.com",
+      "UserID": 8
+    },
+    "ShoppedItems": [
+      {
+        "Item": {
+          "Name": "Skummetm\u00E6lk 0,1% fedt \u00F8ko",
+          "Price": 12,
+          "ID": 17,
+          "Description": "\u00D8kologisk skummetm\u00E6lk 1 liter",
+          "ImageName": "/Assets/Skummetmaelk.jpg"
+        },
+        "Quantity": 2
+      },
+      {
+        "Item": {
+          "Name": "Softkernerugbr\u00F8d \u00F8ko",
+          "Price": 45,
+          "ID": 52,
+          "Description": "Emmerys , \u00D8kologisk kernerugbr\u00F8d 1 kg",
+          "ImageName": "/Assets/Softkernerugbr\u00F8d \u00F8ko.jfif"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Drikkeyoghurt m. jordb\u00E6r",
+          "Price": 14,
+          "ID": 12,
+          "Description": "Drikkeyoghurt m. jordb\u00E6r",
+          "ImageName": "/Assets/DrikkeYoghurtJordbaer.jpg"
+        },
+        "Quantity": 1
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 14-18% fedt",
+          "Price": 65,
+          "ID": 5,
+          "Description": "Hakket oksek\u00F8d 14-18% fedt 1000 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 3
+      }
+    ],
+    "TotalPrice": 368,
+    "DeliveryCity": "K\u00F8benhavn K",
+    "DeliveryStreet": "Slipager 9",
+    "PostalCode": 1434
+  },
+  {
+    "OrderID": 9,
+    "IsDelivered": false,
+    "Customer": {
+      "CityName": "Terndrup",
+      "Street": "Hovbanken 8",
+      "Age": 25,
+      "PostalCode": 9575,
+      "Name": "Sebastian Jensen",
+      "Phone": "23567512",
+      "Email": "Sebastian@email.com",
+      "UserID": 10
+    },
+    "ShoppedItems": [
+      {
+        "Item": {
+          "Name": "Kartofler \u00F8ko",
+          "Price": 11,
+          "ID": 58,
+          "Description": "\u00D8kologiske kartofler 1 kg",
+          "ImageName": "/Assets/Kartofler \u00F8ko.jfif"
+        },
+        "Quantity": 2
+      },
+      {
+        "Item": {
+          "Name": "M\u00FCslibar m. m\u00E6lkechokolade",
+          "Price": 11,
+          "ID": 62,
+          "Description": "Salling , M\u00FCslibar med havreflager og m\u00E6lkechokolade 150 g",
+          "ImageName": "/Assets/M\u00FCslibar m. m\u00E6lkechokolade.jfif"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 4-7% fedt \u00F8ko",
+          "Price": 50,
+          "ID": 4,
+          "Description": "\u00D8kologisk hakket oksek\u00F8d 4-7% fedt 400 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 5
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 14-18% fedt",
+          "Price": 65,
+          "ID": 5,
+          "Description": "Hakket oksek\u00F8d 14-18% fedt 1000 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 3
+      }
+    ],
+    "TotalPrice": 500,
+    "DeliveryCity": "Terndrup",
+    "DeliveryStreet": "Hovbanken 8",
+    "PostalCode": 9575
+  },
+  {
+    "OrderID": 10,
+    "IsDelivered": false,
+    "Customer": {
+      "CityName": "Skodsborg",
+      "Street": "Hans Schacksvej 8",
+      "Age": 32,
+      "PostalCode": 2942,
+      "Name": "Lars Karlsen",
+      "Phone": "43512389",
+      "Email": "LArskoarlsen@email.com",
+      "UserID": 9
+    },
+    "ShoppedItems": [
+      {
+        "Item": {
+          "Name": "Proteinbar m. karamel u. sukker",
+          "Price": 20,
+          "ID": 68,
+          "Description": "Barebells Double Bite, Proteinbar med karamelsmag. Indeholder s\u00F8destoffer 55 g",
+          "ImageName": "/Assets/Proteinbar m. karamelknas u. tilsat sukker.jfif"
+        },
+        "Quantity": 2
+      },
+      {
+        "Item": {
+          "Name": "\u00D8landsbr\u00F8d \u00F8ko",
+          "Price": 45,
+          "ID": 53,
+          "Description": "Emmerys , \u00D8kologisk \u00F8landsbr\u00F8d 650 g",
+          "ImageName": "/Assets/\u00D8landsbr\u00F8d \u00F8ko.jfif"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 4-7% fedt \u00F8ko",
+          "Price": 50,
+          "ID": 4,
+          "Description": "\u00D8kologisk hakket oksek\u00F8d 4-7% fedt 400 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 5
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 14-18% fedt",
+          "Price": 65,
+          "ID": 5,
+          "Description": "Hakket oksek\u00F8d 14-18% fedt 1000 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Solsikkerugbr\u00F8d",
+          "Price": 21,
+          "ID": 56,
+          "Description": "Schulstad Det Gode, Rugbr\u00F8d med solsikkekerner 950 g",
+          "ImageName": "/Assets/Solsikkerugbr\u00F8d.jfif"
+        },
+        "Quantity": 2
+      },
+      {
+        "Item": {
+          "Name": "Proteinbar m. cookies \u0026 cream",
+          "Price": 20,
+          "ID": 67,
+          "Description": "Barebells , Proteinbar med m\u00E6lkechokolade. Indeholder s\u00F8destoffer 55 g",
+          "ImageName": "/Assets/Proteinbar m. cookies \u0026 cream.jfif"
+        },
+        "Quantity": 4
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 14-18% fedt",
+          "Price": 30,
+          "ID": 3,
+          "Description": "Hakket oksek\u00F8d 14-18% fedt 500 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 2
+      },
+      {
+        "Item": {
+          "Name": "Drikkeyoghurt m. jordb\u00E6r",
+          "Price": 14,
+          "ID": 12,
+          "Description": "Drikkeyoghurt m. jordb\u00E6r",
+          "ImageName": "/Assets/DrikkeYoghurtJordbaer.jpg"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Drikkeyoghurt m. hindb\u00E6r",
+          "Price": 14,
+          "ID": 14,
+          "Description": "Syrnet m\u00E6lk med hindb\u00E6r 0,6% fedt 500 ml",
+          "ImageName": "/Assets/DrikkeYoghurtHindbaer.jpg"
+        },
+        "Quantity": 5
+      },
+      {
+        "Item": {
+          "Name": "Kernerugbr\u00F8d",
+          "Price": 22,
+          "ID": 55,
+          "Description": "Schulstad Signaturbr\u00F8d, Rugbr\u00F8d med kerner 750 g",
+          "ImageName": "/Assets/Kernerugbr\u00F8d.jfif"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 4-7% fedt",
+          "Price": 34,
+          "ID": 2,
+          "Description": "Hakket oksek\u00F8d 4-7% fedt 400 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 2
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 14-18% fedt",
+          "Price": 30,
+          "ID": 3,
+          "Description": "Hakket oksek\u00F8d 14-18% fedt 500 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 4
+      }
+    ],
+    "TotalPrice": 1168,
+    "DeliveryCity": "Skodsborg",
+    "DeliveryStreet": "Hans Schacksvej 8",
+    "PostalCode": 2942
+  },
+  {
+    "OrderID": 11,
+    "IsDelivered": false,
+    "Customer": {
+      "CityName": "Haarby",
+      "Street": "Algade 91",
+      "Age": 18,
+      "PostalCode": 5683,
+      "Name": "Guest",
+      "Phone": "00000000",
+      "Email": "123@email.com",
+      "UserID": 1
+    },
+    "ShoppedItems": [
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 4-7% fedt",
+          "Price": 34,
+          "ID": 2,
+          "Description": "Hakket oksek\u00F8d 4-7% fedt 400 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 14-18% fedt",
+          "Price": 30,
+          "ID": 3,
+          "Description": "Hakket oksek\u00F8d 14-18% fedt 500 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 4
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 4-7% fedt \u00F8ko",
+          "Price": 50,
+          "ID": 4,
+          "Description": "\u00D8kologisk hakket oksek\u00F8d 4-7% fedt 400 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 5
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 14-18% fedt",
+          "Price": 65,
+          "ID": 5,
+          "Description": "Hakket oksek\u00F8d 14-18% fedt 1000 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 4-7% fedt",
+          "Price": 78,
+          "ID": 6,
+          "Description": "Hakket oksek\u00F8d 4-7% fedt 1000 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 2
+      },
+      {
+        "Item": {
+          "Name": "Skummetm\u00E6lk 0,1% fedt \u00F8ko",
+          "Price": 12,
+          "ID": 17,
+          "Description": "\u00D8kologisk skummetm\u00E6lk 1 liter",
+          "ImageName": "/Assets/Skummetmaelk.jpg"
+        },
+        "Quantity": 2
+      },
+      {
+        "Item": {
+          "Name": "Softkernerugbr\u00F8d \u00F8ko",
+          "Price": 45,
+          "ID": 52,
+          "Description": "Emmerys , \u00D8kologisk kernerugbr\u00F8d 1 kg",
+          "ImageName": "/Assets/Softkernerugbr\u00F8d \u00F8ko.jfif"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Drikkeyoghurt m. jordb\u00E6r",
+          "Price": 14,
+          "ID": 12,
+          "Description": "Drikkeyoghurt m. jordb\u00E6r",
+          "ImageName": "/Assets/DrikkeYoghurtJordbaer.jpg"
+        },
+        "Quantity": 1
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 14-18% fedt",
+          "Price": 65,
+          "ID": 5,
+          "Description": "Hakket oksek\u00F8d 14-18% fedt 1000 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Solsikkerugbr\u00F8d",
+          "Price": 21,
+          "ID": 56,
+          "Description": "Schulstad Det Gode, Rugbr\u00F8d med solsikkekerner 950 g",
+          "ImageName": "/Assets/Solsikkerugbr\u00F8d.jfif"
+        },
+        "Quantity": 2
+      },
+      {
+        "Item": {
+          "Name": "Proteinbar m. cookies \u0026 cream",
+          "Price": 20,
+          "ID": 67,
+          "Description": "Barebells , Proteinbar med m\u00E6lkechokolade. Indeholder s\u00F8destoffer 55 g",
+          "ImageName": "/Assets/Proteinbar m. cookies \u0026 cream.jfif"
+        },
+        "Quantity": 4
+      }
+    ],
+    "TotalPrice": 1313,
+    "DeliveryCity": "Haarby",
+    "DeliveryStreet": "Algade 91",
+    "PostalCode": 5683
+  },
+  {
+    "OrderID": 12,
+    "IsDelivered": false,
+    "Customer": {
+      "CityName": "K\u00F8benhavn K",
+      "Street": "Fr\u00F8rupvej 83",
+      "Age": 65,
+      "PostalCode": 1146,
+      "Name": "Kent J\u00F8rgen",
+      "Phone": "23568790",
+      "Email": "KentJ\u00F8rgen@gmail.com",
+      "UserID": 7
+    },
+    "ShoppedItems": [
+      {
+        "Item": {
+          "Name": "Drikkeyoghurt m. hindb\u00E6r",
+          "Price": 14,
+          "ID": 14,
+          "Description": "Syrnet m\u00E6lk med hindb\u00E6r 0,6% fedt 500 ml",
+          "ImageName": "/Assets/DrikkeYoghurtHindbaer.jpg"
+        },
+        "Quantity": 1
+      },
+      {
+        "Item": {
+          "Name": "M\u00FCslibarer m. bl\u00E5b\u00E6r",
+          "Price": 18,
+          "ID": 66,
+          "Description": "Ravensbergen Muesli\u002B, M\u00FCslibarer med bl\u00E5b\u00E6r 120 g",
+          "ImageName": "/Assets/M\u00FCslibarer m. bl\u00E5b\u00E6r.jfif"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Flanksteak",
+          "Price": 65,
+          "ID": 11,
+          "Description": "Okseflanksteak 500 g",
+          "ImageName": "/Assets/Flanksteak.jpg"
+        },
+        "Quantity": 5
+      }
+    ],
+    "TotalPrice": 393,
+    "DeliveryCity": "K\u00F8benhavn K",
+    "DeliveryStreet": "Fr\u00F8rupvej 83",
+    "PostalCode": 1146
+  },
+  {
+    "OrderID": 13,
+    "IsDelivered": false,
+    "Customer": {
+      "CityName": "K\u00F8benhavn K",
+      "Street": "Slipager 9",
+      "Age": 45,
+      "PostalCode": 1434,
+      "Name": "Birgitte Thomsen",
+      "Phone": "12436986",
+      "Email": "BThomsen@email.com",
+      "UserID": 8
+    },
+    "ShoppedItems": [
+      {
+        "Item": {
+          "Name": "Skummetm\u00E6lk 0,1% fedt \u00F8ko",
+          "Price": 12,
+          "ID": 17,
+          "Description": "\u00D8kologisk skummetm\u00E6lk 1 liter",
+          "ImageName": "/Assets/Skummetmaelk.jpg"
+        },
+        "Quantity": 2
+      },
+      {
+        "Item": {
+          "Name": "Softkernerugbr\u00F8d \u00F8ko",
+          "Price": 45,
+          "ID": 52,
+          "Description": "Emmerys , \u00D8kologisk kernerugbr\u00F8d 1 kg",
+          "ImageName": "/Assets/Softkernerugbr\u00F8d \u00F8ko.jfif"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Drikkeyoghurt m. jordb\u00E6r",
+          "Price": 14,
+          "ID": 12,
+          "Description": "Drikkeyoghurt m. jordb\u00E6r",
+          "ImageName": "/Assets/DrikkeYoghurtJordbaer.jpg"
+        },
+        "Quantity": 1
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 14-18% fedt",
+          "Price": 65,
+          "ID": 5,
+          "Description": "Hakket oksek\u00F8d 14-18% fedt 1000 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Solsikkerugbr\u00F8d",
+          "Price": 21,
+          "ID": 56,
+          "Description": "Schulstad Det Gode, Rugbr\u00F8d med solsikkekerner 950 g",
+          "ImageName": "/Assets/Solsikkerugbr\u00F8d.jfif"
+        },
+        "Quantity": 2
+      },
+      {
+        "Item": {
+          "Name": "Proteinbar m. cookies \u0026 cream",
+          "Price": 20,
+          "ID": 67,
+          "Description": "Barebells , Proteinbar med m\u00E6lkechokolade. Indeholder s\u00F8destoffer 55 g",
+          "ImageName": "/Assets/Proteinbar m. cookies \u0026 cream.jfif"
+        },
+        "Quantity": 4
+      },
+      {
+        "Item": {
+          "Name": "Proteinbar m. karamel u. sukker",
+          "Price": 20,
+          "ID": 68,
+          "Description": "Barebells Double Bite, Proteinbar med karamelsmag. Indeholder s\u00F8destoffer 55 g",
+          "ImageName": "/Assets/Proteinbar m. karamelknas u. tilsat sukker.jfif"
+        },
+        "Quantity": 2
+      },
+      {
+        "Item": {
+          "Name": "\u00D8landsbr\u00F8d \u00F8ko",
+          "Price": 45,
+          "ID": 53,
+          "Description": "Emmerys , \u00D8kologisk \u00F8landsbr\u00F8d 650 g",
+          "ImageName": "/Assets/\u00D8landsbr\u00F8d \u00F8ko.jfif"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 4-7% fedt \u00F8ko",
+          "Price": 50,
+          "ID": 4,
+          "Description": "\u00D8kologisk hakket oksek\u00F8d 4-7% fedt 400 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 5
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 14-18% fedt",
+          "Price": 65,
+          "ID": 5,
+          "Description": "Hakket oksek\u00F8d 14-18% fedt 1000 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Solsikkerugbr\u00F8d",
+          "Price": 21,
+          "ID": 56,
+          "Description": "Schulstad Det Gode, Rugbr\u00F8d med solsikkekerner 950 g",
+          "ImageName": "/Assets/Solsikkerugbr\u00F8d.jfif"
+        },
+        "Quantity": 2
+      },
+      {
+        "Item": {
+          "Name": "Proteinbar m. cookies \u0026 cream",
+          "Price": 20,
+          "ID": 67,
+          "Description": "Barebells , Proteinbar med m\u00E6lkechokolade. Indeholder s\u00F8destoffer 55 g",
+          "ImageName": "/Assets/Proteinbar m. cookies \u0026 cream.jfif"
+        },
+        "Quantity": 4
+      }
+    ],
+    "TotalPrice": 1232,
+    "DeliveryCity": "K\u00F8benhavn K",
+    "DeliveryStreet": "Slipager 9",
+    "PostalCode": 1434
+  },
+  {
+    "OrderID": 14,
+    "IsDelivered": false,
+    "Customer": {
+      "CityName": "Terndrup",
+      "Street": "Hovbanken 8",
+      "Age": 25,
+      "PostalCode": 9575,
+      "Name": "Sebastian Jensen",
+      "Phone": "23567512",
+      "Email": "Sebastian@email.com",
+      "UserID": 10
+    },
+    "ShoppedItems": [
+      {
+        "Item": {
+          "Name": "Kartofler \u00F8ko",
+          "Price": 11,
+          "ID": 58,
+          "Description": "\u00D8kologiske kartofler 1 kg",
+          "ImageName": "/Assets/Kartofler \u00F8ko.jfif"
+        },
+        "Quantity": 2
+      },
+      {
+        "Item": {
+          "Name": "M\u00FCslibar m. m\u00E6lkechokolade",
+          "Price": 11,
+          "ID": 62,
+          "Description": "Salling , M\u00FCslibar med havreflager og m\u00E6lkechokolade 150 g",
+          "ImageName": "/Assets/M\u00FCslibar m. m\u00E6lkechokolade.jfif"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 4-7% fedt \u00F8ko",
+          "Price": 50,
+          "ID": 4,
+          "Description": "\u00D8kologisk hakket oksek\u00F8d 4-7% fedt 400 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 5
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 14-18% fedt",
+          "Price": 65,
+          "ID": 5,
+          "Description": "Hakket oksek\u00F8d 14-18% fedt 1000 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 3
+      }
+    ],
+    "TotalPrice": 500,
+    "DeliveryCity": "Terndrup",
+    "DeliveryStreet": "Hovbanken 8",
+    "PostalCode": 9575
+  },
+  {
+    "OrderID": 15,
+    "IsDelivered": false,
+    "Customer": {
+      "CityName": "Skodsborg",
+      "Street": "Hans Schacksvej 8",
+      "Age": 32,
+      "PostalCode": 2942,
+      "Name": "Lars Karlsen",
+      "Phone": "43512389",
+      "Email": "LArskoarlsen@email.com",
+      "UserID": 9
+    },
+    "ShoppedItems": [
+      {
+        "Item": {
+          "Name": "Proteinbar m. karamel u. sukker",
+          "Price": 20,
+          "ID": 68,
+          "Description": "Barebells Double Bite, Proteinbar med karamelsmag. Indeholder s\u00F8destoffer 55 g",
+          "ImageName": "/Assets/Proteinbar m. karamelknas u. tilsat sukker.jfif"
+        },
+        "Quantity": 2
+      },
+      {
+        "Item": {
+          "Name": "\u00D8landsbr\u00F8d \u00F8ko",
+          "Price": 45,
+          "ID": 53,
+          "Description": "Emmerys , \u00D8kologisk \u00F8landsbr\u00F8d 650 g",
+          "ImageName": "/Assets/\u00D8landsbr\u00F8d \u00F8ko.jfif"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 4-7% fedt \u00F8ko",
+          "Price": 50,
+          "ID": 4,
+          "Description": "\u00D8kologisk hakket oksek\u00F8d 4-7% fedt 400 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 5
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 14-18% fedt",
+          "Price": 65,
+          "ID": 5,
+          "Description": "Hakket oksek\u00F8d 14-18% fedt 1000 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Solsikkerugbr\u00F8d",
+          "Price": 21,
+          "ID": 56,
+          "Description": "Schulstad Det Gode, Rugbr\u00F8d med solsikkekerner 950 g",
+          "ImageName": "/Assets/Solsikkerugbr\u00F8d.jfif"
+        },
+        "Quantity": 2
+      },
+      {
+        "Item": {
+          "Name": "Proteinbar m. cookies \u0026 cream",
+          "Price": 20,
+          "ID": 67,
+          "Description": "Barebells , Proteinbar med m\u00E6lkechokolade. Indeholder s\u00F8destoffer 55 g",
+          "ImageName": "/Assets/Proteinbar m. cookies \u0026 cream.jfif"
+        },
+        "Quantity": 4
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 4-7% fedt",
+          "Price": 34,
+          "ID": 2,
+          "Description": "Hakket oksek\u00F8d 4-7% fedt 400 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 14-18% fedt",
+          "Price": 30,
+          "ID": 3,
+          "Description": "Hakket oksek\u00F8d 14-18% fedt 500 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 4
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 4-7% fedt \u00F8ko",
+          "Price": 50,
+          "ID": 4,
+          "Description": "\u00D8kologisk hakket oksek\u00F8d 4-7% fedt 400 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 5
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 14-18% fedt",
+          "Price": 65,
+          "ID": 5,
+          "Description": "Hakket oksek\u00F8d 14-18% fedt 1000 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 3
+      },
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 4-7% fedt",
+          "Price": 78,
+          "ID": 6,
+          "Description": "Hakket oksek\u00F8d 4-7% fedt 1000 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 2
+      }
+    ],
+    "TotalPrice": 1565,
+    "DeliveryCity": "Skodsborg",
+    "DeliveryStreet": "Hans Schacksvej 8",
+    "PostalCode": 2942
+  },
+  {
+    "OrderID": 16,
+    "IsDelivered": false,
+    "Customer": {
+      "CityName": "Haarby",
+      "Street": "Algade 91",
+      "Age": 18,
+      "PostalCode": 5683,
+      "Name": "Guest",
+      "Phone": "00000000",
+      "Email": "123@email.com",
+      "UserID": 1
+    },
+    "ShoppedItems": [
+      {
+        "Item": {
+          "Name": "Drikkeyoghurt m. hindb\u00E6r",
+          "Price": 14,
+          "ID": 14,
+          "Description": "Syrnet m\u00E6lk med hindb\u00E6r 0,6% fedt 500 ml",
+          "ImageName": "/Assets/DrikkeYoghurtHindbaer.jpg"
         },
         "Quantity": 1
       }
     ],
-    "TotalPrice": 42,
+    "TotalPrice": 14,
     "DeliveryCity": "Haarby",
     "DeliveryStreet": "Algade 91",
     "PostalCode": 5683

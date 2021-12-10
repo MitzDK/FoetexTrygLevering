@@ -6,14 +6,20 @@
     .card {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         max-width: 265px;
-        max-height: 650px;
-        height: 650px;
-        padding-left: 50px;
-        padding-right: 50px;
-        padding-top: 50px;
+        max-height: 575px;
+        height: 575px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 20px;
         margin: auto;
         text-align: center;
         font-family: arial;
+        font-size: 14px;
+        border-spacing: 10px;
+        margin-left: 4px;
+        margin-right: 4px;
+        margin-bottom: 20px;
+        
     }
 
     .card-image {
@@ -40,13 +46,24 @@
         cursor: pointer;
         width: 100%;
         font-size: 18px;
+        align-self: end; 
     }
 
 
 
-        .card button:hover {
-            opacity: 0.7;
-        }
+    .card button:hover {
+        opacity: 0.7;
+    }
+
+    .header-size {
+        font-size: 24px;
+    }
+
+    .card-footer {
+        background: transparent;
+        /*border-top: 0px;*/
+    }
+
 </style>
 
 <div class="w3-row-padding w3-padding-16 w3-center" id="food">
@@ -57,12 +74,19 @@
     {
         <div class="w3-quarter">
             <div class="card">
-                <img src="@anItem.ImageName" alt="Item image" style="width:100%">
-                <h1>@anItem.Name</h1>
-                <p class="price">@anItem.Price</p>
-                <p>@anItem.Description</p>
-                <p><a class="btn btn-primary" type="button" data-toggle="tooltip" data-placement="top" title="Add to cart" asp-page="ShoppingCart" asp-page-handler="AddToCart" asp-route-id="@anItem.ID"><i class="fa fa-shopping-basket"></i></a></p>
+                <div class="card-body">
+                    <img src="@anItem.ImageName" alt="Item image" style="width: 100%">
+                    <h1 class="header-size">@anItem.Name</h1>
+                    <p class="price">@anItem.Price ,-</p>
+                    <p>@anItem.Description</p>
+                </div>
+                <div class="card-footer">
+                    <p>
+                        <a class="btn btn-primary" type="button" data-toggle="tooltip" data-placement="top" title="Add to cart" asp-page="ShoppingCart" asp-page-handler="AddToCart" asp-route-id="@anItem.ID"><i class="fa fa-shopping-basket"></i></a>
+                    </p>
+                </div>
             </div>
         </div>
+
     }
 </div>

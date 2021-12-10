@@ -20,5 +20,10 @@ namespace FoetexTrygLevering.Models.Items
         {
             
         }
+
+        public double GetPrice()
+        {
+            return Item.Price * Quantity;
+        }
     }
 }
