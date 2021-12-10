@@ -4,7 +4,72 @@
 @{
     Layout = "Shared/_AdminLayout";
 }
-<div class="w3-row-padding w3-padding-16 w3-center" id="food">
+<style>
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 265px;
+        max-height: 575px;
+        height: 575px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 20px;
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+        font-size: 14px;
+        border-spacing: 10px;
+        margin-left: 4px;
+        margin-right: 4px;
+        margin-bottom: 20px;
+    }
+
+    .card-image {
+        max-height: 200px;
+        max-width: 200px;
+    }
+
+
+
+    .price {
+        color: grey;
+        font-size: 22px;
+    }
+
+
+
+    .card button {
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+        align-self: end;
+    }
+
+
+
+        .card button:hover {
+            opacity: 0.7;
+        }
+
+    .header-size {
+        font-size: 24px;
+    }
+
+    .card-footer {
+        background: transparent;
+    }
+    .button-size {
+        width: 90px;
+        height: 50px; 
+    }
+</style>
+
+@*<div class="w3-row-padding w3-padding-16 w3-center" id="food">
     @foreach (Item anItem in Model.Items)
     {
         <div class="w3-quarter table-border">
@@ -19,5 +84,31 @@
                 <a class="btn btn-danger" type="button" data-toggle="tooltip" data-placement="top" title="Trash item" asp-page="DeleteItem" asp-page-handler="DeleteItem" asp-route-id="@anItem.ID"><i class="fa fa-trash"></i></a>
             </li>
         </div>
+    }
+</div>*@
+
+<div class="w3-row-padding w3-padding-16 w3-center" id="food">
+
+
+
+    @foreach (Item anItem in Model.Items)
+    {
+        <div class="w3-quarter">
+            <div class="card">
+                <div class="card-body">
+                    <img src="@anItem.ImageName" alt="Item image" style="width: 100%">
+                    <h1 class="header-size">@anItem.Name</h1>
+                    <p class="price">@anItem.Price ,-</p>
+                    <p>@anItem.Description</p>
+                </div>
+                <div class="card-footer">
+                    <div class="btn-group-sm"></div>
+                    <a class="btn btn-primary btn-sm button-size" type="button" data-toggle="tooltip" data-placement="top" title="Edit item" asp-page="EditItem" asp-page-handler="EditItem" asp-route-id="@anItem.ID"><i class="fa fa-edit"></i></a>
+
+                    <a class="btn btn-danger btn-sm button-size" type="button" data-toggle="tooltip" data-placement="top" title="Trash item" asp-page="DeleteItem" asp-page-handler="DeleteItem" asp-route-id="@anItem.ID"><i class="fa fa-trash"></i></a>
+                </div>
+            </div>
+        </div>
+
     }
 </div>

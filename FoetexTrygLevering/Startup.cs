@@ -34,6 +34,7 @@ namespace FoetexTrygLevering
                 options.LoginPath = "/Index";
             });
             services.AddRazorPages();
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddSingleton<ItemService, ItemService>();
             services.AddSingleton<UserService, UserService>();
             services.AddSingleton<OrderService, OrderService>();

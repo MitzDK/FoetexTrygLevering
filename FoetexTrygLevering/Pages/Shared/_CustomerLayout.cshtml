@@ -22,8 +22,7 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <form method="post" asp-page="Homepage" class="border">
-                                @*<a class="nav-link text-dark" asp-area="" asp-page="/Index">Kategorier</a>*@
+                            <form method="post" asp-page="Homepage" class="mt-2">
                                 <select id="MenuChoice" name="MenuChoice" class="dropdown" style="width: 125px">
                                     <option value="1" class="text-center">Alle varer</option>
                                     <option value="2" class="text-center">Mad</option>
@@ -32,7 +31,7 @@
                                 </select>
                                 <br/>
                                 <a asp-page="Homepage">
-                                    <input type="submit" class="Mybtn btn-dark"value="Vis varer" style="width: 125px"/>
+                                    <input type="submit" class="Mybtn btn-dark mt-1"value="Vis varer" style="width: 125px"/>
                                 </a>
                             </form>
                         </li>
@@ -57,13 +56,7 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2021 - FoetexTrygLevering - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-    </footer>
-
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 

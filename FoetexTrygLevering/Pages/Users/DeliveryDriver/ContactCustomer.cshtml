@@ -1,0 +1,17 @@
+﻿@page "{id:int}"
+@model FoetexTrygLevering.Pages.Users.DeliveryDriver.ContactCustomerModel
+@{
+    Layout = "Shared/_DeliveryLayout";
+}
+<div>
+    @Model.Order.Customer.Name
+</div>
+<div>
+    @Model.Order.Customer.Phone
+</div>
+<div>
+    @Model.Order.DeliveryCity, @Model.Order.DeliveryStreet
+</div>
+<form method="post">
+    <a asp-page="ActiveOrder" asp-route-id="@Model.Order.OrderID" class="btn btn-success">Go Back</a>
+</form>

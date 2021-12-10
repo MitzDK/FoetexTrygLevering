@@ -177,6 +177,15 @@ input:focus {
 
 }
 
+.input-number {
+    width: 50px;
+    height: 20px;
+    
+}
+
+.myContainer {
+    width: 100%;
+}   
 /* Responsive */
 @media (max-width: 800px) {
     .shopping-cart {

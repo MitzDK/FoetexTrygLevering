@@ -9,41 +9,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Shopping Cart</title>
 
-    <link rel="stylesheet" href="/css/StyleSheetet.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="/css/ShoppingCartSheet.css" media="screen" title="no title" charset="utf-8">
     <script src="https://code.jquery.com/jquery-2.2.4.js" charset="utf-8"></script>
     <meta name="robots" content="noindex,follow" />
 </head>
 <body>
     <form method="post" asp-page="ShoppingCart2" asp-page-handler="update">
-    <div class="shopping-cart">
-        <!-- Title -->
-        <div class="title">
-            Shopping Bag
-        </div>
+        <div class="shopping-cart">
+            <!-- Title -->
+            <div class="title">
+                Shopping Bag
+            </div>
 
-        @if (Model.ShoppingCart != null)
-        {
-            @foreach (var anItem in Model.ShoppingCart)
+            @if (Model.ShoppingCart != null)
             {
-                <div class="item">
-                    <div class="buttons">
-                        <a asp-page="ShoppingCart" asp-page-handler="delete" asp-route-id="@anItem.Item.ID"><img src="/delete-icn.svg" class="delete-btn"/></a>
-                    </div>
-                    <div class="image">
-                        <img src="@anItem.Item.ImageName"/>
-                    </div>
-                    <div class="description">
-                        <span><b>@anItem.Item.Name</b></span>
-                    </div>
-                <input type="number" name="quantities" value="@anItem.Quantity" min="1" style="width: 50px;" height="100%"/>
-                    <a asp-page="ShoppingCart2" asp-page-handler="update" asp-route-id="@anItem.Item.ID"><img src="/update.png" class="delete-btn"/></a>
+                @foreach (var anItem in Model.ShoppingCart)
+                {
+                    <div class="item">
+                        <div class="buttons">
+                            <a asp-page="ShoppingCart" asp-page-handler="delete" asp-route-id="@anItem.Item.ID"><img src="/delete-icn.svg" class="delete-btn"/></a>
+                        </div>
+                        <div class="image">
+                            <img src="@anItem.Item.ImageName" width="120" height="95" />
+                        </div>
+                        <div class="description">
+                            <span>@anItem.Item.Name</span>
+                        </div>
+                        <input type="number" name="quantities" value="@anItem.Quantity" min="1" class="input-number" style="width: 50px; height: 20px; margin-top: 30px;"/>
+                            <a asp-page="ShoppingCart2" asp-page-handler="update" asp-route-id="@anItem.Item.ID"><img src="/update.png" class="delete-btn" style="margin-top: 32px; margin-left: 5px"/></a>
+                        
 
-                    <div class="total-price">@anItem.GetPrice(),-</div>
+                        <div class="total-price">@anItem.GetPrice(),-</div>
     
                     </div>
+                }
             }
-        }
-    </div>
+        </div>
+
     </form>
 </body>
 </html>
