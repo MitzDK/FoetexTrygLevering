@@ -24,23 +24,23 @@
                         <li class="nav-item">
                             <form method="post" asp-page="Homepage" class="mt-2">
                                 <select id="MenuChoice" name="MenuChoice" class="dropdown" style="width: 125px">
-                                    <option value="1" class="text-center">Alle varer</option>
-                                    <option value="2" class="text-center">Mad</option>
-                                    <option value="3" class="text-center">Drikke</option>
-                                    <option value="4" class="text-center">Andet</option>
+                                    <option value="1" class="text-center">All Items</option>
+                                    <option value="2" class="text-center">Food</option>
+                                    <option value="3" class="text-center">Drinks</option>
+                                    <option value="4" class="text-center">Other</option>
                                 </select>
                                 <br/>
                                 <a asp-page="Homepage">
-                                    <input type="submit" class="Mybtn btn-dark mt-1"value="Vis varer" style="width: 125px"/>
+                                    <input type="submit" class="Mybtn btn-dark mt-1"value="Sort Items" style="width: 125px"/>
                                 </a>
                             </form>
                         </li>
                         <li class="nav-item">
-                            <a style="width:auto" class="btn btn-success" type="button" title="Edit customer" asp-page="EditCustomer" asp-route-id="@Model.Customer.UserID">Rediger profiloplysninger</a>
+                            <a style="width:auto" class="btn btn-success" type="button" title="Edit customer" asp-page="EditCustomer" asp-route-id="@Model.Customer.UserID">Edit Profile</a>
                         </li>
                         <li></li>
                         <li class="nav-item">
-                            <a style="width:auto" class="btn btn-success" asp-page="ShoppingCart">View Shoppingcart</a>
+                            <a style="width:auto" class="btn btn-success" asp-page="ShoppingCart">View Shopping-cart</a>
                         </li>
                     </ul>
                 </div>
