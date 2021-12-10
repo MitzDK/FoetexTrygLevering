@@ -8,11 +8,11 @@ namespace FoetexTrygLevering.Models.Users
 {
     public class User
     {
-        [Display(Name="Navn:")]
+        [Display(Name="Name:")]
         [Required(ErrorMessage = "Der skal indtastes et navn"), MinLength(2), MaxLength(50)]
 
         public string Name {get; set;}
-        [Display(Name ="Telefon:" )]
+        [Display(Name ="Phone #:" )]
         [Required(ErrorMessage = "Der skal indtastes et telefonnummer.")]
         [RegularExpression(@"([0-9]+)", ErrorMessage = "Må kun indeholde tal:"), MinLength(8), MaxLength(8)]
 
