@@ -32,16 +32,16 @@
                                 </select>
                                 <br/>
                                 <a asp-page="Homepage">
-                                    <input type="submit" value="Vis varer" style="width: 125px"/>
+                                    <input type="submit" class="Mybtn btn-dark"value="Vis varer" style="width: 125px"/>
                                 </a>
                             </form>
                         </li>
                         <li class="nav-item">
-                            <a style="width:auto" class="btn btn-primary" type="button" title="Edit customer" asp-page="EditCustomer" asp-route-id="@Model.Customer.UserID">Rediger profiloplysninger</a>
+                            <a style="width:auto" class="btn btn-success" type="button" title="Edit customer" asp-page="EditCustomer" asp-route-id="@Model.Customer.UserID">Rediger profiloplysninger</a>
                         </li>
                         <li></li>
                         <li class="nav-item">
-                            <a style="width:auto" class="btn btn-primary" asp-page="ShoppingCart">View Shoppingcart</a>
+                            <a style="width:auto" class="btn btn-success" asp-page="ShoppingCart">View Shoppingcart</a>
                         </li>
                     </ul>
                 </div>

@@ -6,12 +6,12 @@
         </li>
         <li class="nav-item">
             <form method="post" asp-page="/LogOut">
-                <button type="submit" class="ml-2 btn">Logout</button>
+                <button type="submit" class="btn btn-danger">Logout</button>
             </form>
         </li>
     </ul>
 }
 else
 {
-    <a class="btn btn-link" asp-page="Index">Login</a>
+    <a class="btn btn-success" asp-page="Index">Login</a>
 }

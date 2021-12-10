@@ -4,42 +4,41 @@
     Layout = "Shared/_AdminLayout";
 }
 <h1>User Information</h1>
-<table>
+<table class="table">
     <tr>
         <th>
-            <div class="w3-quarter">
-
+            <div>
                 <h5>Search id</h5>
-                <form method="post" class="form-inline">
-                    <input asp-for="@Model.ID" class="form-control mr-1" placeholder="Enter search term" />
-                    <input type="submit" asp-page-handler="IDSearch" value="Search" class="btn btn-primary" />
+                <form method="post">
+                    <input asp-for="@Model.ID" class="form-control" placeholder="Enter search term"/>
+                    <input type="submit" asp-page-handler="IDSearch" value="Search" class="btn btn-success"/>
                 </form>
             </div>
-
-            <div class="w3-quarter">
-
+        </th>
+        <th>
+            <div>
                 <h5>Search Name</h5>
                 <form method="post">
-                    <input asp-for="@Model.Name" class="form-control mr-1" placeholder="Enter search term" />
-                    <input type="submit" asp-page-handler="NameSearch" value="Search" class="btn btn-primary" />
+                    <input asp-for="@Model.Name" class="form-control" placeholder="Enter search term" />
+                    <input type="submit" asp-page-handler="NameSearch" value="Search" class="btn btn-success" />
                 </form>
             </div>
-
-            <div class="w3-quarter">
-
+        </th>
+        <th>
+            <div>
                 <h5>Search Email</h5>
                 <form method="post">
-                    <input asp-for="@Model.Email" class="form-control mr-1" placeholder="Enter search term" />
-                    <input type="submit" asp-page-handler="EmailSearch" value="Search" class="btn btn-primary" />
+                    <input asp-for="@Model.Email" class="form-control" placeholder="Enter search term" />
+                    <input type="submit" asp-page-handler="EmailSearch" value="Search" class="btn btn-success" />
                 </form>
             </div>
-
-            <div class="w3-quarter">
-
+        </th>
+        <th>
+            <div>
                 <h5>Search phone</h5>
                 <form method="post">
-                    <input asp-for="@Model.Phone" class="form-control mr-1" placeholder="Enter search term" />
-                    <input type="submit" asp-page-handler="PhoneSearch" value="Search" class="btn btn-primary" />
+                    <input asp-for="@Model.Phone" class="form-control" placeholder="Enter search term" />
+                    <input type="submit" asp-page-handler="PhoneSearch" value="Search" class="btn btn-success" />
                 </form>
             </div>
         </th>
@@ -50,21 +49,23 @@
 
 <table class="table table-borderless table-hover table-striped table-opacity" width="40%">
     <thead>
-    <th>
-        Name
-    </th>
-    <th>
-        Id
-    </th>
-    <th>
-        Email
-    </th>
-    <th>
-        Phone
-    </th>
-    <th>
-        Actions
-    </th>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Id
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Phone
+            </th>
+            <th>
+                Actions
+            </th>
+        </tr>
     </thead>
 
 
