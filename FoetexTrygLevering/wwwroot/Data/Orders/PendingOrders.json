@@ -1355,16 +1355,16 @@
     "ShoppedItems": [
       {
         "Item": {
-          "Name": "Hakket oksek\u00F8d 14-18% fedt",
-          "Price": 30,
-          "ID": 3,
-          "Description": "Hakket oksek\u00F8d 14-18% fedt 500 g",
+          "Name": "Hakket oksek\u00F8d 4-7% fedt",
+          "Price": 34,
+          "ID": 2,
+          "Description": "Hakket oksek\u00F8d 4-7% fedt 400 g",
           "ImageName": "/Assets/Hakkekoed.jpg"
         },
         "Quantity": 1
       }
     ],
-    "TotalPrice": 30,
+    "TotalPrice": 34,
     "DeliveryCity": "GuestCity",
     "DeliveryStreet": "GuestGade 91",
     "PostalCode": 5683

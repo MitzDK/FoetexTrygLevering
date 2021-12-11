@@ -16,14 +16,15 @@ namespace FoetexTrygLevering.Services
         {
             JsonFileService = jsonFileService;
             //Udkommenter og brug den nedenunder, hvis du vil bruge Json data istedet for Mock Data
-            _userList = UserMockData.GetItems();
+            //_userList = UserMockData.GetItems();
             //Udkommenter og brug den ovenover, hvis du vil bruge Mock Data istedet
-            //_userList = JsonFileService.GetJsonUsers();
+            _userList = JsonFileService.GetJsonUsers();
         }
 
         public void Add(User newItem)
         {
             _userList.Add(newItem);
+            JsonFileService.SaveJsonUsers(_userList);
         }
 
         public User Search(int number)

@@ -107,8 +107,9 @@ public class EditItemModel : PageModel
                 _beverage.Name = Name;
                 _beverage.Description = Description;
                 _beverage.Price = Price;
-            }
 
+            }
+            _itemService.Update(id, _searchedItem);
             return RedirectToPage("Homepage");
         }
 

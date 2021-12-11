@@ -17,16 +17,16 @@ namespace FoetexTrygLevering.Services
         {
             JsonFileService = jsonFileService;
             //Udkommenter og brug den nedenunder, hvis du vil bruge Json data istedet for Mock Data
-            _items = ItemsMockData.GetItems();
+            //_items = ItemsMockData.GetItems();
             //Udkommenter og brug den ovenover, hvis du vil bruge Mock Data istedet
-            //_items = JsonFileService.GetJsonItems();
+            _items = JsonFileService.GetJsonItems();
         }
 
         public void Add(Item newItem)
         {
             _items.Add(newItem);
             AssignID();
-            //JsonFileService.SaveJsonItems(_items);
+            JsonFileService.SaveJsonItems(_items);
         }
 
         public Item Search(int number)
@@ -74,14 +74,14 @@ namespace FoetexTrygLevering.Services
         {
             _items.RemoveAt(number-1);
             AssignID();
-            //JsonFileService.SaveJsonItems(_items);
+            JsonFileService.SaveJsonItems(_items);
         }
 
         public void Update(int number, Item theItem)
         {
             Item searchItem = Search(number);
             searchItem = theItem;
-            //JsonFileService.SaveJsonItems(_items);
+            JsonFileService.SaveJsonItems(_items);
         }
 
         public List<Item> GetAll()

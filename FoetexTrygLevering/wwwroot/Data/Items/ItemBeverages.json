@@ -1,0 +1,162 @@
+[
+  {
+    "AgeRestriction": false,
+    "Name": "Drikkeyoghurt m. jordb\u00E6r",
+    "Price": 14,
+    "ID": 12,
+    "Description": "Drikkeyoghurt m. jordb\u00E6r",
+    "ImageName": "/Assets/DrikkeYoghurtJordbaer.jpg"
+  },
+  {
+    "AgeRestriction": false,
+    "Name": "Drikkeyoghurt m. bl\u00E5b\u00E6r",
+    "Price": 14,
+    "ID": 13,
+    "Description": "Syrnet skummetm\u00E6lk med bl\u00E5b\u00E6r 0,5% fedt 500 ml",
+    "ImageName": "/Assets/DrikkeYoghurtBlaabaer.jpg"
+  },
+  {
+    "AgeRestriction": false,
+    "Name": "Drikkeyoghurt m. hindb\u00E6r",
+    "Price": 14,
+    "ID": 14,
+    "Description": "Syrnet m\u00E6lk med hindb\u00E6r 0,6% fedt 500 ml",
+    "ImageName": "/Assets/DrikkeYoghurtHindbaer.jpg"
+  },
+  {
+    "AgeRestriction": false,
+    "Name": "Minim\u00E6lk 0,4% fedt \u00F8ko",
+    "Price": 12,
+    "ID": 15,
+    "Description": "\u00D8kologisk homogeniseret minim\u00E6lk 0,4% fedt 1 liter",
+    "ImageName": "/Assets/Minimaelk.jpg"
+  },
+  {
+    "AgeRestriction": false,
+    "Name": "Letm\u00E6lk 1,5% fedt \u00F8ko",
+    "Price": 13,
+    "ID": 16,
+    "Description": "\u00D8kologisk letm\u00E6lk 1 liter",
+    "ImageName": "/Assets/Minimaelk.jpg"
+  },
+  {
+    "AgeRestriction": false,
+    "Name": "Skummetm\u00E6lk 0,1% fedt \u00F8ko",
+    "Price": 12,
+    "ID": 17,
+    "Description": "\u00D8kologisk skummetm\u00E6lk 1 liter",
+    "ImageName": "/Assets/Skummetmaelk.jpg"
+  },
+  {
+    "AgeRestriction": false,
+    "Name": "S\u00F8dm\u00E6lk 3,5% fedt",
+    "Price": 11,
+    "ID": 18,
+    "Description": "Homogeniseret s\u00F8dm\u00E6lk 1 liter",
+    "ImageName": "/Assets/Skummetmaelk.jpg"
+  },
+  {
+    "AgeRestriction": false,
+    "Name": "S\u00F8dm\u00E6lk 3,5% fedt \u00F8ko",
+    "Price": 14,
+    "ID": 19,
+    "Description": "\u00D8kologisk s\u00F8dm\u00E6lk 1 liter",
+    "ImageName": "/Assets/SoedmaelkOko.jpg"
+  },
+  {
+    "AgeRestriction": false,
+    "Name": "R\u00F8d saft til opblanding",
+    "Price": 21,
+    "ID": 20,
+    "Description": "Multifrugtsaft fra koncentrat 5 l.b",
+    "ImageName": "/Assets/RoedSaft.jpg"
+  },
+  {
+    "AgeRestriction": false,
+    "Name": "R\u00F8d saft til opblanding light",
+    "Price": 21,
+    "ID": 21,
+    "Description": "Multifrugtsaft fra koncentrat. Indeholder s\u00F8destoffer 5 l.b",
+    "ImageName": "/Assets/RoedSaftLight.jpg"
+  },
+  {
+    "AgeRestriction": true,
+    "Name": "Tuborg Classic 18 stk.",
+    "Price": 88,
+    "ID": 22,
+    "Description": "Tuborg , \u00D8l 5,94 liter",
+    "ImageName": "/Assets/TuborgClassic18stk.jpg"
+  },
+  {
+    "AgeRestriction": true,
+    "Name": "Gr\u00F8n Tuborg Pilsner 18 stk.",
+    "Price": 88,
+    "ID": 23,
+    "Description": "Tuborg , \u00D8l 5,94 liter",
+    "ImageName": "/Assets/Tuborg18stk.jpg"
+  },
+  {
+    "AgeRestriction": true,
+    "Name": "Carlsberg 20 stk.",
+    "Price": 88,
+    "ID": 24,
+    "Description": "Carlsberg , \u00D8l 6,60 liter",
+    "ImageName": "/Assets/Carlsberg20stk.jpg"
+  },
+  {
+    "AgeRestriction": true,
+    "Name": "Primitivo 2020",
+    "Price": 89,
+    "ID": 25,
+    "Description": "Montedido Antorino , Vin 75 cl",
+    "ImageName": "/Assets/Primitivo2020.jpg"
+  },
+  {
+    "AgeRestriction": true,
+    "Name": "Valpolicella Ripasso",
+    "Price": 99,
+    "ID": 26,
+    "Description": "Le Arche , R\u00F8dvin 75 cl",
+    "ImageName": "/Assets/ValpolicellaRipasso.jpg"
+  },
+  {
+    "AgeRestriction": true,
+    "Name": "Appassimento",
+    "Price": 109,
+    "ID": 27,
+    "Description": "Il Capolavoro , R\u00F8dvin 75 cl",
+    "ImageName": "/Assets/Appassimento.jpg"
+  },
+  {
+    "AgeRestriction": true,
+    "Name": "Pinot Noir 2019",
+    "Price": 95,
+    "ID": 28,
+    "Description": "Vignerons Ard\u00E9chois , Vin 75 cl",
+    "ImageName": "/Assets/PinotNoir2019.jpg"
+  },
+  {
+    "AgeRestriction": true,
+    "Name": "Vodka",
+    "Price": 109,
+    "ID": 29,
+    "Description": "Smirnoff , Vodka 70 cl",
+    "ImageName": "/Assets/SmirnoffVodka.jpg"
+  },
+  {
+    "AgeRestriction": true,
+    "Name": "Vodka",
+    "Price": 109,
+    "ID": 30,
+    "Description": "Absolut , Svensk vodka 70 cl",
+    "ImageName": "/Assets/AbsolutVodka.jpg"
+  },
+  {
+    "AgeRestriction": true,
+    "Name": "Vodka",
+    "Price": 399,
+    "ID": 31,
+    "Description": "Belvedere , Polish vodka 70 cl",
+    "ImageName": "/Assets/BelvedereVodka.jpg"
+  }
+]

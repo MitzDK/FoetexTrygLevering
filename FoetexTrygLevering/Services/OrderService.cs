@@ -22,10 +22,10 @@ namespace FoetexTrygLevering.Services
         public OrderService(JsonFileService jsonFileService)
         {
             JsonFileService = jsonFileService;
-            //_orders = JsonFileService.GetJsonOrders();
-            _orders = OrderMockData.GetAllOrders();
-            _pendingOrders = OrderMockData.GetAllPendingOrders();
-            //_pendingOrders = JsonFileService.GetJsonPendingOrders();
+            //_orders = OrderMockData.GetAllOrders();
+            //_pendingOrders = OrderMockData.GetAllPendingOrders();
+            _orders = JsonFileService.GetJsonOrders();
+            _pendingOrders = JsonFileService.GetJsonPendingOrders();
             AssignPendingID();
             AssignID();
         }

@@ -45,13 +45,13 @@ namespace FoetexTrygLevering.Services
         public List<Item> CombineItems(List<Beverage> beverages, List<Food> foods, List<NonFood> nonFoods)
         {
             List<Item> itemList = new List<Item>();
-            foreach (Beverage bev in beverages)
-            {
-                itemList.Add(bev);
-            }
             foreach (Food food in foods)
             {
                 itemList.Add(food);
+            }
+            foreach (Beverage bev in beverages)
+            {
+                itemList.Add(bev);
             }
             foreach (NonFood nonfood in nonFoods)
             {

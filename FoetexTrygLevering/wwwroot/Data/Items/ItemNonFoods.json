@@ -1,0 +1,162 @@
+[
+  {
+    "AgeRestriction": false,
+    "Name": "Toiletpapir 2-lags",
+    "Price": 10,
+    "ID": 32,
+    "Description": "Budget 1 kg",
+    "ImageName": "/Assets/Toiletpapir 2-lags.jfif"
+  },
+  {
+    "AgeRestriction": false,
+    "Name": "Fugtigt toiletpapir sensitiv",
+    "Price": 15,
+    "ID": 33,
+    "Description": "Lotus 42 stk",
+    "ImageName": "/Assets/Fugtigt toiletpapir sensitiv.jfif"
+  },
+  {
+    "AgeRestriction": false,
+    "Name": "Toiletpapir 3-lags",
+    "Price": 18,
+    "ID": 34,
+    "Description": "Lotus Comfort 0,76 kg",
+    "ImageName": "/Assets/Toiletpapir 3-lags.jfif"
+  },
+  {
+    "AgeRestriction": true,
+    "Name": "Toiletpapir 4-lags",
+    "Price": 25,
+    "ID": 35,
+    "Description": "Salling , Toiletpapir 4 lag 1,34 kg",
+    "ImageName": "/Assets/Toiletpapir 4-lags.jfif"
+  },
+  {
+    "AgeRestriction": false,
+    "Name": "Toiletpapir 3 lag 10-pak",
+    "Price": 27,
+    "ID": 36,
+    "Description": "Salling 1,25 kg",
+    "ImageName": "/Assets/Toiletpapir 3 lag 10-pak.jfif"
+  },
+  {
+    "AgeRestriction": false,
+    "Name": "Universalreng\u00F8ring",
+    "Price": 25,
+    "ID": 37,
+    "Description": "Ajax 1250 ml",
+    "ImageName": "/Assets/Universalreng\u00F8ring.jfif"
+  },
+  {
+    "AgeRestriction": false,
+    "Name": "Toiletrens Ocean Fresh",
+    "Price": 22,
+    "ID": 38,
+    "Description": "Klorin 750 ml",
+    "ImageName": "/Assets/Toiletrens Ocean Fresh.jfif"
+  },
+  {
+    "AgeRestriction": false,
+    "Name": "Toiletrens",
+    "Price": 5,
+    "ID": 39,
+    "Description": "Salling 1 liter",
+    "ImageName": "/Assets/Toiletrens.jfif"
+  },
+  {
+    "AgeRestriction": false,
+    "Name": "Reng\u00F8ringsservietter",
+    "Price": 30,
+    "ID": 40,
+    "Description": "Ajax 70 stk",
+    "ImageName": "/Assets/Reng\u00F8ringsservietter.jfif"
+  },
+  {
+    "AgeRestriction": false,
+    "Name": "Badreng\u00F8ring",
+    "Price": 28,
+    "ID": 41,
+    "Description": "Ajax 750 ml",
+    "ImageName": "/Assets/Badreng\u00F8ring.jfif"
+  },
+  {
+    "AgeRestriction": false,
+    "Name": "H\u00E5nds\u00E6be m. aloe vera og lavendel",
+    "Price": 30,
+    "ID": 42,
+    "Description": "Eco Care Nordic 500 ml",
+    "ImageName": "/Assets/H\u00E5nds\u00E6be m. aloe vera og lavendel.jfif"
+  },
+  {
+    "AgeRestriction": false,
+    "Name": "H\u00E5nds\u00E6be parfumefri",
+    "Price": 12,
+    "ID": 43,
+    "Description": "Sanex Zero % 300 ml",
+    "ImageName": "/Assets/H\u00E5nds\u00E6be parfumefri.jfif"
+  },
+  {
+    "AgeRestriction": false,
+    "Name": "Shower milk m. honning og m\u00E6lk",
+    "Price": 24,
+    "ID": 44,
+    "Description": "Palmolive Naturals 650 ml",
+    "ImageName": "/Assets/Shower milk m. honning og m\u00E6lk.jfif"
+  },
+  {
+    "AgeRestriction": false,
+    "Name": "Shower gel m. \u00E6teriske olier",
+    "Price": 10,
+    "ID": 45,
+    "Description": "Palmolive Aroma Sensations 250 ml",
+    "ImageName": "/Assets/Shower gel m. \u00E6teriske olier.jfif"
+  },
+  {
+    "AgeRestriction": false,
+    "Name": "H\u00E5nds\u00E6be parfumefri Neutral",
+    "Price": 12,
+    "ID": 46,
+    "Description": "Neutral 250 ml",
+    "ImageName": "/Assets/H\u00E5nds\u00E6be parfumefri Neutral.jfif"
+  },
+  {
+    "AgeRestriction": false,
+    "Name": "Opvaskemiddel citrus",
+    "Price": 12,
+    "ID": 47,
+    "Description": "Vel Ultra 500 ml",
+    "ImageName": "/Assets/Opvaskemiddel citrus.jfif"
+  },
+  {
+    "AgeRestriction": false,
+    "Name": "Opvaskemiddel lime",
+    "Price": 12,
+    "ID": 48,
+    "Description": "Vel Ultra 500 ml",
+    "ImageName": "/Assets/Opvaskemiddel lime.jfif"
+  },
+  {
+    "AgeRestriction": false,
+    "Name": "Opvaskemiddel sensitiv",
+    "Price": 12,
+    "ID": 49,
+    "Description": "Vel Ultra 500 ml",
+    "ImageName": "/Assets/Opvaskemiddel sensitiv.jfif"
+  },
+  {
+    "AgeRestriction": false,
+    "Name": "Opvaskemiddel citronmelisse",
+    "Price": 21,
+    "ID": 50,
+    "Description": "Eco Clean Nordic 500 ml",
+    "ImageName": "/Assets/Opvaskemiddel citronmelisse.jfif"
+  },
+  {
+    "AgeRestriction": false,
+    "Name": "Afsp\u00E6ndingsmiddel",
+    "Price": 15,
+    "ID": 51,
+    "Description": "Salling 1 liter",
+    "ImageName": "/Assets/Afsp\u00E6ndingsmiddel.jfif"
+  }
+]
