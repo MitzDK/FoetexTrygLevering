@@ -269,4 +269,9 @@ input:focus {
     padding: 10px 20px;
     color: #43484D;
 }
-    
+@media screen and (min-width: 960px) {
+    html {
+        margin-left: calc(100vw - 100%);
+        margin-right: 0;
+    }
+}
