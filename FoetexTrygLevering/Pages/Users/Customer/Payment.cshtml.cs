@@ -63,7 +63,7 @@ namespace FoetexTrygLevering.Pages.Users.Customer
             Customer = _userService.SpecificCustomer(User.Identity.Name);
             ShoppingCart = HttpContext.Session.GetObjectFromJson<List<ShoppingItem>>("ShoppingCart");
             Order o1 = new Order(Customer, new List<ShoppingItem>(ShoppingCart));
-            o1 = _orderService.NewDoneOrder(o1);
+            o1 = _orderService.NewPendingOrder(o1);
             ShoppingCart.Clear();
             HttpContext.Session.SetObjectAsJson("ShoppingCart", ShoppingCart);
             return RedirectToPage("ConfirmationPurchase", "Forward", o1);

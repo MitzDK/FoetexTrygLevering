@@ -1355,16 +1355,16 @@
     "ShoppedItems": [
       {
         "Item": {
-          "Name": "Kernerugbr\u00F8d",
-          "Price": 22,
-          "ID": 55,
-          "Description": "Schulstad Signaturbr\u00F8d, Rugbr\u00F8d med kerner 750 g",
-          "ImageName": "/Assets/Kernerugbr\u00F8d.jfif"
+          "Name": "Hakket oksek\u00F8d 14-18% fedt",
+          "Price": 30,
+          "ID": 3,
+          "Description": "Hakket oksek\u00F8d 14-18% fedt 500 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
         },
-        "Quantity": 1203
+        "Quantity": 1
       }
     ],
-    "TotalPrice": 26466,
+    "TotalPrice": 30,
     "DeliveryCity": "GuestCity",
     "DeliveryStreet": "GuestGade 91",
     "PostalCode": 5683

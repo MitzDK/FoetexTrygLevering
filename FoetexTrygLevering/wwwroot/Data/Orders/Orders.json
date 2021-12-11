@@ -1165,16 +1165,6 @@
     "ShoppedItems": [
       {
         "Item": {
-          "Name": "Proteinbar m. hvid chokolade",
-          "Price": 20,
-          "ID": 70,
-          "Description": "Barebells , Proteinbar med hvid chokolade og mandelsmag. Indeholder s\u00F8destoffer 55 g",
-          "ImageName": "/Assets/Proteinbar m. hvid chokolade og mandler u. tilsat sukker.jfif"
-        },
-        "Quantity": 1
-      },
-      {
-        "Item": {
           "Name": "Hakket oksek\u00F8d 4-7% fedt",
           "Price": 34,
           "ID": 2,
@@ -1182,29 +1172,9 @@
           "ImageName": "/Assets/Hakkekoed.jpg"
         },
         "Quantity": 1
-      },
-      {
-        "Item": {
-          "Name": "Flanksteak",
-          "Price": 65,
-          "ID": 11,
-          "Description": "Okseflanksteak 500 g",
-          "ImageName": "/Assets/Flanksteak.jpg"
-        },
-        "Quantity": 1
-      },
-      {
-        "Item": {
-          "Name": "Entrecotes",
-          "Price": 65,
-          "ID": 10,
-          "Description": "Entrecoteb\u00F8ffer 360 g",
-          "ImageName": "/Assets/Entrecotes.jpg"
-        },
-        "Quantity": 1
       }
     ],
-    "TotalPrice": 184,
+    "TotalPrice": 34,
     "DeliveryCity": "GuestCity",
     "DeliveryStreet": "GuestGade 91",
     "PostalCode": 5683
@@ -1225,16 +1195,26 @@
     "ShoppedItems": [
       {
         "Item": {
+          "Name": "Hakket oksek\u00F8d 14-18% fedt",
+          "Price": 30,
+          "ID": 3,
+          "Description": "Hakket oksek\u00F8d 14-18% fedt 500 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 1
+      },
+      {
+        "Item": {
           "Name": "Hakket oksek\u00F8d 4-7% fedt",
           "Price": 34,
           "ID": 2,
           "Description": "Hakket oksek\u00F8d 4-7% fedt 400 g",
           "ImageName": "/Assets/Hakkekoed.jpg"
         },
-        "Quantity": 1
+        "Quantity": 3
       }
     ],
-    "TotalPrice": 34,
+    "TotalPrice": 132,
     "DeliveryCity": "GuestCity",
     "DeliveryStreet": "GuestGade 91",
     "PostalCode": 5683

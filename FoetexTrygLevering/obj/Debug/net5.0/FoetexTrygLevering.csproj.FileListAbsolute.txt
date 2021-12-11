@@ -459,3 +459,4 @@ C:\Users\Victur\Desktop\FoetexTrygLevering\FoetexTrygLevering\bin\Debug\net5.0\z
 C:\Users\Victur\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\FoetexTrygLevering.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Victur\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Admin\OrderStatistics.cshtml.g.cs
 C:\Users\Victur\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Customer\ShoppingCart - Copy.cshtml.g.cs
+C:\Users\Victur\Desktop\FoetexTrygLevering\FoetexTrygLevering\obj\Debug\net5.0\Razor\Pages\Users\Admin\DebugLists.cshtml.g.cs

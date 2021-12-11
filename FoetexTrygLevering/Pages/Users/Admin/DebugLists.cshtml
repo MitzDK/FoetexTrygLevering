@@ -1,4 +1,17 @@
 ﻿@page
+@using FoetexTrygLevering.Models.Order
 @model FoetexTrygLevering.Pages.Users.Admin.DebugListsModel
 @{
+}
+@foreach (Order ord in Model.DoneOrders)
+{
+<div>@ord.Customer.Name @ord.IsDelivered @ord.ShoppedItems.Count</div>
+}
+
+^ Done Orderds 
+V Pending
+
+@foreach (Order ord in Model.PendingOrders)
+{
+    <div>@ord.Customer.Name @ord.IsDelivered @ord.ShoppedItems.Count</div>
 }
