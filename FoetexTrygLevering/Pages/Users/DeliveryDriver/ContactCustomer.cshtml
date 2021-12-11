@@ -3,15 +3,25 @@
 @{
     Layout = "Shared/_DeliveryLayout";
 }
-<div>
-    @Model.Order.Customer.Name
-</div>
-<div>
-    @Model.Order.Customer.Phone
-</div>
-<div>
-    @Model.Order.DeliveryCity, @Model.Order.DeliveryStreet
-</div>
-<form method="post">
-    <a asp-page="ActiveOrder" asp-route-id="@Model.Order.OrderID" class="btn btn-success">Go Back</a>
-</form>
+<table class="table table-bordered table-opacity">
+    <thead>
+    <tr>
+        <td><b/> Name</td>
+        <td><b/> Phone </td>
+        <td><b/> City </td>
+        <td><b/> Street </td>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td> @Model.Order.Customer.Name </td>
+        <td> @Model.Order.Customer.Phone </td>
+        <td> @Model.Order.DeliveryCity </td>
+        <td> @Model.Order.DeliveryStreet </td>
+    </tr>
+    <form method="post">
+        <a asp-page="ActiveOrder" asp-route-id="@Model.Order.OrderID" class="btn btn-success">Go Back</a>
+    </form>
+    </tbody>
+</table>
