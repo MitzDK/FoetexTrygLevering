@@ -1368,5 +1368,35 @@
     "DeliveryCity": "GuestCity",
     "DeliveryStreet": "GuestGade 91",
     "PostalCode": 5683
+  },
+  {
+    "OrderID": 17,
+    "IsDelivered": false,
+    "Customer": {
+      "CityName": "GuestCity",
+      "Street": "GuestGade 91",
+      "Age": 18,
+      "PostalCode": 5683,
+      "Name": "Guest",
+      "Phone": "00000000",
+      "Email": "123@email.com",
+      "UserID": 1
+    },
+    "ShoppedItems": [
+      {
+        "Item": {
+          "Name": "Hakket oksek\u00F8d 14-18% fedt",
+          "Price": 30,
+          "ID": 3,
+          "Description": "Hakket oksek\u00F8d 14-18% fedt 500 g",
+          "ImageName": "/Assets/Hakkekoed.jpg"
+        },
+        "Quantity": 1
+      }
+    ],
+    "TotalPrice": 30,
+    "DeliveryCity": "GuestCity",
+    "DeliveryStreet": "GuestGade 91",
+    "PostalCode": 5683
   }
 ]

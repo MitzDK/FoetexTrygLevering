@@ -7,16 +7,15 @@
 }
 <table class="table table-bordered table-hover table-striped table-opacity" width="40%">
     <thead>
-        <tr>
+        <tr class="line-allignment">
             <th>Order ID</th>
 
-            <th>
-                <div class="myContainer">
-                    <div class="align-left mt-5">Postal Code
-                    </div>
-                    <div class="align-right mt-5">
+            <th >
+                <div class="fix-alignment">
+                    <div>Postal code</div>
+                    <div class="buttons">
                         <form method="post" asp-page="HomepageModel">
-                            <input type="submit" value="Sort" asp-page-handler="Sort" class="btn btn-primary btn-resize"/>
+                            <input type="submit" value="Sort" asp-page-handler="Sort" class="btn btn-primary btn-resize" />
                         </form>
                     </div>
                 </div>
