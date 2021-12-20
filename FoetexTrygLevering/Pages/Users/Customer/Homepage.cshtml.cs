@@ -16,6 +16,7 @@ namespace FoetexTrygLevering.Pages.Users.Customer
         [BindProperty] public int MenuChoice { get; set; }
         public Models.Users.Customer Customer { get; set; }
         public List<Item> ShoppingCart { get; set; }
+        [BindProperty] public string SearchString { get; set; }
 
         private UserService _userService;
         private ItemService _itemService;
@@ -32,7 +33,12 @@ namespace FoetexTrygLevering.Pages.Users.Customer
             ItemList = _itemService.GetAll();
             Customer = _userService.SpecificCustomer(User.Identity.Name);
         }
-
+        public IActionResult OnPostNameSearch()
+        {
+            Customer = _userService.SpecificCustomer(User.Identity.Name);
+            ItemList = _itemService.SearchByName(SearchString);
+            return Page();
+        }
         public void OnPost()
         {
             Customer = _userService.SpecificCustomer(User.Identity.Name);

@@ -2,11 +2,11 @@
 @model FoetexTrygLevering.Pages.Users.Customer.DeleteCustomerModel
 @{
 }
-<h1>Slet konto</h1>
+<h1>Delete Account</h1>
 <div class="alert alert-danger">
-    <h5>@Model.Customer.Name, er du sikker på at du vil slette din konto?</h5>
+    <h5>@Model.Customer.Name, are you sure you want to delete your account?</h5>
     <form method="post">
-        <button type="submit" class="btn btn-danger">Ja</button>
-        <a class="btn btn-primary" asp-page="Homepage">Nej</a>
+        <button type="submit" class="btn btn-danger">Yes</button>
+        <a class="btn btn-primary" asp-page="Homepage">No</a>
     </form>
 </div>

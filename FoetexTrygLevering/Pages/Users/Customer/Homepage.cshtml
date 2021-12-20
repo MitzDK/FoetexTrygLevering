@@ -65,7 +65,13 @@
     }
 
 </style>
-
+<div>
+    <h5>Search by Name</h5>
+    <form method="post">
+        <input asp-for="@Model.SearchString" class="form-control" placeholder="Enter search term" />
+        <input type="submit" asp-page-handler="NameSearch" value="Search" width="280" class="btn btn-success" />
+    </form>
+</div>
 <div class="w3-row-padding w3-padding-16 w3-center" id="food">
 
  
